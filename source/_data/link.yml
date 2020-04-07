@@ -1,0 +1,13 @@
+class:
+  class_name: 友情链接
+  link_list:
+    1:
+      name: abtgu
+      link: https://abtgu.github.io/
+      avatar: https://abtgu.github.io/images/avatar.jpg
+      descr: 记录学习过程中的收获
+    2:
+      name: 虚位以待
+      link: #
+      avatar: https://zss192.github.io/img/avatar.png
+      descr:  虚位以待
