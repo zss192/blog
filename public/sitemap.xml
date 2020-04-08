@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://39.107.45.243/messageboard/index.html</loc>
+    
+    <lastmod>2020-04-08T13:46:58.307Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://39.107.45.243/about/index.html</loc>
+    
+    <lastmod>2020-04-08T13:41:18.323Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://39.107.45.243/2020/04/08/sublime%E6%95%99%E7%A8%8B/</loc>
     
     <lastmod>2020-04-08T10:04:39.595Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>http://39.107.45.243/2020/04/08/%E4%BB%8Egithub%E8%BF%81%E7%A7%BBhexo%E5%8D%9A%E5%AE%A2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     
     <lastmod>2020-04-08T08:42:28.267Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://39.107.45.243/about/index.html</loc>
-    
-    <lastmod>2020-04-08T07:36:27.336Z</lastmod>
     
   </url>
   
@@ -40,13 +47,6 @@
     <loc>http://39.107.45.243/link/index.html</loc>
     
     <lastmod>2020-04-08T07:25:51.144Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://39.107.45.243/messageboard/index.html</loc>
-    
-    <lastmod>2020-04-08T07:23:56.264Z</lastmod>
     
   </url>
   

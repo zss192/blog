@@ -142,7 +142,19 @@ cover:
   position: both
   # 當沒有設置cover時，默認的封面顯示
   default_cover:
-    - /img/post.jpg
+    - /img/post/1.jpg
+    - /img/post/2.jpg
+    - /img/post/3.jpg
+    - /img/post/4.jpg
+    - /img/post/5.jpg
+    - /img/post/6.jpg
+    - /img/post/7.jpg
+    - /img/post/8.jpg
+    - /img/post/9.jpg
+    - /img/post/10.jpg
+    - /img/post/11.jpg
+    - /img/post/12.jpg
+
 
 # if the photo link cannot connect,it will show that
 lodding_bg:
@@ -416,6 +428,11 @@ canvas_ribbon:
 
 # 動態彩帶
 canvas_ribbon_piao:
+  enable: false
+  mobile: false # false 手機端不顯示 true 手機端顯示
+
+# 页面樱花飘落动效
+sakura:
   enable: true
   mobile: false # false 手機端不顯示 true 手機端顯示
 
