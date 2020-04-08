@@ -3,7 +3,7 @@ tags: []
 categories:
   - Linux
 date: 2020-02-24 18:45:00
-cover: https://w.wallhaven.cc/full/ey/wallhaven-eylzvw.jpg
+cover: /img/post/9.jpg
 ---
 
 ---

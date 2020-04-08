@@ -3,7 +3,7 @@ tags: []
 categories:
   - CTF-杂项
 date: 2020-02-10 16:45:00
-cover: https://w.wallhaven.cc/full/39/wallhaven-398j69.png
+cover: /img/post/6.jpg
 ---
 
 ---

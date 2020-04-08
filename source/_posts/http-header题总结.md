@@ -5,7 +5,7 @@ tags:
 categories:
   - CTF-WEB
 date: 2020-02-02 14:23:00
-cover: https://w.wallhaven.cc/full/ox/wallhaven-ox8lx7.jpg
+cover: /img/post/2.jpg
 ---
 # 1.必须从本机登陆  X-Forwarded-For:127.0.0.1
 # 2.用域名登陆	将host:字段的ip地址改成网页上给出的域名

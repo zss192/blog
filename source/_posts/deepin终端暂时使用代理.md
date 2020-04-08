@@ -3,7 +3,7 @@ tags: []
 categories:
   - Linux
 date: 2020-03-13 18:45:00
-cover: https://w.wallhaven.cc/full/xl/wallhaven-xlg5kd.jpg
+cover: /img/post/12.jpg
 ---
 
 ---

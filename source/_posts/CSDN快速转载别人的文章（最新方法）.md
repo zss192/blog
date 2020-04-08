@@ -3,7 +3,7 @@ tags: []
 categories:
   - 日常办公
 date: 2020-02-04 14:45:00
-cover: https://w.wallhaven.cc/full/83/wallhaven-83w1vo.png
+cover: /img/post/10.jpg
 ---
 
 ---

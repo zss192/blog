@@ -3,7 +3,7 @@ tags: []
 categories:
   - CTF-WEB
 date: 2020-02-10 14:45:00
-cover: https://w.wallhaven.cc/full/g8/wallhaven-g8k6q7.jpg
+cover: /img/post/11.jpg
 ---
 
 ---

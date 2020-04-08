@@ -152,7 +152,7 @@ lodding_bg:
 
 # A simple 404 page
 error_404:
-  enable: false
+  enable: true
   subtitle: "Page Not Found"
   background:
 
@@ -254,19 +254,19 @@ gitalk:
 
 # valine comment system. https://valine.js.org
 valine:
-  enable: false # if you want use valine,please set this value is true
-  appId: # leancloud application app id
-  appKey: # leancloud application app key
+  enable: true # if you want use valine,please set this value is true
+  appId: tekAEc3UtO7aXcLkamh2nCMM-gzGzoHsz
+  appKey: qVGeAkqGHCD2n17QxBQW2Q4P
   notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
   verify: false # valine verify code (true/false)
   pageSize: 10 # comment list page size
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
-  lang: en # i18n: zh-cn/en
-  placeholder: Please leave your footprints # valine comment input placeholder(like: Please leave your footprints )
+  lang: zh-cn # i18n: zh-cn/en
+  placeholder: ヾﾉ≧∀≦)o来啊，快活啊!  # valine comment input placeholder(like: Please leave your footprints )
   guest_info: nick,mail,link #valine comment header info
   recordIP: false # Record reviewer IP
-  serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
-  bg: /img/comment_bg.png # valine background
+  serverURLs: 
+  bg: /img/comment_bg.png
   count: true # top_img顯示評論數
 
 # utterances
@@ -400,7 +400,7 @@ tag_ui: # 留空或index
 background:
 
 # footer是否顯示圖片背景(與top_img一致)
-footer_bg: false
+footer_bg: true
 
 # 背景特效
 # 避免卡頓，建議只開啟一個
@@ -431,9 +431,9 @@ canvas_nest:
 
 # 打字效果
 activate_power_mode:
-  enable: false
+  enable: true
   colorful: true # 冒光特效
-  shake: true # 抖動特效
+  shake: false # 抖動特效
 
 # 鼠標點擊效果
 # 避免卡頓，建議只開啟一個
