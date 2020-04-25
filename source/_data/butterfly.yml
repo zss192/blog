@@ -543,7 +543,7 @@ aside:
 
 # 網站公告
 announcement:
-  content: 感謝訪問本站，若喜歡請收藏 ^_^
+  content: 所有github图片均已经CDN加速，图片可正常显示
 
 # busuanzi count for PV / UV in site
 # 訪問人數
@@ -688,7 +688,8 @@ CDN:
   blueimp_md5: https://cdn.jsdelivr.net/npm/blueimp-md5/js/md5.min.js
   gitalk: https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js
   gitalk_css: https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css
-  valine: https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js
+  valine: https://unpkg.com/valine@1.4.9/dist/Valine.min.js
+
   disqusjs: https://cdn.jsdelivr.net/npm/disqusjs@1.2/dist/disqus.js
   disqusjs_css: https://cdn.jsdelivr.net/npm/disqusjs@1.2/dist/disqusjs.css
   utterances: https://utteranc.es/client.js

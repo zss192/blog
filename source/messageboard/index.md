@@ -1,7 +1,7 @@
 ---
 title: 留言板
 type: messageboard
-top_img: /img/post/11.jpg
+top_img: /img/post/12.jpg
 date: 2020-04-08 13:50:04
 ---
 **<center>有什么想问的</center>**
