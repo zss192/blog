@@ -543,7 +543,7 @@ aside:
 
 # 網站公告
 announcement:
-  content: 所有github图片均已经CDN加速，图片可正常显示
+  content: 推荐使用N95机场的v2ray节点(比较稳定速度还贼快)，具体配置就不讲解了(和ssr类似)
 
 # busuanzi count for PV / UV in site
 # 訪問人數
