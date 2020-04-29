@@ -5,6 +5,7 @@ echo "-----------------------------------"
 hexo g
 hexo d
 
+echo "-----------------------------------"
 git add .
 git commit -m "add"
 git pull origin master
