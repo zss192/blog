@@ -2,8 +2,7 @@
 time=$(date "+%Y-%m-%d %H:%M:%S")
 echo "${time}"
 echo "-----------------------------------"
-hexo g
-hexo d
+hexo g -d
 
 echo "-----------------------------------"
 git add .
