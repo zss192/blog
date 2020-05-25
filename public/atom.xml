@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zssblog.top/"/>
-  <updated>2020-05-25T08:03:14.488Z</updated>
+  <updated>2020-05-25T08:04:01.593Z</updated>
   <id>http://zssblog.top/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>某旅游网站子站存在上传漏洞已拿下服务器</title>
     <link href="http://zssblog.top/2020/05/25/%E6%9F%90%E6%97%85%E6%B8%B8%E7%BD%91%E7%AB%99%E5%AD%90%E7%AB%99%E5%AD%98%E5%9C%A8%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%E5%B7%B2%E6%8B%BF%E4%B8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     <id>http://zssblog.top/2020/05/25/%E6%9F%90%E6%97%85%E6%B8%B8%E7%BD%91%E7%AB%99%E5%AD%90%E7%AB%99%E5%AD%98%E5%9C%A8%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%E5%B7%B2%E6%8B%BF%E4%B8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
-    <published>2020-05-25T07:36:29.000Z</published>
-    <updated>2020-05-25T08:03:14.488Z</updated>
+    <published>2020-05-25T07:36:00.000Z</published>
+    <updated>2020-05-25T08:04:01.593Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>上篇文章：<a href="http://zssblog.top/2020/05/22/%E6%9F%90%E6%97%85%E6%B8%B8%E7%BD%91%E7%AB%99sql%E6%B3%A8%E5%85%A5%E5%AF%BC%E8%87%B4%E6%B3%84%E9%9C%B22%E4%B8%87%E5%A4%9A%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF/">某旅游网站sql注入导致泄露2万多个人信息</a>已经找到了sql注入点拿到了数据库，但始终拿不到shell,经过探索，在一子站找到了上传点。</p><p>已成功上传拿到了服务器</p><p>但是！！！</p><p>由于没经验上传了木马到服务器没管第二天发现木马被删了，木马上传页面也被禁止访问了，补天因此没收录</p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/%E4%B8%8B%E8%BD%BD.jpeg"  alt="下载"></p><p>咳咳，出于学习为主的原因，还是写了这篇文章(一个高危就这样溜了，哭泣.jpg)</p><h1 id="漏洞描述"><a href="#漏洞描述" class="headerlink" title="漏洞描述"></a>漏洞描述</h1><p>子站 <a href="http://cs.xxxxxx.cn" target="_blank" rel="noopener">http://cs.xxxxxx.cn</a> 一客服管理系统可任意注册客服用户，聊天页面可上传shell，已拿下服务器。</p><h1 id="漏洞详情"><a href="#漏洞详情" class="headerlink" title="漏洞详情"></a>漏洞详情</h1><p>在 <a href="http://cs.xxxxx.cn" target="_blank" rel="noopener">http://cs.xxxxx.cn</a> 页面源代码处发现注册页面，随便注册用户1成功注册，会给个专属聊天链接 <a href="http://cs.xxxxx.cn/index.php/Index/admin?kf=149806532" target="_blank" rel="noopener">http://cs.xxxxx.cn/index.php/Index/admin?kf=149806532</a></p><p>打开链接是一个聊天页面，没有上传文件选项，但是可以上传图片</p><p>聊天界面上传图片，抓包改为将image/jpeg改为php,base64编码一句话木马成功上传</p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/f24238293cfc5895b4a6906fad7bc030d0e2f8804a8c5.png"  alt="img"></p><p>连接shell成功连接</p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/1.png"  alt="4"></p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/4.png"  alt="1"></p><p>可任意下载修改文件，执行mysql命令</p><h1 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h1><p>如果你恰巧看到了这篇文章，建议如果以后你上传了木马后测试可以的话就立马删除木马，清理所有痕迹(问的一群里大佬)。</p><p>清理了痕迹他们就不那么容易发现木马，而且补天审核还真的不是一般慢(两个星期)，他们收到你的漏洞后会再测下的，如果不能测试成功，那审核就不能通过，所以还是把木马藏好点保险。</p><p>还好有个任意用户登录漏洞被收录了，给了个中危。</p><p>清理痕迹，血的教训！！！</p>]]></content>
     
@@ -34,6 +34,8 @@
     
     </summary>
     
+    
+      <category term="渗透测试" scheme="http://zssblog.top/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
     
     
   </entry>
