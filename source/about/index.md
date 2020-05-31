@@ -11,6 +11,6 @@ date: 2020-04-08 13:52:26
 
 职位：河南大学在校学生
 
-技能：前端、后端、CTF-WEB、CTF-MISC
+技能：前端、后端、CTF-WEB、CTF-MISC、渗透测试(菜鸟ing)
 
 CSDN：https://blog.csdn.net/zss192
