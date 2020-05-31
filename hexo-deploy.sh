@@ -3,9 +3,11 @@ time=$(date "+%Y-%m-%d %H:%M:%S")
 echo "${time}"
 echo "-----------------------------------"
 hexo g -d
+echo "成功操作hexo g -d"
 
 echo "-----------------------------------"
 git add .
 git commit -m "add"
 git pull origin master
 git push origin master
+echo "成功将博客源码推到github"
