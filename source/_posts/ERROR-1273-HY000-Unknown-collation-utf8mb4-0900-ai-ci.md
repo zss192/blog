@@ -2,6 +2,9 @@
 title: 'ERROR 1273 (HY000): Unknown collation: ''utf8mb4_0900_ai_ci'''
 date: 2020-04-15 21:21:41
 tags:
+  - 日常办公
+categories:
+  - 日常办公
 ---
 # 起因
 本地数据库迁移到服务器出错，特此记录下。

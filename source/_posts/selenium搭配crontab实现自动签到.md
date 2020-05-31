@@ -1,6 +1,7 @@
 ---
 title: selenium搭配crontab实现自动签到
-tags: []
+tags:
+  - 日常办公
 categories:
   - 日常办公
 date: 2020-04-17 16:45:00

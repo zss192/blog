@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - Linux
 categories:
   - Linux
 date: 2020-02-24 18:45:00

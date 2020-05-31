@@ -1,7 +1,7 @@
 ---
 title: http header题总结
 tags:
-  - 信息安全
+  - CTF-WEB
 categories:
   - CTF-WEB
 date: 2020-02-02 14:23:00

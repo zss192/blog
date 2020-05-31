@@ -2,7 +2,8 @@
 title: '[HCTF 2018]admin wp'
 tags:
   - CTF-WEB
-categories: []
+categories:
+  - CTF-WEB
 date: 2020-05-03 18:41:00
 ---
 # 题目说明

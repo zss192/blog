@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - CTF-WEB
 categories:
   - CTF-WEB
 date: 2020-03-20 13:45:00

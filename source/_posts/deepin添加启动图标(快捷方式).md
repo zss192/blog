@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - Linux
 categories:
   - Linux
 date: 2020-02-21 16:45:00
@@ -43,4 +44,4 @@ Terminal：是否以终端启动。<br>
 <img src="https://img-blog.csdnimg.cn/20200221144105120.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70" width="50%" height="30%">
 <p>使用方法参照上面的参数。</p>
 
-                       
+​                       

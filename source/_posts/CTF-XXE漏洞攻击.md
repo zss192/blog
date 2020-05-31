@@ -1,6 +1,7 @@
 ---
 title: CTF XXE漏洞攻击
-tags: []
+tags:
+  - CTF-WEB
 categories:
   - CTF-WEB
 date: 2020-05-07 15:58:00

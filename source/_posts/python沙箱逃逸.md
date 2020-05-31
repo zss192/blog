@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - CTF-WEB
 categories:
   - CTF-WEB
 date: 2020-02-06 19:45:00
@@ -116,7 +117,7 @@ file()函数
 file('test.txt').read()
 #注意：该函数只存在于Python2，Python3不存在
 ```
-   
+
 
 open()函数
 ```python
