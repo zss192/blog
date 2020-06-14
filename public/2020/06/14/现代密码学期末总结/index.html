@@ -1,0 +1,326 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>现代密码学期末总结 | 夏日 の blog</title><meta name="description" content="现代密码学期末总结"><meta name="keywords" content="计算机专业课"><meta name="author" content="夏日"><meta name="copyright" content="夏日"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="现代密码学期末总结"><meta name="twitter:description" content="现代密码学期末总结"><meta name="twitter:image" content="http://zssblog.top/img/post/5.jpg"><meta property="og:type" content="article"><meta property="og:title" content="现代密码学期末总结"><meta property="og:url" content="http://zssblog.top/2020/06/14/%E7%8E%B0%E4%BB%A3%E5%AF%86%E7%A0%81%E5%AD%A6%E6%9C%9F%E6%9C%AB%E6%80%BB%E7%BB%93/"><meta property="og:site_name" content="夏日 の blog"><meta property="og:description" content="现代密码学期末总结"><meta property="og:image" content="http://zssblog.top/img/post/5.jpg"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="http://zssblog.top/2020/06/14/%E7%8E%B0%E4%BB%A3%E5%AF%86%E7%A0%81%E5%AD%A6%E6%9C%9F%E6%9C%AB%E6%80%BB%E7%BB%93/"><link rel="next" title="实验六 查找和排序的实现" href="http://zssblog.top/2020/06/12/%E5%AE%9E%E9%AA%8C%E5%85%AD-%E6%9F%A5%E6%89%BE%E5%92%8C%E6%8E%92%E5%BA%8F%E7%9A%84%E5%AE%9E%E7%8E%B0/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"欢迎你,来到,我的博客","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: false,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isSidebar: true  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><script src="/js/sakura.js"></script><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="夏日 の blog" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">53</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">10</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">8</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-coffee"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#写在前面"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-引言"><span class="toc-number">2.</span> <span class="toc-text">1.引言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#知识点"><span class="toc-number">2.1.</span> <span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题"><span class="toc-number">2.2.</span> <span class="toc-text">习题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-流密码"><span class="toc-number">3.</span> <span class="toc-text">2.流密码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#知识点-1"><span class="toc-number">3.1.</span> <span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题-1"><span class="toc-number">3.2.</span> <span class="toc-text">习题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-分组密码体制"><span class="toc-number">4.</span> <span class="toc-text">3.分组密码体制</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#知识点-2"><span class="toc-number">4.1.</span> <span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#习题-2"><span class="toc-number">4.2.</span> <span class="toc-text">习题</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><div class="post-bg" id="nav" style="background-image: url(/img/post/5.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">夏日 の blog</a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-coffee"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">现代密码学期末总结</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2020-06-14 23:33:00"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2020-06-14</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2020-06-14 23:34:31"><i class="fa fa-history" aria-hidden="true"></i> 更新于 2020-06-14</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E4%B8%9A%E8%AF%BE/">计算机专业课</a></span></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="post-meta__icon fa fa-file-word-o" aria-hidden="true"></i><span>字数总计:</span><span class="word-count">3.5k</span><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-clock-o" aria-hidden="true"></i><span>阅读时长: 12 分钟</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-comment-o" aria-hidden="true"></i><span>评论数:</span><a href="/2020/06/14/%E7%8E%B0%E4%BB%A3%E5%AF%86%E7%A0%81%E5%AD%A6%E6%9C%9F%E6%9C%AB%E6%80%BB%E7%BB%93/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/2020/06/14/%E7%8E%B0%E4%BB%A3%E5%AF%86%E7%A0%81%E5%AD%A6%E6%9C%9F%E6%9C%AB%E6%80%BB%E7%BB%93/" itemprop="commentCount"></span></a></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container"><h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>临近期末，总结了下知识点，供个人复习使用，仅供参考(近期不间断更新)。</p>
+<h1 id="1-引言"><a href="#1-引言" class="headerlink" title="1.引言"></a>1.引言</h1><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><p><img src="/" class="lazyload" data-src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3pzczE5Mi9UeXBvcmEtbm90ZXNAbWFzdGVyL2ltYWdlcy9pbWFnZS0yMDIwMDYxNDEwMzQzOTM1MC5wbmc?x-oss-process=image/format,png"  alt="image-20200614103439350"></p>
+<p>1.在本书中，c指密文，m指明文，E()表示加密函数，D()表示解密函数</p>
+<p>2.仿射变换：加密和解密中a，b为秘钥  （属于单表变换）</p>
+<p>c=E<del>a,b</del>(m)=am+b(mod 26)</p>
+<p>m=D<del>a,b</del>(m)=a^-1^(c-b)(mod 26)      </p>
+<blockquote>
+<p>注意a^-1^*a≡1 mod 26</p>
+</blockquote>
+<p>3.多表代换密码：其中A为n*n的矩阵，n等于几代表明文每几个分成一组。一般N为26。</p>
+<p>C<del>i</del>≡AM<del>i</del>+B(mod N)，i=1,2,3….</p>
+<p>M<del>i</del>≡A^-1^(C<del>i</del>-B)(mod N)，i=1,2,3….</p>
+<p>4.人为攻击分为</p>
+<ul>
+<li>被动攻击       就是窃听，是对系统保密性的攻击<ul>
+<li>获取信息的内容</li>
+<li>业务流分析     敌收无法获得消息但可能获得通信双方身份、次数……..</li>
+</ul>
+</li>
+<li>主动攻击       对数据流的篡改或产生假数据流<ul>
+<li>中断      如破坏硬件、系统是对系统可用性的攻击</li>
+<li>篡改      修改数据是对系统完整性的攻击</li>
+<li>伪造      如插入伪造消息或记录，是对系统真实性的攻击</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>被动攻击不改变消息而主动攻击改变消息内容</p>
+<p>抵抗被动攻击：预防                抵抗主动攻击：检测修复</p>
+</blockquote>
+<p>5.密码算法的安全性包括哪两类？？(暂时没找到)</p>
+<p>6.密钥管理：密钥产生、分配、存储、销毁等问题</p>
+<p>7.密码体质从原理上可分为两类</p>
+<ul>
+<li>对称(单钥)密码体制             （可用于数据加密和消息认证）<ul>
+<li>流密码                             逐位加密</li>
+<li>分组密码                         消息分组，逐组加密</li>
+</ul>
+</li>
+<li>非对称(双钥)密码体制            两密钥，一公开一私密</li>
+</ul>
+<p>8.对密码系统的攻击按攻击者可获取的信息量可分为</p>
+<ul>
+<li>唯密文攻击                           仅知道一些密文</li>
+<li>已知明文攻击                       知道一些密文和相应的明文</li>
+<li>选择明文攻击                       密码分析者可以选择一些明文并得到相应的密文</li>
+<li>选择密文攻击                       密码分析者可以选择一些密文，并得到相应的明文</li>
+</ul>
+<blockquote>
+<p>以上攻击都建立在已知算法的基础之上，且攻击强度依次增加</p>
+</blockquote>
+<p>9.单向陷门函数就是有一个陷门的一类特殊单向函数。</p>
+<p>若y=f(x)，已知x很容易计算y，但已知y很难计算x（单向性）。特别的是存在一个z使得知道了z那么就很容易由y计算出x，那么z则称为陷门（有陷门也称后门）</p>
+<p>10.加密算法满足下列两点则认为是计算上安全的</p>
+<ul>
+<li>破译密文的代价超过被加密信息的价值</li>
+<li>破译密文所花的时间超过信息的有用期</li>
+</ul>
+<p>11.攻击密码体制的常用方法 </p>
+<ul>
+<li>穷举攻击                             （解决方法 : 增大密钥量）</li>
+<li>统计分析攻击                     （解决方法：使明文的统计特性与密文的统计特性不一样）</li>
+<li>数学分析攻击                     （解决方法：选用足够复杂的加密算法）</li>
+</ul>
+<p>12.密钥体制组成部分（加密系统的五元组）：明文，密文，密钥，加密算法，解密算法。</p>
+<p>13.一个好密钥体制至少应满足的两个条件：</p>
+<ul>
+<li>已知明文和加密密钥计算密文容易，已知密文和解密密钥计算明文容易</li>
+<li>在不知解密密钥的情况下，不可能由密文 c 推出明文</li>
+</ul>
+<p>14.清楚信息安全专业学习密码学的原因   （非标准答案）</p>
+<p>答：信息在社会中的地位和作用越来越重要，则其安全愈发重要，而密码学是保障信息安全的核心技术。可以说没有密码学就没有信息安全。</p>
+<h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><p>1.设由仿射变换对一个明文加密得到的密文为edsgickxhuklzveqzvkxwkzukvcuh，又已知明文的前两个字符是“if”，对该密文解密。</p>
+<p>答：e=4  d=3  i=8   f=5    （26个字母下标从0开始）E<del>a,b</del>(m)=am+b(mod 26)</p>
+<p>E(i)=e，4≡8*a+b(mod 26)</p>
+<p>E(f)=d，3≡5*a+b(mod 26)</p>
+<p>由上述两个式子可推出a=9，b=10，所以m=9^-1^(c-10)(mod 26)</p>
+<img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@latest/images/image-20200609204054393.png"  alt="image-20200609204054393" style="zoom:80%;" />
+
+<p>2.设多表代换密码C≡AM<del>i</del>+ B(mod26)中，A是2X2矩阵，B是0矩阵，又知明文“dont”被加密为“elni”，求矩阵A。</p>
+<img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20200609205229494.png"  alt="image-20200609205229494" style="zoom:67%;" />
+
+<blockquote>
+<p>注意矩阵相乘的结果要模26，上式求b的时候算得125b=13，其实应是125b≡13(mod 26)，即为21b≡13(mod 26)，解得b=13，其他类似</p>
+</blockquote>
+<h1 id="2-流密码"><a href="#2-流密码" class="headerlink" title="2.流密码"></a>2.流密码</h1><h2 id="知识点-1"><a href="#知识点-1" class="headerlink" title="知识点"></a>知识点</h2><p><img src="/" class="lazyload" data-src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3pzczE5Mi9UeXBvcmEtbm90ZXNAbWFzdGVyL2ltYWdlcy9pbWFnZS0yMDIwMDYxNDExMDc1MTM1My5wbmc?x-oss-process=image/format,png"  alt="image-20200614110751353"></p>
+<p>1.流密码的基本思想：利用密钥k产生一个密钥流z=z<del>0</del>z<del>1</del>z<del>2</del>…..，并对明文串x=x<del>0</del>x<del>1</del>x<del>2</del>….</p>
+<p>加密：y=y<del>0</del>y<del>1</del>y<del>2</del>…..=E<del>z0</del>(x<del>0</del>)E<del>z1</del>(x<del>1</del>)E<del>z2</del>(x<del>2</del>)……..    (密钥产生密钥流，依次逐位加密信息)</p>
+<p>2.流密码中密钥流就等于明文串和密文串异或</p>
+<p>3.移位寄存器是流密码产生密钥流的一个重要组成部分</p>
+<p>4.m序列密码的破译就是求密钥流的递推关系即a<del>m+i</del>=c<del>m</del>ai⊕c<del>m-1</del>a<del>i+1</del>⊕…..⊕c<del>1</del>a<del>m+i-1</del></p>
+<p>(公式中的m即题目说多少级级线性反馈移位寄存器就是多少)</p>
+<blockquote>
+<p>比如是3级，我们求得是a<del>i+3</del>，当i=1，i+3=4即第四个这样根据前三个就可知道后面所有的数</p>
+</blockquote>
+<h2 id="习题-1"><a href="#习题-1" class="headerlink" title="习题"></a>习题</h2><p>1.求矩阵的逆（这章习题会用到，复习下）</p>
+<p>核心公式：A^-1^=A^*^/|A|</p>
+<img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20200609214703300.png"  alt="image-20200609214703300" style="zoom:80%;" />
+
+<p>若是三阶矩阵：A<del>ij</del>=(-1)^i+j^M<del>ij</del>，M<del>ij</del>为除去a<del>ij</del>所在那一行和那一列得到的二阶矩阵</p>
+<p><img src="/" class="lazyload" data-src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3pzczE5Mi9UeXBvcmEtbm90ZXNAbWFzdGVyL2ltYWdlcy9pbWFnZS0yMDIwMDYwOTIxNTE0MDU1MS5wbmc?x-oss-process=image/format,png"  alt="image-20200609215140551"></p>
+<p><img src="/" class="lazyload" data-src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3pzczE5Mi9UeXBvcmEtbm90ZXNAbWFzdGVyL2ltYWdlcy9pbWFnZS0yMDIwMDYwOTIxNTUyMTg4NS5wbmc?x-oss-process=image/format,png"  alt="image-20200609215521885"></p>
+<p><img src="/" class="lazyload" data-src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3pzczE5Mi9UeXBvcmEtbm90ZXNAbGF0ZXN0L2ltYWdlcy9pbWFnZS0yMDIwMDYwOTIxNTczNjYwOS5wbmc?x-oss-process=image/format,png"  alt="image-20200609215736609"></p>
+<p><img src="/" class="lazyload" data-src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3pzczE5Mi9UeXBvcmEtbm90ZXNAbGF0ZXN0L2ltYWdlcy9pbWFnZS0yMDIwMDYwOTIxNTk0MTk1OS5wbmc?x-oss-process=image/format,png"  alt="image-20200609215941959"></p>
+<p>2.已知流密码的密文串1010110110和相应的明文串0100010001，而且还已知密钥流是使用3级线性反馈移位寄存器产生的，试破译该密码系统。(和P65例2-6类似)</p>
+<p>答：由已知可得密钥流为1010110110⊕0100010001=1110100111，因为是3级线性反馈</p>
+<p><img src="/" class="lazyload" data-src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3pzczE5Mi9UeXBvcmEtbm90ZXNAbWFzdGVyL2ltYWdlcy9pbWFnZS0yMDIwMDYwOTIxMjI0OTMyNi5wbmc?x-oss-process=image/format,png"  alt="image-20200609212249326"></p>
+<blockquote>
+<p>按照上面矩阵：a<del>4</del>=c<del>3</del><em>a<del>1</del>+c<del>2</del></em>a<del>2</del>+c<del>1</del>*a<del>3</del>正是密钥流递推关系(m=3,i=1然后是m=3,i=2…)</p>
+</blockquote>
+<p><img src="/" class="lazyload" data-src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3pzczE5Mi9UeXBvcmEtbm90ZXNAbWFzdGVyL2ltYWdlcy9pbWFnZS0yMDIwMDYwOTIxNDIzNTA4NC5wbmc?x-oss-process=image/format,png"  alt="image-20200609214235084"></p>
+<blockquote>
+<p>记住c从高到低，a从低到高</p>
+</blockquote>
+<p>3.如图是一个3级反馈移位寄存器，其初始状态为(a1,a2,a3)=(1,0,1)，求输出序列</p>
+<img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@latest/images/image-20200609221112648.png"  alt="image-20200609221112648" style="zoom:80%;" />
+
+<p>从图中可看到a1、a2、a3经f函数送至左边形成一个循环，比如f(a1,a2,a3)=b，那么b将代替a3的位置，a3～a1均右移，所以a1输出，以此类推。</p>
+<p>答：f(a1,a2,a3)=f(1,0,1)=1*0⊕1=1，然后f(1,1,0)</p>
+<p>可总结规律，右边的3为参与f函数生成的数放在左边，然后以左边这个数向右数3个数分别当做a3,a2,a1参与f生成的又放在最左边……最后输出是从右到左</p>
+<img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/IMG_20200609_222216.jpg"  alt="IMG_20200609_222216" style="height:170px;" />
+
+<p>即输出序列为10111011101…..，周期为4</p>
+<h1 id="3-分组密码体制"><a href="#3-分组密码体制" class="headerlink" title="3.分组密码体制"></a>3.分组密码体制</h1><h2 id="知识点-2"><a href="#知识点-2" class="headerlink" title="知识点"></a>知识点</h2><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20200614114916547.png"  alt="image-20200614114916547" style="zoom:80%;" />
+
+<p>1.分组密码：将明文划分为长为n的组x(x0,x1,…,xn-1)，各组在密钥k=(k0,k1,….kt-1)控制下变换成等长的数字序列y=(y0,y1,….ym-1)。实质是对字长为n的数字序列的代换密码 （一般m=n）</p>
+<p>2.扩散和混淆是Shannon提出的设计密码系统的两个基本方法(分组密码安全设计性原则)  ==必考！==</p>
+<ul>
+<li>扩散：使明文与密文之间的统计关系变得尽可能复杂，以使敌手无法得到密钥<ul>
+<li>明文每一比特变换尽量多的影响密文序列的变化，以隐蔽明文的统计特性（雪崩效应）</li>
+<li>P盒(置换)用于扩散</li>
+</ul>
+</li>
+<li>混淆：使密文与密钥之间的统计关系变得尽可能复杂，以使敌手无法得到密钥<ul>
+<li>S盒(代换)用于混淆</li>
+</ul>
+</li>
+</ul>
+<p>3.很多分组密码结构本质都基于Feistel结构</p>
+<p>将每组明文分为左右两半L<del>0</del>和R<del>0</del>，n轮迭代后再合在一起产生密文分组</p>
+<p>第i轮迭代（代换）：      L<del>i</del>=R<del>i-1</del>  (左等右上)             R<del>i</del>=L<del>i-1</del>⊕F(R<del>i-1</del>,K<del>i</del>)  （右等左上异或F即右上和K）</p>
+<p>最后一轮交换左右两半数据（置换）</p>
+<img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20200614145605923.png"  alt="image-20200614145605923" style="zoom: 80%;" />
+
+<p>解密和加密本质过程一样，密文作为输入，但使用子密钥K<del>i</del>的次序和加密相反（这一特性保证了加密和解密可用同一算法）</p>
+<p>4.DES加密过程可分为三个阶段 (64比特明文，64比特密钥(每个第8位设置奇偶校验位实际56位)）</p>
+<ul>
+<li>初始置换IP，用于重排明文分组的64比特         （由IP置换表实现）</li>
+<li>生成子密钥</li>
+<li>迭代过程即16轮变换(代换和置换)然后交换左右次序</li>
+<li>逆初始置换IP^-1^</li>
+</ul>
+<p>:two: 生成子密钥过程                参考：<a href="https://www.cxyxiaowu.com/1478.html" target="_blank" rel="noopener">算法科普：神秘的 DES 加密算法</a> ，下同</p>
+<p>56比特密钥经PC-1置换后分为左右C<del>0</del>和D<del>0</del>，然后由表左循环经PC-2产生48比特的本轮密钥</p>
+<img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/1571057977-17488ca32598db6.jpg"  alt="image-20200614145605923" style="zoom: 80%;" />
+
+<p>:three: 迭代过程等同于Feistel结构(左等右上，右等左上异或F)，而其中用到的F函数为：</p>
+<img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20200614155257147.png"  alt="image-20200614155257147" style="zoom:67%;" />
+
+<p>5.分组密码的运行模式</p>
+<ul>
+<li>ECB(电话本)模式                      各明文组以同一密钥加密</li>
+<li><strong>CBC(密码分组链接)模式</strong>          加密的输入是当前明文组和前一密文组的异或</li>
+<li>CFB(密码反馈)模式                  每次处理j位输入，上次密文加密产生伪随机再与当前明文异或</li>
+<li>OFB(输出反馈)模式           与CFB不同的是加密的输入是前一次加密的输出(与明文异或的那个)</li>
+</ul>
+<p>:two: CBC模式加解密示意图 （==必考！==）</p>
+<img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20200614163017246.png"  alt="image-20200614163017246" style="height:450px" />
+
+<p>加密: C<del>i</del>= E<del>k</del>[P<del>i</del>⊕C<del>i-1</del>] (可认为C<del>0</del>=IV)         解密:P<del>i</del>= D<del>K</del>[C<del>i</del>]⊕C<del>i-1</del></p>
+<blockquote>
+<p>IV为初始向量应重点保护，该模式可加密也可认证，适合加密64比特的消息</p>
+</blockquote>
+<p>6.AES是DES的替代者，也是当今最流行的对称加密算法之一</p>
+<img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/20190527200618151.png"   />
+
+<p>AES轮函数包括字节代换、行移位、列混合、密钥加</p>
+<p>:one: 字节代换：根据S盒把明文块的每一个字节都替代成另外一个字节   </p>
+<p>:two: 行移位：如第1行不变，第2行循环左移C1个字节，第3行左移C2个字节，第4行移C3 要根据表</p>
+<p>:three: 列混合：输入数组每一列和修补矩阵的二维常量数组做矩阵相乘，得到对应的输出列。</p>
+<p>:four: 密钥加：输入数组的每个字节a[i,j]与密钥对应位置的字节k[i,j]异或一次，就生成了输出值b[i,j]</p>
+<p>7.SM4算法，数据和密码分组均为128比特</p>
+<p>加密：Xi+4=F(X<del>i</del>,X<del>i+1</del>,X<del>i+2</del>,X<del>i+3</del>,rk<del>i</del>)=X<del>i</del>⊕T(X<del>i+1</del>⊕X<del>i+2</del>⊕X<del>i+3</del>⊕rk<del>i</del>)（i=0,1,2….31）</p>
+<p>后经反序R处理：(Y<del>0</del>,Y<del>1</del>,Y<del>2</del>,Y<del>3</del>)=(X<del>35</del>,X<del>34</del>,X<del>33</del>,X<del>32</del>)=R(X<del>32</del>,X<del>33</del>,X<del>34</del>,X<del>35</del>)</p>
+<p>解密算法和加密算法相同，轮密钥使用顺序相反</p>
+<p>8.GF(2^8^)中   a*a^-1^=1(mod x8+x4+x5+x+1)</p>
+<p>GF(2)上的可逆的仿射变换  （x是题目中a的逆）</p>
+<p><img src="/" class="lazyload" data-src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3pzczE5Mi9UeXBvcmEtbm90ZXNAbWFzdGVyL2ltYWdlcy9pbWFnZS0yMDIwMDYxNDIwNTMzNTYzMi5wbmc?x-oss-process=image/format,png"  alt="image-20200614205335632"></p>
+<h2 id="习题-2"><a href="#习题-2" class="headerlink" title="习题"></a>习题</h2><p>1.对字节a=1011  0110字节替代变换，设a的逆为a^-1^                  ==必考！==</p>
+<p>答：先求a的逆，再用仿射变换即可</p>
+<p>:one: 由a得(x^7^+x^5^+x^4^+x^2^+x)a^-1^ ≡ 1(mod x^8^+x^4^+x^3^+x+1)</p>
+<p>所以a^-1^=x^6^+x^5^+x^4^+x^3^             即0111 1000     （二进制对应位数有1就代表有x的那一次方）</p>
+<blockquote>
+<p>根据老师给的考试要点，a的逆和仿射变换题目应该会给出</p>
+</blockquote>
+<p>:two: 使用仿射变换   （注意要用a的逆而且注意x的顺序从下往上读）</p>
+<p><img src="/" class="lazyload" data-src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL3pzczE5Mi9UeXBvcmEtbm90ZXNAbWFzdGVyL2ltYWdlcy9RUSVFNSU5QiVCRSVFNyU4OSU4NzIwMjAwNjE0MjEwNjM5LmpwZw?x-oss-process=image/format,png"  alt="QQ图片20200614210639"></p>
+<p>即(0100 1110)<del>2</del>=(4E)<del>16</del>                 注意也是从下开始读  因为最下面的是字节高位即最前面的01…</p>
+<p>2.利用DES算法和全0密钥对输入(1000 0001 1960 0000)进行一圈加密的结果 （需要查表P39）</p>
+<p>答：:one: 输入的右半部分是1960 0000 = 0001 1001 0110 0000    0000 0000 0000 0000</p>
+<p>:two: 经E盒扩展后为：000011 110010 101100 000000      000000 000000 000000 000000</p>
+<p>:three: 与全0密钥对异或后为：000011 110010 101100 000000      000000 000000 000000 000000</p>
+<p>:four: 经S盒后变为：15 8 3 7 2 12 4 13 即1111 1000 0011 0111 0010 1100 0100 1101</p>
+<p>:five: 经P盒后变为 1001 1100 1101 1000     1001 1010 1010 1110</p>
+<p>:six: 输出的左半部分即输入的右半部分为1960 0000，输出的右半部分为F函数输出和左半部分输入异或即8cd8 9aaf，最终输出为 1960 0000  8cd8 9aaf</p>
+<blockquote>
+<p>这题主要是加深对DES迭代过程的理解，由于要查表，考试应该不会考</p>
+</blockquote>
+<p>3.在DES的ECB模式中,如果在密文分组中有一个错误,解密后仅相应的明文分组受到影响。然而在CBC模式中，将有错误传播。加密解密图中C1中的一个错误明显地将影响到P1和P2的结果。</p>
+<img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20200614163017246.png"  alt="image-20200614163017246" style="zoom: 50%;" />
+
+<p>(1) P2后的分组是否受到影响?<br>(2)设加密前的明文分组P1中有1比特的错误，问这一错误将在多少个密文分组中传播?<br>对接收者产生什么影响?</p>
+<p>答：:one: CBC的加密: C<del>i</del>= E<del>k</del>[P<del>i</del>⊕C<del>i-1</del>]，i≥2           解密:P<del>i</del>= D<del>K</del>[C<del>i</del>]⊕C<del>i-1</del>，i≥1</p>
+<p>若C1有错误，P2=D<del>K</del>[C<del>2</del>]⊕C<del>1</del>所以P2也会受影响，但i≥3时，P<del>i</del>= D<del>K</del>[C<del>i</del>]⊕C<del>i-1</del>与C1无关因此不会受到影响</p>
+<blockquote>
+<p>本题由于C1错误事实上C2、C3、C4….都会和原来不一样，但即使它是错的经密钥解密后还是可以得到原明文(可理解为是明文的另一种加密结果)，所以说P2后不受影响</p>
+</blockquote>
+<p>:two: 若P1出错，则C1会是错的，由C<del>i</del>= E<del>k</del>[P<del>i</del>⊕C<del>i-1</del>]得，C<del>i≥2</del>也都是错误的，因此会传递到每一个分组</p>
+<p>由加密解密方式可知，若只是P1出错，解密后得到的还是原来的输入。即接收者解密后的P1和原来输入的一样会有1比特的错误，而其他的可以解密得到正确的明文</p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">夏日</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://zssblog.top/2020/06/14/%E7%8E%B0%E4%BB%A3%E5%AF%86%E7%A0%81%E5%AD%A6%E6%9C%9F%E6%9C%AB%E6%80%BB%E7%BB%93/">http://zssblog.top/2020/06/14/%E7%8E%B0%E4%BB%A3%E5%AF%86%E7%A0%81%E5%AD%A6%E6%9C%9F%E6%9C%AB%E6%80%BB%E7%BB%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://zssblog.top" target="_blank">夏日 の blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E4%B8%9A%E8%AF%BE/">计算机专业课</a></div><div class="post_share"><div class="social-share" data-image="/img/post/9.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="支付宝"/><div class="post-qr-code__desc">支付宝</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="next-post pull-full"><a href="/2020/06/12/%E5%AE%9E%E9%AA%8C%E5%85%AD-%E6%9F%A5%E6%89%BE%E5%92%8C%E6%8E%92%E5%BA%8F%E7%9A%84%E5%AE%9E%E7%8E%B0/"><img class="next_cover lazyload" data-src="/img/post/9.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">实验六 查找和排序的实现</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2020/05/31/数据结构期末总结/" title="数据结构期末总结"><img class="relatedPosts_cover lazyload"data-src="/img/post/1.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-05-31</div><div class="relatedPosts_title">数据结构期末总结</div></div></a></div><div class="relatedPosts_item"><a href="/2020/06/09/计算机组成原理期末总结/" title="计算机组成原理期末总结"><img class="relatedPosts_cover lazyload"data-src="/img/post/9.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-06-09</div><div class="relatedPosts_title">计算机组成原理期末总结</div></div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://unpkg.com/valine@1.4.9/dist/Valine.min.js"></script><script>var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+window.valine = new Valine({
+  el:'#vcomment',
+  notify: false,
+  verify: false,
+  appId: 'tekAEc3UtO7aXcLkamh2nCMM-gzGzoHsz',
+  appKey: 'qVGeAkqGHCD2n17QxBQW2Q4P',
+  placeholder: '建议评论时填写邮箱，可收到回复邮件提醒',
+  avatar: 'monsterid',
+  meta: guest_info,
+  pageSize: '10',
+  lang: 'zh-cn',
+  recordIP: false,
+  serverURLs: ''
+});</script></div></article></main><footer id="footer" style="background-image: url(/img/post/5.jpg)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2020 By 夏日</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="icp"><a href="http://www.beian.gov.cn" target="_blank" rel="noopener"><img class="icp-icon" src="/img/icp.png"/><span>豫ICP备20013184号</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/js/third-party/ClickShowText.js"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":20},"mobile":{"show":false},"log":false,"tagMode":false});</script></body></html><script type="text/javascript" src="/js/crash_cheat.js"></script>
