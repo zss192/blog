@@ -129,42 +129,38 @@ admin:
   deployCommand: './hexo-deploy.sh'
 
 
-# Markdown-it config
-# Docs: https://github.com/hexojs/hexo-renderer-markdown-it/wiki
+## 高级配置
+# markdown-it config
 markdown:
+  # 渲染器
   render:
-    html: true
-    xhtmlOut: false
-    breaks: true
-    linkify: true
-    typographer: true
-    quotes: '“”‘’'
+    html: true # 对Html内容进行转义, 使标签作为文本输出
+    xhtmlOut: false # 不必使用完全的XHtml代码, 换行可以为<br>
+    breaks: true # 每次回车换行相当于一个<br/>标签
+    linkify: true # 链接内联, 将其文本作为链接输出
+    typographer: true # 替换常见的排版元素
+    quotes: '“”‘’' # 将英文单引号和双引号变成中文单引号和双引号
+  # 插件
   plugins:
+    # 缩写插件
     - markdown-it-abbr
+    # 脚注插件
     - markdown-it-footnote
+    # 插入插件
     - markdown-it-ins
+    # 下标插件
     - markdown-it-sub
+    # 上标插件
     - markdown-it-sup
-    - markdown-it-deflist
-    - markdown-it-imsize
-    - markdown-it-mark
-    - markdown-it-regexp
-    - markdown-it-task-checkbox
-    - name: markdown-it-container
-      options: success
-    - name: markdown-it-container
-      options: info
-    - name: markdown-it-container
-      options: warning
-    - name: markdown-it-container
-      options: danger
-    - markdown-it-deflist
-    - name: markdown-it-emoji
-      options:
-        shortcuts: {}
+  # 锚
   anchors:
-    level: 1
+    # 生成Heading ID的标题等级
+    level: 2
+    # Heading ID重复时, 数字的后缀
     collisionSuffix: 'v'
+    # 创建一个锚标记, 除标题还有一个固定链接
     permalink: true
+    # 用于确定锚标记的样式
     permalinkClass: header-anchor
-    permalinkSymbol: ''
+    # 用于确定链接标记的符号
+    permalinkSymbol: ¶

@@ -88,129 +88,71 @@ function activateLightMode(){
 </blockquote>
 <div class="htmledit_views" id="content_views">
                                             <h3><a name="t0"></a><a name="t0"></a>第一步、&nbsp;</h3>
-
 <p>首先去官网下载mysql的安装包<a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="nofollow noopener">https://dev.mysql.com/downloads/mysql/</a></p>
-
 <p>linux generic 的64位的tar -xJvf mysql-8.0.18-linux-glibc2.12-x86_64.tar.xz&nbsp;</p>
-
 <p><img alt="" class="has lazyload" height="186" src="/" width="889" data-src="https://img-blog.csdnimg.cn/20191031195545619.png"></p>
-
 <h3><a name="t1"></a><a name="t1"></a>第二步、解包</h3>
-
 <p>找到下载好的64位mysql安装包</p
-
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tar -xJvf mysql-8.0.18-linux-glibc2.12-x86_64.tar.xz</span><br></pre></td></tr></table></figure>
 <p>移动到指定位置：一定要这个位置，原因是在mysql配置文件中写死了，这样的好处是可以直接用默认文件启动mysql服务&nbsp;</p>
-
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv mysql-8.0.18-linux-glibc2.12-x86_64/ /usr/local/mysql</span><br></pre></td></tr></table></figure>
-
 <h3><a name="t2"></a><a name="t2"></a>第三步、创建mysql用户</h3>
-
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo useradd -r -s /bin/false mysql</span><br></pre></td></tr></table></figure>
-
 <h3><a name="t3"></a><a name="t3"></a>第四步、生成root密码并打印密码（在/usr/local/mysql 目录下执行）</h3>
-
 <p><span style="color:#f33b45;">首先 cd 进入解压缩的文件夹内</span></p>
-
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/mysql</span><br></pre></td></tr></table></figure>
-
 <p>然后执行初始化mysql的密码========&gt;注意这里会获得root密码</p>
-
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ./bin/mysqld <span class="comment">--user=mysql --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data --initialize</span></span><br></pre></td></tr></table></figure>
-
 <p>&nbsp;<img alt="" class="has lazyload" height="162" src="/" width="816" data-src="https://img-blog.csdnimg.cn/20191101020326603.png"></p>
-
 <p>启动mysql服务</p>
-
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ./support-files/mysql.server <span class="keyword">start</span></span><br></pre></td></tr></table></figure>
-
 <p>登录mysql服务器修改root密码</p>
-
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ./bin/mysql -u root -p</span><br></pre></td></tr></table></figure>
-
 <blockquote>
-<p>此处可能会提示<strong>ERROR 2002</strong> (HY000): Can’t connect to local MySQL server through socket ‘/var/lib/mysql/mysql.sock’ (13)<br>，执行下sudo ln -s /tmp/mysql.sock /var/lib/mysql/mysql.sock就可以了（注意权限问题，如果没/var/lib/mysql/的权限也会报错）</p>
+<p>此处可能会提示<strong>ERROR 2002</strong> (HY000): Can’t connect to local MySQL server through socket ‘/var/lib/mysql/mysql.sock’ (13)<br>
+，执行下sudo ln -s /tmp/mysql.sock /var/lib/mysql/mysql.sock就可以了（注意权限问题，如果没/var/lib/mysql/的权限也会报错）</p>
 </blockquote>
 <p>将上面获得的密码通过右键粘贴进去登录到mysql</p>
-
 <p>修改root密码</p>
-
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">user</span> <span class="string">'root'</span>@<span class="string">'localhost'</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">'123456'</span>;</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>&nbsp;下面的两条命令是让navicat等客户端连接mysql的建议执行一下</p>
-
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> <span class="string">'root'</span>@<span class="string">'localhost'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'123456'</span>  <span class="keyword">PASSWORD</span> <span class="keyword">EXPIRE</span> <span class="keyword">NEVER</span>;</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> <span class="string">'root'</span>@<span class="string">'localhost'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">WITH</span> mysql_native_password <span class="keyword">BY</span> <span class="string">'123456'</span>;</span><br></pre></td></tr></table></figure>
-
 </blockquote>
-
 <p>&nbsp;后序操作，配置环境变了 和 开机自启服务</p>
-
 <h3>第五步、配置环境变量，让mysql可以在任何位置下都可以直接执行</h3>
-
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/profile</span><br></pre></td></tr></table></figure>
-
 <h3><a name="t5"></a><a name="t5"></a>&nbsp;将下面的代码添加到文件末尾</h3>
-
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#MYSQL_HOME</span></span><br><span class="line"><span class="built_in">export</span> MYSQL_HOME=/usr/<span class="built_in">local</span>/mysql</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$MYSQL_HOME</span>/bin</span><br></pre></td></tr></table></figure>
-
 <p>一定要记得刷新配置然后环境变量生效</p>
-
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
-
 <p>&nbsp;</p>
-
 <hr><h3><a name="t6"></a><a name="t6"></a>第六步、开机自启服务</h3>
-
 <p>将mysql的默认脚本复制到/etc/init.d&nbsp; 取名叫mysqld就可以全局通过service mysqld start手动启动</p>
-
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /usr/local/mysql/support-files/mysql.server /etc/init.d/mysqld</span><br></pre></td></tr></table></figure>
-
 <p>执行service mysqld start相当于手动开启mysql，将他添加到开机自启服务中</p>
-
 <p>下面是让开机时自动执行这条命令</p>
-
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/rc.local</span><br></pre></td></tr></table></figure>
-
 <p>添加内容</p>
-
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="comment"># rc.local config file created by use</span></span><br><span class="line"> </span><br><span class="line">service mysqld start</span><br><span class="line"> </span><br><span class="line"><span class="built_in">exit</span> 0</span><br></pre></td></tr></table></figure>
-
 <p>给予执行权限</p>
-
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod +x /etc/rc.local</span><br></pre></td></tr></table></figure>
-
 <p>然后重启即可！deepin官网有解释：<a href="https://wiki.deepin.org/wiki/%E8%87%AA%E5%90%AF%E5%8A%A8%E7%A8%8B%E5%BA%8F" target="_blank" rel="nofollow noopener">deepin自启动程序</a></p>
-
 <p>&nbsp;</p>
-
 <h3><a name="t7"></a><a name="t7"></a>&nbsp;常见错误解决方式：</h3>
-
 <p>如果是初始化遇到了问题，你可以删除对应数据（/usr/local/mysql/data）在初始化的时候指定的，</p>
-
 <p>如果没有指定可以删除mysql整个文件夹，然后重新安装</p>
-
 <p>先删除对应文件夹</p>
-
 <p>（mysql要先关闭）</p>
-
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/mysql/bin/mysqld <span class="keyword">stop</span></span><br></pre></td></tr></table></figure>
-
 <p>删除数据，然后重新初始化root用户和密码&nbsp;</p>
-
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rm -rf /usr/local/mysql/data</span><br></pre></td></tr></table></figure>
-
 <p>紧接着，从博客上面的第二步重复执行命令即可，不要跳过命令！要一条一条执行，创建过mysql用户的哪天命令第二次可以不用执行了，因为前面已经创建过了，会提示用户已存在。</p>
 </blockquote>
-
 <p>另外赠送navicat12的包，压缩包目录里有我写好的txt文件。直接解压缩就能使用 免激活。官网的最新版在deepin上运行会报错，建立连接&nbsp;</p>
-
 <p>链接: <a href="https://pan.baidu.com/s/18NecXedG3SuRCZqJCO0B1g" target="_blank" rel="nofollow noopener">https://pan.baidu.com/s/18NecXedG3SuRCZqJCO0B1g</a> 提取码: w8x5</p>
-
-
-</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">夏日</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://zssblog.top/2020/02/24/deepin%E5%AE%89%E8%A3%85mysql/">http://zssblog.top/2020/02/24/deepin%E5%AE%89%E8%A3%85mysql/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://zssblog.top" target="_blank">夏日 の blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Linux/">Linux</a></div><div class="post_share"><div class="social-share" data-image="/img/post/2.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="支付宝"/><div class="post-qr-code__desc">支付宝</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2020/02/27/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"><img class="prev_cover lazyload" data-src="/img/post/3.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">阿里云服务器无法访问解决方案</div></div></a></div><div class="next-post pull_right"><a href="/2020/02/22/Linux%E4%B8%8BuGet%E9%85%8D%E5%90%88aria2/"><img class="next_cover lazyload" data-src="/img/post/3.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Linux下uGet配合aria2</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2020/04/13/deepin使用crontab自动更换壁纸/" title="deepin使用crontab自动更换壁纸"><img class="relatedPosts_cover lazyload"data-src="/img/post/12.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-04-13</div><div class="relatedPosts_title">deepin使用crontab自动更换壁纸</div></div></a></div><div class="relatedPosts_item"><a href="/2020/03/13/deepin终端暂时使用代理/" title="deepin终端暂时使用代理"><img class="relatedPosts_cover lazyload"data-src="/img/post/12.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-03-13</div><div class="relatedPosts_title">deepin终端暂时使用代理</div></div></a></div><div class="relatedPosts_item"><a href="/2020/02/22/Linux下uGet配合aria2/" title="Linux下uGet配合aria2"><img class="relatedPosts_cover lazyload"data-src="/img/post/3.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-02-22</div><div class="relatedPosts_title">Linux下uGet配合aria2</div></div></a></div><div class="relatedPosts_item"><a href="/2020/02/21/deepin添加启动图标(快捷方式)/" title="deepin添加启动图标(快捷方式)"><img class="relatedPosts_cover lazyload"data-src="/img/post/6.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-02-21</div><div class="relatedPosts_title">deepin添加启动图标(快捷方式)</div></div></a></div><div class="relatedPosts_item"><a href="/2020/02/21/deepin双击运行jar文件/" title="deepin双击运行jar文件"><img class="relatedPosts_cover lazyload"data-src="/img/post/5.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-02-21</div><div class="relatedPosts_title">deepin双击运行jar文件</div></div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://unpkg.com/valine@1.4.9/dist/Valine.min.js"></script><script>var GUEST_INFO = ['nick','mail','link'];
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">夏日</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://zssblog.top/2020/02/24/deepin%E5%AE%89%E8%A3%85mysql/">http://zssblog.top/2020/02/24/deepin%E5%AE%89%E8%A3%85mysql/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://zssblog.top" target="_blank">夏日 の blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Linux/">Linux</a></div><div class="post_share"><div class="social-share" data-image="/img/post/10.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="支付宝"/><div class="post-qr-code__desc">支付宝</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2020/02/27/%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"><img class="prev_cover lazyload" data-src="/img/post/3.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">阿里云服务器无法访问解决方案</div></div></a></div><div class="next-post pull_right"><a href="/2020/02/22/Linux%E4%B8%8BuGet%E9%85%8D%E5%90%88aria2/"><img class="next_cover lazyload" data-src="/img/post/3.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Linux下uGet配合aria2</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2020/04/13/deepin使用crontab自动更换壁纸/" title="deepin使用crontab自动更换壁纸"><img class="relatedPosts_cover lazyload"data-src="/img/post/2.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-04-13</div><div class="relatedPosts_title">deepin使用crontab自动更换壁纸</div></div></a></div><div class="relatedPosts_item"><a href="/2020/03/13/deepin终端暂时使用代理/" title="deepin终端暂时使用代理"><img class="relatedPosts_cover lazyload"data-src="/img/post/12.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-03-13</div><div class="relatedPosts_title">deepin终端暂时使用代理</div></div></a></div><div class="relatedPosts_item"><a href="/2020/02/22/Linux下uGet配合aria2/" title="Linux下uGet配合aria2"><img class="relatedPosts_cover lazyload"data-src="/img/post/3.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-02-22</div><div class="relatedPosts_title">Linux下uGet配合aria2</div></div></a></div><div class="relatedPosts_item"><a href="/2020/02/21/deepin添加启动图标(快捷方式)/" title="deepin添加启动图标(快捷方式)"><img class="relatedPosts_cover lazyload"data-src="/img/post/6.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-02-21</div><div class="relatedPosts_title">deepin添加启动图标(快捷方式)</div></div></a></div><div class="relatedPosts_item"><a href="/2020/02/21/deepin双击运行jar文件/" title="deepin双击运行jar文件"><img class="relatedPosts_cover lazyload"data-src="/img/post/5.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-02-21</div><div class="relatedPosts_title">deepin双击运行jar文件</div></div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://unpkg.com/valine@1.4.9/dist/Valine.min.js"></script><script>var GUEST_INFO = ['nick','mail','link'];
 var guest_info = 'nick,mail,link'.split(',').filter(function(item){
   return GUEST_INFO.indexOf(item) > -1
 });
