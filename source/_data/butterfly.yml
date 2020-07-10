@@ -543,7 +543,7 @@ aside:
 
 # 網站公告
 announcement:
-  content: 推荐机场：[点我查看](https://zaizaicloud.me/auth/register?code=gpBf)(正在使用ing)
+  content: 推荐机场：<a href="https://zaizaicloud.me/auth/register?code=gpBf">点我查看</a>(正在使用ing)
 
 # busuanzi count for PV / UV in site
 # 訪問人數
