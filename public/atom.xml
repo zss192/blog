@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zssblog.top/"/>
-  <updated>2020-07-04T03:08:35.263Z</updated>
+  <updated>2020-09-24T14:36:36.212Z</updated>
   <id>http://zssblog.top/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>deepin迁移系统</title>
+    <link href="http://zssblog.top/2020/09/24/deepin%E8%BF%81%E7%A7%BB%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://zssblog.top/2020/09/24/deepin%E8%BF%81%E7%A7%BB%E7%B3%BB%E7%BB%9F/</id>
+    <published>2020-09-24T14:36:36.212Z</published>
+    <updated>2020-09-24T14:36:36.212Z</updated>
+    
+    <content type="html"><![CDATA[<p>tags:</p><ul><li>Linux<br>categories:</li><li>Linux<br>date: 2020-09-24 18:45:00<br>cover: /img/post/3.jpg</li></ul><h1 id="xie-zai-qian-mian">写在前面</h1><p>因为实验室电脑重装了deepin系统，想把笔记本上备份下直接恢复到实验室台式机上，但是数据恢复了，启动项也覆盖了，整了一两天也没整好，卒。</p><p>后尝试把用户目录下的.config文件夹下软件配置直接copy过来发现可行，这样不用再配置软件了。</p><p>本篇文章仅为个人笔记，方便日后重装系统免去配置软件等步骤。</p><h1 id="qian-yi-ju-ti-cao-zuo">迁移具体操作</h1><blockquote><p>进行数据迁移前建议备份下原文件或者用timeshift备份下系统</p></blockquote><p>个人安装的软件一般在opt目录下，把这些软件直接copy到台式机上的opt目录下，如sublime_text</p><p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/img_convert/5dd31e01b012c465c92c2adcfb1bb074.png"  alt="image-20200920112036363"></p><p>然后把笔记本下的.config目录下的sublime对应的文件夹copy到台式机上对应文件夹即可</p><p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/img_convert/7127f51005fd5ae1256545151abee587.png"  alt="image-20200920112109178"></p><p>然后我们打开sublime，会惊奇的发现下载的插件还有配置什么的都还在</p><blockquote><p>注意在opt目录下的软件需要先创建个快捷图标(y=用桌面文件创建工具即可)</p></blockquote><p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/img_convert/ae9bffee4bbeaf6156825c060ebbb0ed.png"  alt="image-20200920112446748"></p><p>其他软件同理，只需把.config下文件copy过来即可，注意copy过来之前不要打开软件否则可能会覆盖你copy过来的文件导致打开软件还需要配置</p><h1 id="deepin-qi-ta-pei-zhi">deepin其它配置</h1><p>安装好deepin后还需要很多配置</p><p>1.首先在设置里更新下系统然后把智能镜像源切换成国内的源</p><p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/img_convert/dce0a17cef5e42ee5712ae8bce48882e.png"  alt="image-20200920112804733"></p><p>2.把Windows下的C:\Windows\Fonts文件夹复制到deepin下。打开deepin字体安装器，直接把Fonts文件夹拖进去即可。然后去设置里更改下字体</p><p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/img_convert/74567fb7803add9ec6ff04056712b30b.png"  alt="image-20200920113329172"></p><p>3.由于经常要为一些可执行文件创建桌面图标，安装下一个桌面文件创建软件。<a href="https://blog.csdn.net/zss192/article/details/104427330" target="_blank" rel="noopener">点我下载</a></p><p>4.谷歌浏览器登录账号同步即可。若浏览器字体不清楚可以</p><ul><li>用stylus插件，<a href="https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?utm_source=chrome-ntp-icon" target="_blank" rel="noopener">点我下载</a>。然后下载思源黑体即可，<a href="https://userstyles.org/styles/123597/theme" target="_blank" rel="noopener">点我下载</a>。这样会强制渲染浏览器字体为思源黑体。</li><li>全部设置字体为微软雅黑（外观-&gt;自定义字体）</li></ul><p>5.普通用户使用sudo免密码：dedit /etc/sudoers 修改your_user_name ALL=(ALL) NOPASSWD: ALL</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;tags:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux&lt;br&gt;
+categories:&lt;/li&gt;
+&lt;li&gt;Linux&lt;br&gt;
+date: 2020-09-24 18:45:00&lt;br&gt;
+cover: /img/post/3.jpg&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;xie-z
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>互联网+反爬虫核心技术说明</title>
@@ -549,35 +579,6 @@
     
     
       <category term="日常办公" scheme="http://zssblog.top/tags/%E6%97%A5%E5%B8%B8%E5%8A%9E%E5%85%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>deepin使用crontab自动更换壁纸</title>
-    <link href="http://zssblog.top/2020/04/13/deepin%E4%BD%BF%E7%94%A8crontab%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%8D%A2%E5%A3%81%E7%BA%B8/"/>
-    <id>http://zssblog.top/2020/04/13/deepin%E4%BD%BF%E7%94%A8crontab%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%8D%A2%E5%A3%81%E7%BA%B8/</id>
-    <published>2020-04-13T09:33:00.000Z</published>
-    <updated>2020-04-14T03:20:08.324Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="qi-yin">起因</h1><p>deepin下有自动更换壁纸功能，但是最多间隔1小时且最多自动更换范围为15张图片。</p><h1 id="jie-jue-fang-fa">解决方法</h1><p>用python脚本更换壁纸，再利用crontab定时执行python脚本完成自动更换壁纸功能。crontab也可定时执行其他sh脚本、python脚本。我也是第一次接触crontab，后将其用于github博客每天自动更新，或者每天自动把本地笔记推到github都是不错的选择。</p><h1 id="python-jiao-ben">python脚本</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python3</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">利用linux下的crontab工具实现半小时切换一次，</span></span><br><span class="line"><span class="string">*/30 * * * * python /xxx/changebackground.py</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 更换壁纸指令，此为deepin更换指令，不代表所有linux发行版更换指令</span></span><br><span class="line">cmd = <span class="string">"gsettings set com.deepin.wrap.gnome.desktop.background picture-uri "</span></span><br><span class="line"><span class="comment"># 图片目录，用户可自主更换</span></span><br><span class="line">path = <span class="string">"/home/zss/Pictures/"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 利用os.listdir()方法获取图片目录下的所有文件名的列表</span></span><br><span class="line">pic_list = os.listdir(path)</span><br><span class="line"><span class="comment"># 确切的文件位置，以及确切的更换指令</span></span><br><span class="line"><span class="keyword">while</span>(<span class="literal">True</span>):</span><br><span class="line">real_path = path + str(random.choice(pic_list))</span><br><span class="line"><span class="keyword">if</span>(real_path[<span class="number">-3</span>:]==<span class="string">"jpg"</span> <span class="keyword">or</span> real_path[<span class="number">-3</span>:]==<span class="string">"png"</span>):</span><br><span class="line"><span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">real_cmd = cmd + <span class="string">"\""</span> + real_path +<span class="string">"\""</span></span><br><span class="line"><span class="comment"># 执行</span></span><br><span class="line">pid = subprocess.check_output([<span class="string">"pgrep"</span>, <span class="string">"dde-session"</span>]).decode(<span class="string">"utf-8"</span>).strip()<span class="comment">#获取到dde-session的PID具体请看上面的那个问题与回答</span></span><br><span class="line">cmd = <span class="string">"grep -z DBUS_SESSION_BUS_ADDRESS /proc/"</span> + pid + <span class="string">"/environ|cut -d= -f2-"</span></span><br><span class="line">os.environ[<span class="string">"DBUS_SESSION_BUS_ADDRESS"</span>] = subprocess.check_output(</span><br><span class="line">    [<span class="string">'/bin/bash'</span>, <span class="string">'-c'</span>, cmd]).decode(<span class="string">"utf-8"</span>).strip().replace(<span class="string">"\0"</span>, <span class="string">""</span>)</span><br><span class="line">    </span><br><span class="line">os.system(real_cmd)</span><br></pre></td></tr></table></figure><blockquote><p>脚本为一篇博客发现，但原脚本本地执行有效，一放到corntab就不行，原因下面讲述。</p></blockquote><h1 id="crontab">crontab</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">crontab <span class="literal">-e</span> //进入corntab文件</span><br><span class="line">crontab <span class="literal">-l</span> //查看corntan文件</span><br></pre></td></tr></table></figure><p>f1 f2 f3 f4 f5 program</p><ul><li>其中 f1 是表示分钟，f2 表示小时，f3 表示一个月份中的第几日，f4 表示月份，f5 表示一个星期中的第几天。program 表示要执行的程序。</li><li>当 f1 为 * 时表示每分钟都要执行 program，f2 为 * 时表示每小时都要执行程序，其馀类推</li><li>当 f1 为 a-b 时表示从第 a 分钟到第 b 分钟这段时间内要执行，f2 为 a-b 时表示从第 a 到第 b 小时都要执行，其馀类推</li><li>当 f1 为 */n 时表示每 n 分钟个时间间隔执行一次，f2 为 */n 表示每 n 小时个时间间隔执行一次，其馀类推</li><li>当 f1 为 a, b, c,… 时表示第 a, b, c,… 分钟要执行，f2 为 a, b, c,… 时表示第 a, b, c…个小时要执行，其馀类推</li></ul><h1 id="wu-xiao-jie-jue-fang-fa">无效解决方法</h1><ol><li>所有文件必须是绝对路径</li><li>例如python命令也要用绝对路径，如/usr/bin/python</li><li>对于sh文件无效可尝试先进入文件夹再执行./test.sh</li><li>对于deepin更换壁纸一定要注意加上以下代码，具体原因见<a href="https://blog.csdn.net/u011648373/article/details/84837650" target="_blank" rel="noopener">用Python爬虫+Crontab实现自动更换电脑壁纸</a></li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pid = subprocess.check_output([<span class="string">"pgrep"</span>, <span class="string">"dde-session"</span>]).decode(<span class="string">"utf-8"</span>).strip()<span class="comment">#获取到dde-session的PID具体请看上面的那个问题与回答</span></span><br><span class="line">cmd = <span class="string">"grep -z DBUS_SESSION_BUS_ADDRESS /proc/"</span> + pid + <span class="string">"/environ|cut -d= -f2-"</span></span><br><span class="line">os.environ[<span class="string">"DBUS_SESSION_BUS_ADDRESS"</span>] = subprocess.check_output(</span><br><span class="line">    [<span class="string">'/bin/bash'</span>, <span class="string">'-c'</span>, cmd]).decode(<span class="string">"utf-8"</span>).strip().replace(<span class="string">"\0"</span>, <span class="string">""</span>)</span><br></pre></td></tr></table></figure><h1 id="ge-ren-wen-jian-pei-zhi-shi-li">个人文件配置示例</h1><p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20200414111959680.png"  alt="在这里插入图片描述"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;qi-yin&quot;&gt;起因&lt;/h1&gt;
-&lt;p&gt;deepin下有自动更换壁纸功能，但是最多间隔1小时且最多自动更换范围为15张图片。&lt;/p&gt;
-&lt;h1 id=&quot;jie-jue-fang-fa&quot;&gt;解决方法&lt;/h1&gt;
-&lt;p&gt;用python脚本更换壁纸，再利用crontab定时执行
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="http://zssblog.top/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://zssblog.top/tags/Linux/"/>
     
   </entry>
   
