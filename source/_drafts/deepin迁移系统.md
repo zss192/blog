@@ -1,15 +1,15 @@
 ---
+{}
+date: 2020-09-24 22:43:13
+---
+
+---
 tags:
   - Linux
 categories:
   - Linux
 date: 2020-09-24 18:45:00
-
----
-
----
-
-
+cover: /img/post/3.jpg
 
 # 写在前面
 
