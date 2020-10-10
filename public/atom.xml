@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zssblog.top/"/>
-  <updated>2020-09-24T14:50:19.254Z</updated>
+  <updated>2020-10-10T13:13:34.521Z</updated>
   <id>http://zssblog.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>校园网免认证</title>
+    <link href="http://zssblog.top/2020/10/10/%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%85%8D%E8%AE%A4%E8%AF%81/"/>
+    <id>http://zssblog.top/2020/10/10/%E6%A0%A1%E5%9B%AD%E7%BD%91%E5%85%8D%E8%AE%A4%E8%AF%81/</id>
+    <published>2020-10-10T13:12:00.000Z</published>
+    <updated>2020-10-10T13:13:34.521Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="xie-zai-qian-mian">写在前面</h1><blockquote><p>全网首发，仅适用于河南大学，转载前请留言告知。CSDN:<a href="https://blog.csdn.net/zss192/article/details/109004166" target="_blank" rel="noopener">点我查看</a></p></blockquote><p>相信大家是不是有这样的经历，每次去综合楼连上校园网后都会跳到认证页面。它长这个亚子</p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201010161459259.png"  alt="image-20201010161459259"></p><p>更有甚者根本不自动跳到认证页面，频繁的验证着实麻烦。</p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/0855.png"  alt="1"></p><p>那么有没有一种方法让校园网和平常用的无线网一样自动连接后直接就可以使用呢？？</p><p><strong>恭喜你找到了宝藏</strong>，你只需要简单的几个步骤就可以解决这个问题。</p><h1 id="zheng-chang-ren-zheng">正常认证</h1><p>按往常一样连接上校园网认证，然后再打开那个认证界面，<a href="http://172.22.255.18/" target="_blank" rel="noopener">点我查看</a>。</p><p>点击图中所示的自服务</p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201010162140659.png"  alt="image-20201010162140659"></p><p>账号密码和认证页面一样，登录进去</p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201010162237466.png"  alt="image-20201010162237466"></p><p>点击左侧导航栏的用户–&gt;无感知认证</p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201010162355373.png"  alt="image-20201010162355373"></p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201010162416117.png"  alt="image-20201010162416117"></p><p>点击增加MAC地址即可</p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201010162504605.png"  alt="image-20201010162504605"></p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201010162522215.png"  alt="image-20201010162522215"></p><p>最最关键的一步，添加完后别忘了开启无感知认证，开启后是这个亚子。</p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/qq_pic_merged_1602335104702.jpg"  alt="qq_pic_merged_1602335104702"></p><h1 id="mac-di-zhi-cha-kan-fang-fa">MAC地址查看方法</h1><p>那么问题来了，MAC地址在哪看呢？？？</p><h2 id="dian-nao-duan" id="电脑端"><a class="header-anchor" href="#电脑端">¶</a>电脑端</h2><p>Win + R 快捷键调出“运行”对话框，输入“cmd”，确定，打开“命令提示符”窗口，输入命令 <strong>ipconfig /all</strong> ，回车运行。</p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201010163445429.png"  alt="image-20201010163445429"></p><p>就是上图所述，但是需要把&quot;-“换成”:&quot;</p><p>例如MAC：a1-b2-c3-d4-e5-f6那么我们输入a1:b2:c3:d4:e5:f6即可</p><h2 id="shou-ji-duan" id="手机端"><a class="header-anchor" href="#手机端">¶</a>手机端</h2><p>如果是手机的话一般在设置里面的系统–&gt;关于手机–&gt;状态信息里面，它长这个亚子</p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/39CB2F22459305D07889EF403613D9E7.jpg"  alt="39CB2F22459305D07889EF403613D9E7"></p><blockquote><p>以上是荣耀手机查看MAC地址方法，其他手机类似。</p></blockquote><h1 id="jie-yu">结语</h1><p>至此就大功告成了，以后你就可以享受一到综合楼手机直接可以上校园网的快感了</p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/16023354244172.png"  alt="16023354244172"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;xie-zai-qian-mian&quot;&gt;写在前面&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;全网首发，仅适用于河南大学，转载前请留言告知。CSDN:&lt;a href=&quot;https://blog.csdn.net/zss192/article/details/10900
+      
+    
+    </summary>
+    
+    
+      <category term="日常办公" scheme="http://zssblog.top/categories/%E6%97%A5%E5%B8%B8%E5%8A%9E%E5%85%AC/"/>
+    
+    
+      <category term="日常办公" scheme="http://zssblog.top/tags/%E6%97%A5%E5%B8%B8%E5%8A%9E%E5%85%AC/"/>
+    
+  </entry>
   
   <entry>
     <title>deepin迁移系统</title>
@@ -541,34 +569,6 @@
       
         &lt;h1 id=&quot;qi-yin&quot;&gt;起因&lt;/h1&gt;
 &lt;p&gt;前几天接触到linux中的crontab可以定时完成更换壁纸、推送本地文件到github等功能。这几天想着可不可以弄个自动签到的脚本，本来用的爬虫带cookie实现登录然后签到，但是过几天cookie失效就凉凉了。偶然的机会了
-      
-    
-    </summary>
-    
-    
-      <category term="日常办公" scheme="http://zssblog.top/categories/%E6%97%A5%E5%B8%B8%E5%8A%9E%E5%85%AC/"/>
-    
-    
-      <category term="日常办公" scheme="http://zssblog.top/tags/%E6%97%A5%E5%B8%B8%E5%8A%9E%E5%85%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ERROR 1273 (HY000): Unknown collation: &#39;utf8mb4_0900_ai_ci&#39;</title>
-    <link href="http://zssblog.top/2020/04/15/ERROR-1273-HY000-Unknown-collation-utf8mb4-0900-ai-ci/"/>
-    <id>http://zssblog.top/2020/04/15/ERROR-1273-HY000-Unknown-collation-utf8mb4-0900-ai-ci/</id>
-    <published>2020-04-15T13:21:41.000Z</published>
-    <updated>2020-05-31T10:13:31.062Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="qi-yin">起因</h1><p>本地数据库迁移到服务器出错，特此记录下。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR 1273 (HY000): Unknown collation: <span class="string">'utf8mb4_0900_ai_ci'</span></span><br></pre></td></tr></table></figure><h1 id="pei-zhi">配置</h1><p>本地：mysql  8.0.19<br>服务器：mysql 5.7.29</p><h1 id="jie-jue-fang-fa">解决方法</h1><p>因为是<strong>高版本导入到低版本</strong>，引起1273错误</p><p>打开sql文件，将文件中的所有<br>utf8mb4_0900_ai_ci替换为utf8_general_ci</p><p>utf8mb4替换为utf8<br>保存后重新在服务器运行sql文件即可。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;qi-yin&quot;&gt;起因&lt;/h1&gt;
-&lt;p&gt;本地数据库迁移到服务器出错，特此记录下。&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/
       
     
     </summary>
