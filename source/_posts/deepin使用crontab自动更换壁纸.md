@@ -7,6 +7,7 @@ categories:
 date: 2020-04-13 17:33:00
 ---
 # 起因
+
 deepin下有自动更换壁纸功能，但是最多间隔1小时且最多自动更换范围为15张图片。
 # 解决方法
 用python脚本更换壁纸，再利用crontab定时执行python脚本完成自动更换壁纸功能。crontab也可定时执行其他sh脚本、python脚本。我也是第一次接触crontab，后将其用于github博客每天自动更新，或者每天自动把本地笔记推到github都是不错的选择。
