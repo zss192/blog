@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zssblog.top/"/>
-  <updated>2020-10-15T05:15:10.560Z</updated>
+  <updated>2020-10-16T13:46:20.424Z</updated>
   <id>http://zssblog.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git使用方法</title>
+    <link href="http://zssblog.top/2020/10/16/Git%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+    <id>http://zssblog.top/2020/10/16/Git%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</id>
+    <published>2020-10-16T13:45:00.000Z</published>
+    <updated>2020-10-16T13:46:20.424Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="chang-yong-dai-ma">常用代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git init    &#x2F;&#x2F;初始化仓库,若是用的clone则不需要这步</span><br><span class="line">git config --global user.name &quot;账户名&quot;</span><br><span class="line">git config --global user.email &quot;邮箱号&quot;</span><br><span class="line">git config --global --list&#x2F;&#x2F;查看全局配置(设置的邮箱等)</span><br><span class="line">git remote add origin 远程库地址 &#x2F;&#x2F;关联到远程库</span><br><span class="line"></span><br><span class="line">日常使用步骤</span><br><span class="line">git add .&#x2F;&#x2F;把文件添加到版本库中</span><br><span class="line">git commit -m &quot;test&quot;&#x2F;&#x2F;把文件提交到仓库。引号内为提交说明</span><br><span class="line">git pull origin master&#x2F;&#x2F;把远程仓库的master分之拉到本地</span><br><span class="line">git push origin master&#x2F;&#x2F;把本地文件推到远程仓库master分支</span><br></pre></td></tr></table></figure><h1 id="su-cha-biao">速查表</h1><p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/img_convert/c3564e1d2318110e06be04b97fdf8fd0.png"  alt="img"></p><h1 id="zhu-yi-shi-xiang">注意事项</h1><p>1.不到万不得已不要使用强制提交(问就是曾和学长一起开发系统用过，然后把更新记录全部覆盖了，虽然代码没什么大改动，但是提交记录被全部覆盖不利于后期维护)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --force origin master　如果本地比远程仓库版本低，会提醒先git pull更新，但仍要坚持提交可用这个强制提交</span><br></pre></td></tr></table></figure><p>2.github添加了ssh密钥使用ssh -T git@github.com测试报错？</p><p>事实证明重启即可</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;chang-yong-dai-ma&quot;&gt;常用代码&lt;/h1&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
+      
+    
+    </summary>
+    
+    
+      <category term="日常办公" scheme="http://zssblog.top/categories/%E6%97%A5%E5%B8%B8%E5%8A%9E%E5%85%AC/"/>
+    
+    
+      <category term="日常办公" scheme="http://zssblog.top/tags/%E6%97%A5%E5%B8%B8%E5%8A%9E%E5%85%AC/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo博客部署到服务器</title>
@@ -558,34 +585,6 @@
     
     
       <category term="数据结构" scheme="http://zssblog.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>科学上网教程</title>
-    <link href="http://zssblog.top/2020/04/22/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%95%99%E7%A8%8B/"/>
-    <id>http://zssblog.top/2020/04/22/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%95%99%E7%A8%8B/</id>
-    <published>2020-04-22T10:24:00.000Z</published>
-    <updated>2020-05-31T10:10:28.121Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="shuo-ming">说明</h1><p>本次文章涉及的均为免费翻墙，效果肯定不如付费的。但如果不追求YouTube 4K画质足够平常用了。主要介绍ssr(目前在用)</p><h2 id="su-du-jie-tu" id="速度截图"><a class="header-anchor" href="#速度截图">¶</a>速度截图</h2><p>YouTube 4k视频速度，这个速度相当可以了，如果用过YouTube的应该知道<br><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20200422172222546.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"></p><p>github下载速度测试，最快可达到2.3M/s（手机热点），一下40多M没了，有点心疼</p><p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/2020042217273073.png"  alt="在这里插入图片描述"></p><p>其他的就不测了，一般这个速度完全满足大部分的需求了</p><h1 id="ssr-ji-chang">ssr机场</h1><p>ssr主要是各种机场，一般机场有免费流量，追求速度可以包月</p><p>接下来就介绍下几个我用的机场，大家看哪个好用用哪个，一般我都用</p><p>如果提示不能注册进相应的QQ群问管理员要注册链接</p><h2 id="zai-zai-yun" id="崽崽云"><a class="header-anchor" href="#崽崽云">¶</a>崽崽云</h2><p>免费节点情况：</p><p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20200422173510903.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"></p><p>QQ群：580539633</p><p>注册链接：<a href="https://zaizaicloud.pw/auth/register?code=gpBf" target="_blank" rel="noopener">https://zaizaicloud.pw/auth/register?code=gpBf</a></p><h2 id="n-95" id="N95"><a class="header-anchor" href="#N95">¶</a>N95</h2><p>免费节点情况：不巧，这几天免费节点正在维护，就不放截图了</p><p>QQ群：717740592</p><p>注册链接：<a href="https://n95cloud.com/auth/register?code=pIsY" target="_blank" rel="noopener">https://n95cloud.com/auth/register?code=pIsY</a></p><h2 id="you-yun-666" id="优云666"><a class="header-anchor" href="#优云666">¶</a>优云666</h2><p>免费节点情况：太多了，没截完</p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@latest/images/image-20200422173851471.png"  alt="image-20200422173851471"></p><p>没QQ群，TG群：<a href="https://t.me/youyun666" target="_blank" rel="noopener">https://t.me/youyun666</a></p><p>注册链接：<a href="https://youyun666.com/auth/register?code=6QxZ" target="_blank" rel="noopener">https://youyun666.com/auth/register?code=6QxZ</a></p><h2 id="xi-xicats" id="XiXicats"><a class="header-anchor" href="#XiXicats">¶</a>XiXicats</h2><p>免费节点情况：</p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@latest/images/image-20200422174309129.png"  alt="image-20200422174309129"></p><p>没QQ群</p><p>注册链接：<a href="https://xixicats.com/auth/register?code=p4LT" target="_blank" rel="noopener">https://xixicats.com/auth/register?code=p4LT</a></p><h1 id="ssr-shi-yong-jiao-cheng">ssr使用教程</h1><p>有了机场，那么我们怎么使用呢，别急，慢慢往下看</p><h2 id="ke-hu-duan-xia-zai" id="客户端下载"><a class="header-anchor" href="#客户端下载">¶</a>客户端下载</h2><blockquote><p>因为我用的linux版的客户端和Windows有点不一样，如果遇到问题下方留言</p></blockquote><p>下载 SSR 客户端，解压后以管理员身份运行 ShadowsocksR-dotnet4.0.exe。若系统提示需要安装 .NET Framework，请<a href="https://www.microsoft.com/net/download/dotnet-framework-runtime" target="_blank" rel="noopener">点此</a>访问微软官网下载安装。</p><p><a href="https://zaizaicloud.pw/client-download/ssr.7z" target="_blank" rel="noopener"> 客户端下载点我</a></p><h2 id="pei-zhi" id="配置"><a class="header-anchor" href="#配置">¶</a>配置</h2><p>下载好后我们去机场复制订阅链接</p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@latest/images/image-20200422174757757.png"  alt="image-20200422174757757"></p><p>然后找到添加订阅</p><p><img src="/" class="lazyload" data-src="https://zaizaicloud.pw/theme/malio/img/tutorial/windows-ssr-2.jpg"  alt="image-20200422175212224"></p><p>右键点击小飞机，选择 “服务器订阅” &gt; “更新SSR服务器订阅”</p><p><img src="/" class="lazyload" data-src="https://zaizaicloud.pw/theme/malio/img/tutorial/windows-ssr-3.jpg"  alt="image-20200422175420070"></p><p>鼠标放到服务器出现FreeSSR-public,然后会出现很多节点选择一个即可</p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@latest/images/image-20200422175606983.png"  alt="image-20200422175606983"></p><h2 id="xun-zhao-ji-chang-fang-fa" id="寻找机场方法"><a class="header-anchor" href="#寻找机场方法">¶</a>寻找机场方法</h2><p>以上机场也是我在YouTube看到的，其实这类机场还有很多，有需求的可去YouTube搜机场你就会发现一大堆人专门分享机场给你介绍</p><h2 id="ji-qiao" id="技巧"><a class="header-anchor" href="#技巧">¶</a>技巧</h2><p>之所以介绍好几个机场，是为了方便切换，如果使用过程突然不能用尝试更换节点即可</p><p>介绍下系统代理模式中的PAC和全局模式的区别</p><ul><li>PAC：有一个列表，列表内的网站都揍代理，比如常见的YouTube、google。优点是节省流量，大陆内网站访问速度较快，但打开部分外国会出现不走代理点情况，还有下载软件也不会走代理的</li><li>全局模式：既然PAC部分网站不走代理，那么全局模式就可以解决。全局即电脑所有流量均走代理，即使你访问大陆网站也是走代理，这样就会导致消耗更多的流量且访问大陆网站速度慢</li><li>建议平常开PAC、需要走全局的时候再切换全局模式</li></ul><h1 id="v-2-ray">v2ray</h1><p>v2ray和ssr类似，只不过v2ray目前比ssr稳定，也存在v2ray的机场，但是都没免费的，所以就不介绍了</p><h1 id="zi-xing-da-jian">自行搭建</h1><p>这点个人不推荐，花费较大，且速度没有保证，万一你选的服务器速度慢，那你就瞎了。如果追求速度稳定，建议购买机场包月，也不贵，一月才十来块，而且可以多人合买</p><h1 id="ssr-que-dian">ssr缺点</h1><p>介绍完ssr大家看了速度挺激动是吧，速度那么快，那还花钱包月干啥，事实是太天真了。</p><p>免费节点虽然部分节点速度确实快，但是会出现掉线的情况，比如用着用着不能用了，这个时候就要切换节点，而且高峰期的时候网速会打折扣。</p><p>但其实要不是每天看YouTube免费的就够用了，目前我还是用的白嫖的节点</p><p>因为我最近发现YouTube还挺好，有点想合买会员的冲动，有想合买的可滴滴我</p><h1 id="fu-li">福利</h1><p>对于免费机场大多采用每天签到可以领取1-5G流量的奖励，建议大家签到不然流量可能会不够用，当然如果你比较壕开个会员，那当我没说。</p><p>前几天用Python的selenium搭配linux的crontab写了个自动签到的脚本，实现每天自动签到，文章见：<a href="https://blog.csdn.net/zss192/article/details/105574863" target="_blank" rel="noopener">点我查看</a></p><p>用了几天的感受偶尔可能会签到失败，因为是外国的网站有时候打不开导致的(开代理就行)</p><p>如果大家不想每天苦逼的签到，去我csdn：<a href="https://blog.csdn.net/zss192" target="_blank" rel="noopener">点我查看</a>关注下(总不能让你白嫖吧)，私聊发我你账号密码就行</p><p>适用机场：崽崽云、N95（其他机场登录有验证所以脚本不能用）</p><p>放张脚本截图</p><p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@latest/images/1.jpg"  alt="Cache_2330dc506cd4d0e1."></p><h1 id="xie-zai-zui-hou">写在最后</h1><p>分享不易，如有帮助还望多支持下我的博客</p><p><a href="https://blog.csdn.net/zss192" target="_blank" rel="noopener">CSDN</a></p><p><a href="http://39.107.45.243/" target="_blank" rel="noopener">个人博客</a></p><p>有问题博客留言板留言或者文章下方留言</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;shuo-ming&quot;&gt;说明&lt;/h1&gt;
-&lt;p&gt;本次文章涉及的均为免费翻墙，效果肯定不如付费的。但如果不追求YouTube 4K画质足够平常用了。主要介绍ssr(目前在用)&lt;/p&gt;
-&lt;h2 id=&quot;su-du-jie-tu&quot; id=&quot;速度截图&quot;&gt;&lt;a class=&quot;h
-      
-    
-    </summary>
-    
-    
-      <category term="日常办公" scheme="http://zssblog.top/categories/%E6%97%A5%E5%B8%B8%E5%8A%9E%E5%85%AC/"/>
-    
-    
-      <category term="日常办公" scheme="http://zssblog.top/tags/%E6%97%A5%E5%B8%B8%E5%8A%9E%E5%85%AC/"/>
     
   </entry>
   
