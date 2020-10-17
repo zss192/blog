@@ -583,14 +583,14 @@ readmode:
 
 # dark mode
 darkmode:
-  enable: true
+  enable: false
   # dark mode和 light mode切換按鈕
   button: true
   # 自動切換 dark mode和 light mode
   # autoChangeMode: 1  跟隨系統而變化，不支持的瀏覽器/系統將按照時間晚上6點到早上6點之間切換為 dark mode
   # autoChangeMode: 2  只按照時間晚上6點到早上6點之間切換為 dark mode
   # autoChangeMode: false 取消自動切換
-  autoChangeMode: 1
+  autoChangeMode: false
 
 ####    other     ####
 #------------------------------------------------
