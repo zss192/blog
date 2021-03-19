@@ -8,6 +8,6 @@ echo "成功操作hexo g -d"
 echo "-----------------------------------"
 git add .
 git commit -m "add"
-git pull origin master
-git push origin master
+proxychains git pull origin master
+proxychains git push origin master
 echo "成功将博客源码推到github"
