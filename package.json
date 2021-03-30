@@ -9,35 +9,36 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "4.2.1"
+    "version": "5.4.0"
   },
   "dependencies": {
-    "hexo": "^4.0.0",
+    "hexo": "^5.4.0",
     "hexo-admin-cn": "^2.1.0",
-    "hexo-deployer-git": "^2.1.0",
+    "hexo-deployer-git": "^3.0.0",
     "hexo-deployer-heroku": "^0.1.2",
     "hexo-deployer-openshift": "^0.1.2",
     "hexo-deployer-rsync": "^1.0.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
-    "hexo-generator-feed": "^2.2.0",
+    "hexo-generator-feed": "^3.0.0",
     "hexo-generator-index-pin-top": "^0.2.2",
-    "hexo-generator-sitemap": "^2.0.0",
+    "hexo-generator-sitemap": "^2.1.0",
     "hexo-generator-tag": "^1.0.0",
     "hexo-helper-live2d": "^3.1.1",
     "hexo-renderer-ejs": "^1.0.0",
-    "hexo-renderer-markdown-it": "^4.1.0",
+    "hexo-renderer-markdown-it": "^5.0.0",
     "hexo-renderer-pug": "^1.0.0",
-    "hexo-renderer-stylus": "^1.1.0",
-    "hexo-server": "^1.0.0",
+    "hexo-renderer-stylus": "^2.0.1",
+    "hexo-server": "^2.0.0",
     "hexo-wordcount": "^6.0.1",
+    "highlight.js": "^10.7.1",
     "live2d-widget-model-miku": "^1.0.5",
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-footnote": "^3.0.2",
-    "markdown-it-ins": "^3.0.0",
+    "markdown-it-ins": "^3.0.1",
     "markdown-it-named-headings": "^1.1.0",
     "markdown-it-sub": "^1.0.0",
     "markdown-it-sup": "^1.0.0",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.4"
   }
 }
