@@ -58,14 +58,14 @@
   </url>
   
   <url>
-    <loc>https://zss192.github.io/messageboard/index.html</loc>
+    <loc>https://zss192.github.io/link/index.html</loc>
     
     <lastmod>2022-11-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://zss192.github.io/link/index.html</loc>
+    <loc>https://zss192.github.io/categories/index.html</loc>
     
     <lastmod>2022-11-14</lastmod>
     
@@ -79,13 +79,6 @@
   </url>
   
   <url>
-    <loc>https://zss192.github.io/tags/index.html</loc>
-    
-    <lastmod>2022-11-14</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://zss192.github.io/2021/07/05/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%85%A8/</loc>
     
     <lastmod>2022-11-14</lastmod>
@@ -93,7 +86,14 @@
   </url>
   
   <url>
-    <loc>https://zss192.github.io/categories/index.html</loc>
+    <loc>https://zss192.github.io/messageboard/index.html</loc>
+    
+    <lastmod>2022-11-14</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zss192.github.io/tags/index.html</loc>
     
     <lastmod>2022-11-14</lastmod>
     
