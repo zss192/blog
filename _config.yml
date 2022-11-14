@@ -1,8 +1,3 @@
-# Hexo Configuration
-## Docs: https://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
-
-# Site
 title: 夏日 の blog
 subtitle: ''
 description: '不甘于平凡'
@@ -121,9 +116,6 @@ deploy:
 -  type: git
    repository: git@github.com:zss192/zss192.github.io.git
    branch: master
--  type: git
-   repository: git@e.coding.net:zss192/zss192/zss192.coding.me.git     
-   branch: master      # 分支
 
 admin:
   deployCommand: './hexo-deploy.sh'
