@@ -1,0 +1,2199 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>操作系统 | 夏日 の blog</title><meta name="description" content="操作系统"><meta name="keywords" content="计算机专业课"><meta name="author" content="夏日"><meta name="copyright" content="夏日"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="操作系统"><meta name="twitter:description" content="操作系统"><meta name="twitter:image" content="https://zss192.github.io/img/post/4.jpg"><meta property="og:type" content="article"><meta property="og:title" content="操作系统"><meta property="og:url" content="https://zss192.github.io/2022/11/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><meta property="og:site_name" content="夏日 の blog"><meta property="og:description" content="操作系统"><meta property="og:image" content="https://zss192.github.io/img/post/4.jpg"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="https://zss192.github.io/2022/11/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><link rel="prev" title="" href="https://zss192.github.io/2022/11/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><link rel="next" title="网络安全" href="https://zss192.github.io/2022/11/14/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"欢迎你,来到,我的博客","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: false,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isSidebar: true  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><script src="/js/sakura.js"></script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="夏日 の blog" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">17</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">2</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-coffee"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">绪论</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">2.1.</span> <span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98"><span class="toc-number">2.2.</span> <span class="toc-text">习题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">进程的描述与控制</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9-v2"><span class="toc-number">3.1.</span> <span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98-v2"><span class="toc-number">3.2.</span> <span class="toc-text">习题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">处理机调度与死锁</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9-v3"><span class="toc-number">4.1.</span> <span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98-v3"><span class="toc-number">4.2.</span> <span class="toc-text">习题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">内存管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9-v4"><span class="toc-number">5.1.</span> <span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98-v4"><span class="toc-number">5.2.</span> <span class="toc-text">习题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">文件管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9-v5"><span class="toc-number">6.1.</span> <span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98-v5"><span class="toc-number">6.2.</span> <span class="toc-text">习题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">7.</span> <span class="toc-text">设备管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9-v6"><span class="toc-number">7.1.</span> <span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A0%E9%A2%98-v6"><span class="toc-number">7.2.</span> <span class="toc-text">习题</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><div class="post-bg" id="nav" style="background-image: url(/img/post/4.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">夏日 の blog</a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-coffee"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">操作系统</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2022-11-14 17:36:00"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2022-11-14</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2022-11-14 23:58:48"><i class="fa fa-history" aria-hidden="true"></i> 更新于 2022-11-14</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E4%B8%9A%E8%AF%BE/">计算机专业课</a></span></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="post-meta__icon fa fa-file-word-o" aria-hidden="true"></i><span>字数总计:</span><span class="word-count">30k</span><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-clock-o" aria-hidden="true"></i><span>阅读时长: 92 分钟</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-comment-o" aria-hidden="true"></i><span>评论数:</span><a href="/2022/11/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/2022/11/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" itemprop="commentCount"></span></a></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container"><h1>写在前面</h1>
+<p>作者：夏日</p>
+<p>博客地址：<a target="_blank" rel="noopener" href="https://blog.csdn.net/zss192">https://blog.csdn.net/zss192</a></p>
+<p>思维导图快速复习见我这篇博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/zss192/article/details/112388383">操作系统思维导图总结</a></p>
+<p>本文结合天勤考研的高分笔记和王道考研的PPT进行总结</p>
+<p>所用到的资料：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1gl936J5fLHBAAndMLGYbsg">传送门</a>  密码: j6md</p>
+<h1>绪论</h1>
+<h2 id="知识点"><a class="header-anchor" href="#知识点">¶</a>知识点</h2>
+<p>1.操作系统(Operating System即OS)：指控制和管理整个计算机系统的硬件和软件资源，并合理的组织调度计算机的工作和资源的分配，以提供给用户和其他软件方便的接口的环境。它是计算机系统中的最基本的<strong>系统软件</strong>。</p>
+<p>2.操作系统的特征</p>
+<ul>
+<li>并发性(最基本的特征)
+<ul>
+<li>并发：交替发生(宏观同时发生微观交替发生)；并行：同时进行</li>
+</ul>
+</li>
+<li>共享性(最基本的特征)
+<ul>
+<li>互斥共享：一个时间段内只允许一个进程访问</li>
+<li>同时访问：一个时间段内允许多个进程&quot;同时&quot;访问(微观上看仍是交替访问)</li>
+</ul>
+</li>
+<li>虚拟性：把一个物理上(实际存在)的实体变为若干个逻辑上(感觉存在)的对应物
+<ul>
+<li>时分复用技术：利用处理机的空闲时间运行其他程序,提高处理机的利用率</li>
+<li>空分复用技术：利用存储器的空闲空间存放其他程序,提高内存的利用率</li>
+</ul>
+</li>
+<li>异步性：进程以不可预知的速度向前推进</li>
+</ul>
+<p>3.操作系统的五大基本功能</p>
+<blockquote>
+<p>由于功能描述较多，前四个的分类有印象即可(了解后可帮助理解)</p>
+</blockquote>
+<ul>
+<li><strong>处理器管理</strong>：处理器的分配和运行是<strong>以进程为单位</strong>的，因此也是对进程的管理
+<ul>
+<li>进程控制：负责进程的创建、撤销及状态转换</li>
+<li>进程同步：对并发执行的进程进行协调</li>
+<li>进程通信：负责完成进程间的信息交换</li>
+<li>进程调度：按一定算法进行处理器分配</li>
+</ul>
+</li>
+<li><strong>存储器管理</strong>：对内存进行分配、保护、和扩充
+<ul>
+<li>内存分配：按一定的策略为每道程序分配内存</li>
+<li>内存保护：保证各程序互不干扰的运行</li>
+<li>内存扩充：为允许大型作业的运行，必须借助虚拟存储技术获得增加内存的效果</li>
+</ul>
+</li>
+<li><strong>设备管理</strong>：对计算机系统内的所有设备实施有效管理
+<ul>
+<li>设备分配：按一定的分配原则对设备进行分配</li>
+<li>设备传输控制：实现物理的输入/输出操作</li>
+<li>设备独立性：用户程序中的设备与实际使用的物理设备无关</li>
+</ul>
+</li>
+<li><strong>文件管理</strong>：负责信息管理
+<ul>
+<li>文件存储空间管理：负责存储空间的分配与回收</li>
+<li>目录管理：目录是为方便文件管理而设的数据结构能按名存取</li>
+<li>文件操作管理：实现文件操作，负责文件读写</li>
+<li>文件保护：提供文件保护功能</li>
+</ul>
+</li>
+<li><strong>用户接口</strong>：为方便用户使用操作系统而设
+<ul>
+<li>命令接口：提供一组命令供用户控制自己的作业
+<ul>
+<li>联机命令(交互式)：说一句做一句</li>
+<li>脱机命令(批处理)：说一堆一起做</li>
+</ul>
+</li>
+<li>系统调用：用户向OS提出各种服务要求(如磁盘文件操作)</li>
+<li>图形接口：如Windows、安卓、IOS</li>
+</ul>
+</li>
+</ul>
+<p>4.操作系统的形成</p>
+<blockquote>
+<p>各阶段的优点主要是解决了上一阶段的主要缺点</p>
+</blockquote>
+<ul>
+<li>手工操作阶段：将纸带装入输入机，程序运行完成用户取走纸带
+<ul>
+<li>缺点：用户独占全机、人机速度矛盾导致资源利用率极低</li>
+</ul>
+</li>
+<li>批处理阶段
+<ul>
+<li>单道批处理系统：引入脱机输入/输出(通过中间设备减少CPU等待输入输出时间)技术，并监督程序(OS的雏形)负责控制作业的输入、输出
+<ul>
+<li>优点：缓解了一定程度的人机速度矛盾，资源利用率有所提升</li>
+<li>缺点：内存中仅有一道程序运行，CPU大量时间空闲等待I/O完成，资源利用率依然很低</li>
+<li>特点：自动性(作业依次自动运行)、顺序性、单道性</li>
+</ul>
+</li>
+<li>多道批处理系统：每次可往内存中输入多道程序。（<strong>操作系统正式诞生</strong>）
+<ul>
+<li>优点：多道程序并发执行，共享计算机资源，资源利用率大幅提升。</li>
+<li>缺点：用户响应时间长，没有人机交互功能(提交作业后只能等待完成，不能自主控制作业执行)</li>
+<li>特点：脱机使用PC、成批处理(分批次)、多道程序运行</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>5.操作系统的分类</p>
+<ul>
+<li>批处理操作系统：包括单道批处理OS和多道批处理OS(详见上)</li>
+<li>分时操作系统：以时间片为单位轮流为各个作业服务，各用户可通过终端与计算机交互
+<ul>
+<li>优点：解决人机交互问题，允许多用户同时使用一台计算机，且操作相互独立。</li>
+<li>缺点：不能优先处理一些紧急任务，OS对各个作业完全公平，不区分任务紧急性。</li>
+<li>特点：多路性(多用户)、交互性、独占性(好像自己独占)、及时性</li>
+</ul>
+</li>
+<li>实时操作系统：对外部输入能在<strong>规定时间内</strong>(注意这里的实时不是马上而是规定时间(s/ms/us级))处理完毕并做出反应
+<ul>
+<li>硬实时系统：必须在规定时间内完成(如导弹控制系统)</li>
+<li>软实时系统：能接受偶尔违反时间规定(如12306订票系统)</li>
+<li>特点：及时性、可靠性</li>
+</ul>
+</li>
+<li>其他操作系统
+<ul>
+<li>嵌入式OS：运行在嵌入式系统环境中，如各种电器</li>
+<li>网络OS：把网络中各计算机互联起来，实现资源共享、信息交换</li>
+<li>分布式OS：各计算机地位相同(自治性)，工作由它们并行、协同完成且对用户透明</li>
+</ul>
+</li>
+</ul>
+<p>6.两种指令、处理器状态、程序</p>
+<ul>
+<li>
+<p>特权指令：不允许用户直接使用的指令，如I/O指令、中断屏蔽指令、清内存指令</p>
+</li>
+<li>
+<p>非特权指令：普通的运算指令</p>
+</li>
+<li>
+<p>核心态(管态)：能执行一切指令，能访问所有寄存器和存储器</p>
+</li>
+<li>
+<p>用户态(目态)：只能执行非特权指令，访问指定的寄存器和存储器</p>
+</li>
+<li>
+<p>内核程序：系统的管理者，可执行一切指令、运行在核心态</p>
+</li>
+<li>
+<p>应用程序：普通用户程序只能执行非特权指令，运行在用户态</p>
+</li>
+</ul>
+<blockquote>
+<p>助记：类似于Linux系统下的root用户和一般用户</p>
+</blockquote>
+<p>7.操作系统的内核：操作系统最基本最核心的部分</p>
+<ul>
+<li>时钟管理：实现计时功能</li>
+<li>中断处理：负责实现中断机制</li>
+<li>原语：一种特殊的程序
+<ul>
+<li>处于操作系统最底层，最接近硬件</li>
+<li>运行具有原子性，<strong>只能一气呵成，不能中断</strong></li>
+<li>运行时间短、调用频繁</li>
+</ul>
+</li>
+<li>系统资源的管理：进程管理、存储器管理、设备管理</li>
+</ul>
+<p>8.中断：为实现多道程序并发执行而引入的一种技术(如因I/O请求暂停执行时，可转去运行其它程序)，是CPU<strong>从用户态进入核心态的唯一途径</strong></p>
+<ul>
+<li>内中断：也称异常，由错误引起，信号来自内部</li>
+<li>外中断：系统正常操作，如外设请求，信号来自外部</li>
+</ul>
+<p>9.系统调用：系统给程序员(应用程序)提供的唯一接口，可获得OS的服务。在用户态发生，核心态处理</p>
+<ul>
+<li>无论什么方式，最终都是通过系统调用，这是唯一接口</li>
+</ul>
+<p>程序接口：由一组系统调用组成，进一步封装</p>
+<ul>
+<li>针对操作系统，如凡是在Windows工作环境下执行的应用程序，都可以调用Windows API</li>
+</ul>
+<p>库函数：应用程序通过<strong>高级语言提供</strong>的库函数间接(编程方便)进行系统调用，在用户态运行</p>
+<ul>
+<li>针对某种语言本身，如C语言的库函数只能在C语言中使用</li>
+</ul>
+<p>10.用户执行系统调用的过程：先传递系统调用所需参数，通过陷入(trap)指令进入核心态，然后执行相应服务程序，最后返回用户态。</p>
+<p>11.操作系统的体系结构</p>
+<ul>
+<li>
+<p>大内核：将OS的主要功能模块作为系统内核</p>
+<ul>
+<li>优点：高性能</li>
+<li>缺点：内核代码庞大，结构混乱，难以维护</li>
+</ul>
+</li>
+<li>
+<p>微内核：只保存基本的功能在内核</p>
+<ul>
+<li>优点：结构清晰，便于维护，可靠性高</li>
+<li>缺点：需频繁在核心态和用户态切换，性能低</li>
+</ul>
+</li>
+</ul>
+<h2 id="习题"><a class="header-anchor" href="#习题">¶</a>习题</h2>
+<p>1.操作系统提供给编程人员的接口是（C）</p>
+<p>A.库函数	B.高级语言	C.系统调用	D.子程序</p>
+<p>答：程序员通过调用操作系统提供的<strong>系统调用函数</strong>来使用操作系统提供的服务。</p>
+<p>而库函数是由<strong>程序设计语言提供</strong>的，它不是操作系统提供的接口。</p>
+<p>2.在单处理机系统中，可并行的是（ D ）。</p>
+<p>Ⅰ  进程与进程   Ⅱ  处理机与设备  Ⅲ  处理机与通道  Ⅳ  设备与设备</p>
+<p>A.Ⅰ、Ⅱ和Ⅲ	B.Ⅰ、Ⅱ和Ⅳ</p>
+<p>C.Ⅰ、Ⅲ和Ⅳ	D.Ⅱ、Ⅲ和Ⅳ</p>
+<p>答：注意是并行即同时运行，而又是单处理机即单核，则同一时刻只能运行一个进程，但多个进程可以并发即交替的运行。</p>
+<p>处理器、通道、设备都能并行运行(因为不属于同一类)，比如同时打印(设备)、计算(处理器)、传输数据(通道)</p>
+<p>3.一个多道批处理系统中仅有P1和P2两个作业，P2 比 P1 晚 5ms到达，它们的计算和 I/O操作顺序如下：</p>
+<p>P1  ：计算  60ms ，I/O 80ms，计算 20ms</p>
+<p>P2  ：计算  120ms，I/O 40ms，计算 40ms</p>
+<p>若不考虑调度和切换时间，则完成两个作业需要的时间最少是（B）</p>
+<p>A.240ms	B.260ms	C.340ms	D.360ms</p>
+<p>答：由于P2晚到，所以P1先执行</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201210172938859.png"  alt="image-20201210172938859"></p>
+<blockquote>
+<p>特别注意的是多道只是并发即交替执行，同一时刻CPU还是只能处理一个计算过程，但可以同时计算机处理I/O操作</p>
+</blockquote>
+<p>4.下列选项中，不可能在用户态发生的事件是（C）</p>
+<p>A.系统调用	B.外部中断	C.进程切换	D.缺页</p>
+<p>答：注意题目问的是发生时处于用户态</p>
+<p>系统调用本来就是操作系统提供给用户使用的接口，所以自然是由用户使用</p>
+<p>外部中断比如用户敲击键盘，会产生外部中断，也是在用户态发生的</p>
+<p>缺页会产生缺页中断，也是会发生在用户态下</p>
+<p>而进程切换比如挂起一个正在运行的进程，显然用户是没有这个权限的，实质上需要修改程序状态字，且全程在核心态执行</p>
+<h1>进程的描述与控制</h1>
+<h2 id="知识点-v2"><a class="header-anchor" href="#知识点-v2">¶</a>知识点</h2>
+<p>1.进程是进程实体的运行过程，是<strong>资源分配的基本单位</strong>，也是接受调度的基本单位</p>
+<p>2.进程的基本特征</p>
+<ul>
+<li>动态性(最基本特征)：进程是程序的一次执行过程，是动态的产生、变化和消亡的</li>
+<li>并发性：内存中有多个进程，各进程可并发执行</li>
+<li>独立性：进程是能独立运行、独立获得资源、独立接受调度的基本单位</li>
+<li>异步性：各进程以各自独立的、不可预知的速度向前推进(执行结果的不确定性)</li>
+<li>结构性：每个进程都会配置一个PCB,结构上看进程由程序段、数据段、PCB组成</li>
+</ul>
+<p>3.进程和程序的区别</p>
+<ul>
+<li>程序是静态的，就是放在磁盘里的可执行文件，是一系列指令的集合</li>
+<li>进程是动态的，是程序的一次执行过程，一个程序可产生多个不同的进程</li>
+</ul>
+<p>4.进程的组成(严谨的说是进程实体或进程映像的组成)</p>
+<ul>
+<li>进程控制块PCB：<strong>是进程存在的唯一标志</strong>，进程被创建时OS会为其创建PCB,进程结束后回收PCB</li>
+<li>程序段：程序的代码</li>
+<li>数据段：原始数据或运行过程产生的中间或结果数据</li>
+</ul>
+<blockquote>
+<p>PCB是给操作系统用的，程序段和数据段是给进程自己用的</p>
+</blockquote>
+<p>5.进程控制块PCB(Process Control Block)的组成</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201214225227721.png"  alt="image-20201214225227721"></p>
+<p>6.进程的组织方式</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201214225941662.png"  alt="image-20201214225941662"></p>
+<p>7.进程的5种基本状态</p>
+<ul>
+<li>创建态：此时进程正在被创建，OS会为进程分配资源、初始化PCB</li>
+<li>就绪态：已经<strong>获得除处理器外的所有资源</strong>，一旦获得处理器可立即执行</li>
+<li>运行态：此时进程已获得必要的资源并正在CPU上运行</li>
+<li>阻塞态：由于某事件(如等待I/O完成)无法继续执行，此时即使把<strong>处理器分给它也无法运行</strong></li>
+<li>终止态：此时进程正在消失，OS会回收其内存资源并回收PCB</li>
+</ul>
+<p>8.进程控制：实现进程状态的相互转换，用原语实现</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201214231822060.png"  alt="image-20201214231822060"></p>
+<blockquote>
+<p>助记：阻塞到运行转个圈，运行也可到就绪</p>
+</blockquote>
+<p>9.进程的创建</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201214233255993.png"  alt="image-20201214233255993"></p>
+<p>进程的终止</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201214233328937.png"  alt="image-20201214233328937"></p>
+<p>进程的阻塞和唤醒</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201214233425078.png"  alt="image-20201214233425078"></p>
+<p>进程的切换</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201214233516560.png"  alt="image-20201214233516560"></p>
+<blockquote>
+<p>无论哪个进程控制原语，其实只做三件事</p>
+<p>1.更新PCB中的信息（修改进程状态）<br>
+2.将PCB插入合适的队列<br>
+3.分配/回收资源</p>
+</blockquote>
+<p>10.进程通信：即进程间的信息交换。</p>
+<ul>
+<li>进程的互斥和同步交换信息少且效率低称为低级进程通信方式。
+<ul>
+<li>PV原语称为低级进程通信原语。</li>
+</ul>
+</li>
+</ul>
+<p>11.高级进程通信可分为三类</p>
+<ul>
+<li>共享存储：划出一块共享存储区，多个进程互斥的对其进行读写来实现通信</li>
+<li>信息传递：进程间以消息为单位，通过OS提供的发送/接收消息原语进行数据交换
+<ul>
+<li>直接通信方式：消息直接挂到接收进程的消息缓冲队列上</li>
+<li>间接通信方式：消息先发到中间实体(信箱)中，也称为信箱通信方式。(eg：计网的电子邮件系统)</li>
+</ul>
+</li>
+<li>管道：用于连接读写进程的一个共享文件，其实就是一个缓冲区
+<ul>
+<li>一个管道只能实现半双工，双向通信需两个管道</li>
+<li>写满不能再写，读空不能再读。没写满不能读，没读空不能写。</li>
+</ul>
+</li>
+</ul>
+<p>12.引入线程带来的变化</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201215002014259.png"  alt="image-20201215002014259"></p>
+<p>13.线程的属性</p>
+<ul>
+<li>处理机调度的基本单位（引入线程前是进程）</li>
+<li>也有就绪、阻塞、运行三种基本状态</li>
+<li>几乎不拥有系统资源，切换同进程的线程系统开销较小</li>
+<li>进程间的多个线程也可并发执行，提高了系统的吞吐量</li>
+<li>由于共享内存地址空间，同一进程的线程通信甚至无需OS干预</li>
+<li>本身不能单独运行，只能包含在进程中并在进程中执行</li>
+</ul>
+<p>14.线程的实现方式</p>
+<ul>
+<li>用户级线程：通过线程库实现，由应用程序负责线程管理，用户看有多线程而OS意识不到线程的存在
+<ul>
+<li>优点：线程切换无需进入核心态，开销小效率高</li>
+<li>缺点：当一个线程被阻塞时，整个进程都会阻塞，多个线程不可并行运行</li>
+</ul>
+</li>
+<li>内核级线程：由OS内核管理，OS为每个线程建立相应的TCB，<strong>是处理机分配的单位</strong>
+<ul>
+<li>优点：一个线程阻塞后其它线程仍可执行，多线程可并行执行</li>
+<li>缺点：线程切换要在核心态完成，管理成本高，开销大</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>很多编程语言提供了线程库(用户级)，而大多数操作系统都实现了内核级线程(内核级)</p>
+<p>两个的区别关键在于OS能不能意识到线程的存在</p>
+</blockquote>
+<p>15.多线程模型：根据用户级线程和内核级线程的映射关系，可分为以下三种</p>
+<ul>
+<li>一对一模型：一个用户级线程映射到一个内核级线程
+<ul>
+<li>优点：一个线程阻塞不影响其它线程，各个线程可并行执行，并发度高</li>
+<li>缺点：线程管理都需要操作系统支持，开销大</li>
+</ul>
+</li>
+<li>多对一模型：多个用户级线程映射到一个内核级线程
+<ul>
+<li>优点：在用户空间管理，开销小效率高</li>
+<li>缺点：一个线程阻塞会导致整个进程阻塞，多个用户级线程不能并行执行</li>
+</ul>
+</li>
+<li>多对多模型：m个用户级线程映射到n个内核级线程(m≥n)
+<ul>
+<li>优点：多个用户级线程可并行执行，不会限制用户级线程数量，一个用户级线程阻塞不影响其它线程</li>
+</ul>
+</li>
+</ul>
+<p>16.七状态模型</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/1593487486948-692d915e-a888-4ee5-bd98-6b40503de95c.png"  alt="image-20201215002014269"></p>
+<blockquote>
+<p>注意挂起和阻塞都没获得CPU服务和所需资源，但挂起是将进程映像调到外存，而阻塞仍在内存</p>
+</blockquote>
+<h2 id="习题-v2"><a class="header-anchor" href="#习题-v2">¶</a>习题</h2>
+<p>由于所参考资料书中将进程描述和处理机调度合为了一章，进程的描述习题放在下章处理机调度中</p>
+<h1>处理机调度与死锁</h1>
+<h2 id="知识点-v3"><a class="header-anchor" href="#知识点-v3">¶</a>知识点</h2>
+<p>1.处理机调度：按某种算法选择一个进程将处理机分配给它</p>
+<ul>
+<li>高级调度(作业调度)：从<strong>后备</strong>队列中选择合适的<strong>作业</strong>将其调入<strong>内存</strong>，并为其创建进程</li>
+<li>中级调度(内存调度)：从<strong>挂起</strong>队列中选择合适的<strong>进程</strong>将其数据调回<strong>内存</strong></li>
+<li>低级调度(进程调度)：从<strong>就绪</strong>队列中选择一个<strong>进程</strong>为其分配<strong>处理机</strong></li>
+</ul>
+<blockquote>
+<p>助记：从高到低的调度其实也是从外到内的过程，先是作业调度创建进程然后是进程调度执行进程。而发生频率由低到高</p>
+</blockquote>
+<p>2.引起进程调度或进程切换的原因</p>
+<ul>
+<li>进程主动放弃处理机
+<ul>
+<li>进程正常终止</li>
+<li>运行过程中发生异常而终止</li>
+<li>进程主动请求阻塞(如等待I/O)</li>
+</ul>
+</li>
+<li>进程被动放弃处理机
+<ul>
+<li>分给进程的时间片用完</li>
+<li>有更紧急的事需要处理(如I/O中断)</li>
+<li>有更高优先级的进程进入就绪队列</li>
+</ul>
+</li>
+</ul>
+<p>3.不能进行进程调度和进程切换的情况</p>
+<ul>
+<li>处理中断的过程中</li>
+<li>在操作系统<strong>内核程序</strong>临界区(互斥访问的一段程序)中</li>
+<li>原子操作中(不可中断要一气呵成)</li>
+</ul>
+<p>4.进程调度的方式</p>
+<ul>
+<li>
+<p>非抢占方式(不可剥夺式)：只允许进程主动放弃(完成或主动进入阻塞态)处理机，即使有更紧迫的任务到达也不搭理它</p>
+<ul>
+<li>实现简单，开销小但无法及时处理紧急任务，适用于早期批处理系统</li>
+</ul>
+</li>
+<li>
+<p>抢占方式(可剥夺方式)：有个更重要的进程需使用处理机，则立即暂停当前进程，将处理机分配给它</p>
+<ul>
+<li>可优先处理更紧急的任务，也可让进程按时间片轮流执行，适用于分时、实时操作系统</li>
+</ul>
+</li>
+</ul>
+<p>5.进程的切换与过程</p>
+<ul>
+<li>先对原来运行进程各种数据的保存</li>
+<li>然后对新的进程各种数据的恢复</li>
+</ul>
+<blockquote>
+<p>进程调度和切换都是有代价的，过于频繁会使系统效率下降</p>
+</blockquote>
+<p>6.调度算法的评价指标</p>
+<ul>
+<li>CPU利用率：CPU忙碌的时间占总时间的比例	（忙碌时间/总时间）</li>
+<li>系统吞吐量：单位时间内完成作业的数量      （完成作业数量/花了多少时间）</li>
+<li>周转时间：作业从提交到完成的时间间隔      （作业完成时间-提交时间）
+<ul>
+<li>用户更关心自己单个作业的周转时间</li>
+</ul>
+</li>
+<li>平均周转时间：多个作业周转时间的平均值    （各作业周转时间之和/作业数）
+<ul>
+<li>操作系统更关心系统的整体表现即所有作业的周转情况</li>
+</ul>
+</li>
+<li>带权周转时间：作业周转时间与运行时间之比   （周转时间/运行时间）
+<ul>
+<li>若周转时间相同，实际运行时间越长用户越满意    (等的时间相对少)</li>
+</ul>
+</li>
+<li>平均带权周转时间：多个作业的带权周转时间的平均值 （各作业带权周转时间之和/作业数）</li>
+</ul>
+<p>7.周转时间包括四部分</p>
+<ul>
+<li>作业在外存后备队列等待调度的时间(高级调度)</li>
+<li>进程在就绪队列等待进程调度的时间(低级调度)</li>
+<li>进程在CPU上执行的时间</li>
+<li>进程等待I/O操作完成的时间</li>
+</ul>
+<blockquote>
+<p>由此可看出周转时间含很多等待时间，显然运行时间越长即等待时间越短用户越满意</p>
+</blockquote>
+<p>8.早期批处理的调度算法</p>
+<ul>
+<li>先来先服务算法(FCFS----&gt;First Come First Serve)</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/1593487741194-4a1e43a6-4819-4372-9bcd-0ab8e1d299a9.png"  alt="image-20201215002014271"></p>
+<ul>
+<li>短作业优先算法(SJF----&gt;Shortest Job First)</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201215111142387.png"  alt="image-20201215111142387"></p>
+<ul>
+<li>高响应比优先算法(HRRN----&gt;Hightest Response Ratio Next)</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201215111412289.png"  alt="image-20201215111412289"></p>
+<p>三种调度算法对比</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201215112543300.png"  alt="image-20201215112543300"></p>
+<p>9.交互式系统的调度算法</p>
+<ul>
+<li>时间片轮转算法(RR----&gt;Round-Robin)</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/1593487858888-881de75c-ebec-430f-8e64-6275d82d1b56.png"  alt="image-20201215112543302"></p>
+<ul>
+<li>优先级调度算法</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201215120938537.png"  alt="image-20201215120938537"></p>
+<ul>
+<li>多级反馈队列调度算法</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201215121333296.png"  alt="image-20201215121333296"></p>
+<p>三种调度算法对比</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201215121427700.png"  alt="image-20201215121427700"></p>
+<p>10.各调度算法优点</p>
+<table>
+<thead>
+<tr>
+<th>算法</th>
+<th>优点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FCFS</td>
+<td>公平</td>
+</tr>
+<tr>
+<td>SJF</td>
+<td>能尽快处理完短作业，平均等待/周转时间等参数很优秀</td>
+</tr>
+<tr>
+<td>时间片轮转调度</td>
+<td>可让各个进程得到及时的响应</td>
+</tr>
+<tr>
+<td>优先级调度</td>
+<td>可灵活的调整各进程被服务的机会</td>
+</tr>
+<tr>
+<td>多级反馈队列调度</td>
+<td>对以上算法折中权衡，综合表现优秀平衡</td>
+</tr>
+</tbody>
+</table>
+<p>11.进程同步与互斥</p>
+<ul>
+<li>
+<p>同步(直接制约关系)：异步性结果不可预知用同步实现<strong>先后顺序执行</strong>的目的</p>
+</li>
+<li>
+<p>互斥(间接制约关系)：一个进程访问临界资源时，另一个进程必须等待</p>
+<blockquote>
+<p>临界资源：同时仅允许一个进程使用的资源</p>
+</blockquote>
+</li>
+</ul>
+<p>12.对临界资源的访问分为</p>
+<ul>
+<li>进入区：检查是否可进入临界区，若可访问则设置正在访问标志(上锁)</li>
+<li>临界区：用于访问临界资源的代码</li>
+<li>退出区：解除正在访问标志(解锁)</li>
+<li>剩余区：其余代码部分</li>
+</ul>
+<p>13.互斥的要求</p>
+<ul>
+<li>空闲让进：临界区空闲时，可以允许一个进程进入临界区</li>
+<li>忙则等待：当已有进程进入临界区时，其它进程必须等待</li>
+<li>有限等待：请求访问的进程要在有限时间内进入临界区(避免饥饿)</li>
+<li>让权等待：若进程不能进入临界区，应立即释放处理机，防止忙等待</li>
+</ul>
+<p>14.进程互斥的软件实现方法</p>
+<ul>
+<li>单标志法：进程访问完临界区后把使用权交给另一个进程。违背空闲让进原则 <img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201223193511224.png"  alt="image-20201223193511224"></li>
+</ul>
+<blockquote>
+<p>如果此时允许P0进入，P0却一直不进入使得虽然空闲P1也一直访问不了</p>
+</blockquote>
+<ul>
+<li>双标志先检查法：先检查后上锁。违背忙则等待原则(检查和上锁不是一气呵成)</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201223193834481.png"  alt="image-20201223193834481"></p>
+<blockquote>
+<p>由于异步性，若按照125637的顺序两个进程将会同时访问临界区</p>
+</blockquote>
+<ul>
+<li>双标志后检查法：先上锁后检查。违背空闲让进和有限等待，可能会产生饥饿</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201223194127733.png"  alt="image-20201223194127733"></p>
+<blockquote>
+<p>若按1526的顺序两个进程都无法进入</p>
+</blockquote>
+<ul>
+<li>Peterson算法：综合考虑，若都想进临界区则尝试让给对方。违背让权等待</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201223194606686.png"  alt="image-20201223194606686"></p>
+<p>15.进程互斥的硬件实现方法</p>
+<ul>
+<li>中断屏蔽方法：采用开/关中断实现，简单高效但只适用于单处理机</li>
+<li>TestAndSet(TS/TSL)：old记录此时是否上锁，将lock设为ture，检查old若上锁则循环前几步</li>
+<li>Swap(XCHG)：逻辑同上，二者简单高效，但不满足让权等待</li>
+</ul>
+<p>16.信号量机制</p>
+<p>wait又称P操作即申请资源，signal又称V操作即释放资源</p>
+<ul>
+<li>
+<p>整型信号量：用一个整型变量表示某种资源数，不满足让权等待</p>
+</li>
+<li>
+<p><strong>记录型信号量</strong>：P操作若无可用资源则阻塞(block)，V操作唤醒(wakeup)链表第一个进程</p>
+<blockquote>
+<p>S.L表等待队列，S.value表资源数。P会S.value–，V会S.value++。满足让权等待</p>
+</blockquote>
+</li>
+</ul>
+<p>17.信号量实现同步与互斥</p>
+<ul>
+<li>
+<p>实现互斥：信号量(可理解成资源数)初值为1，临界区之前P，临界区之后V</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mutex=<span class="number">1</span>;    P(mutex); 临界区代码; V(mutex);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>实现同步：信号量初值为0，前操作V释放资源后，后操作才能P申请资源</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">若先P1才能P2   -----&gt;   P1&#123;代码...<span class="built_in">V</span>(s);&#125;      P2&#123;<span class="built_in">P</span>(s);代码...&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>18.生产者-消费者问题：缓冲区没满生产者才能放数据，缓冲区不空消费者才能取数据，所以两个同步信号量</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201223202354872.png"  alt="image-20201223202354872"></p>
+<p>必须先P资源信号量(full和empty)再P互斥信号量(mutex)，否则可能有占用权但无可用资源发生死锁</p>
+<blockquote>
+<p>要会默写上述代码，其它问题与这个类似</p>
+</blockquote>
+<p>19.其它同步问题</p>
+<ul>
+<li>吸烟者问题：轮流让三个吸烟者抽烟必须轮流的放组合一二三</li>
+<li>读者写者问题：核心思想为设置一个count记录正在访问共享文件的读进程数，用count判断当前进程是否为第一个或最后一个读进程</li>
+<li>哲学家进餐问题：关键在于解决进程死锁</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20210104153055476.png"  alt="image-20210104153055476"></p>
+<p>20.为解决信号量机制编程麻烦、易出错的问题引入管程</p>
+<ul>
+<li>进程只有调用管程内的过程才能进入管程访问共享数据</li>
+<li>每次仅允许一个进程在管程内执行某个内部过程</li>
+<li>各进程必须互斥访问管程是由编译器实现的</li>
+<li>可在管程中设置条件变量及等待/唤醒操作以解决同步问题</li>
+</ul>
+<blockquote>
+<p>如Java中用关键字synchronized声明的函数，同一时间段内只能被一个线程调用</p>
+</blockquote>
+<p>21.死锁：各进程都在等待对方的资源导致各进程都阻塞</p>
+<p>22.死锁产生的必要条件</p>
+<ul>
+<li>互斥条件：对互斥使用的资源的争抢才会导致死锁</li>
+<li>不可抢占条件：进程获得的资源只能自己主动释放</li>
+<li>请求和保持条件：进程保持着资源不放又去请求其它资源</li>
+<li>循环等待条件：存在一种进程资源的循环等待链</li>
+</ul>
+<p>23.预防死锁：破坏死锁产生的四个必要条件中的一个或多个</p>
+<ul>
+<li>破坏互斥条件：将临界资源改造为可共享的资源(如SPOOLing技术)
+<ul>
+<li>可行性不高，很多时候无法破坏互斥条件</li>
+</ul>
+</li>
+<li>破坏不可抢占条件：无法申请到所需资源时应立即释放现有资源
+<ul>
+<li>实现复杂，可能会导致部分工作失效，系统开销大且可能会饥饿</li>
+</ul>
+</li>
+<li>破坏请求和保持条件：可采用静态分配方法，运行前分配所需资源且一直保持
+<ul>
+<li>资源利用率低，可能会导致饥饿</li>
+</ul>
+</li>
+<li>破坏循环等待条件：<strong>给资源编号</strong>必须按照从小到大的顺序申请资源
+<ul>
+<li>不方便增加新设备、导致资源浪费、用户编程麻烦</li>
+</ul>
+</li>
+</ul>
+<p>24.避免死锁：避免系统进入不安全状态(银行家算法)</p>
+<p>安全序列：按照此序列分配资源每个进程都能顺利完成</p>
+<p>安全状态：此时系统至少存在一个安全序列</p>
+<blockquote>
+<p>不安全状态不一定会导致死锁，但死锁一定不安全。例如你在河边走处于不安全的状态只是有可能掉下去，而你要是掉下去了肯定处于不安全状态。但你要是离河远远地你就处于安全状态肯定不会掉下去。</p>
+</blockquote>
+<p>25.银行家算法：在资源分配之前先判断会不会进入不安全状态，若不会再分配</p>
+<p>用到的数据结构：</p>
+<ul>
+<li>一维数组Available[m]表空闲资源m的数量</li>
+<li>最大需求矩阵Max[n][m]表进程n对资源m最大需求数</li>
+<li>已分配矩阵Allocation[n][m]表进程n已拥有的资源m的数量</li>
+<li>需求矩阵Need[n][m]表进程n还需资源m的数量（=Max-Allocation）</li>
+<li>向量Request<sub>n</sub>表进程n此次申请的各资源数量</li>
+</ul>
+<p>算法步骤</p>
+<p>①检查此次申请是否超过之前声明的最大需求数（Request<sub>i</sub> ≤ Need<sub>i</sub>）</p>
+<p>②检查此时剩余可用资源是否满足这次请求（Request<sub>i</sub> ≤ Available<sub>i</sub>）</p>
+<p>③对于请求的资源预分配，修改以下向量</p>
+<p>Available<sub>i</sub>=Available<sub>i</sub>-Request<sub>i</sub>	//可用=可用-申请</p>
+<p>Allocation<sub>i</sub>=Allocation<sub>i</sub>+Requesti	//已分配=已分配+申请</p>
+<p>Need<sub>i</sub>=Need<sub>i</sub>-Request<sub>i</sub>	//需求=需求-申请</p>
+<p>④用安全性算法检测此次分配是否会进入不安全状态</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201224164121330.png"  alt="image-20201224164121330"></p>
+<p>25.死锁的检测与解除：允许死锁发生，系统负责检测出死锁并解除</p>
+<p>死锁的检测：类似拓扑排序，找到一个点消除它的所有连接边直到消除所有边</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201224165707851.png"  alt="image-20201224165707851"></p>
+<blockquote>
+<p>找到既不阻塞又不孤立的点即P1(P1申请的资源还足够)，消除它的所有边，此时P2向R1申请一个资源，而R1还剩两个可用资源满足要求则消除P2所有边，所有边均消除说明没有死锁。</p>
+</blockquote>
+<p>死锁的解除：一旦检验到死锁就应该立即解除</p>
+<ul>
+<li>剥夺资源：<strong>挂起</strong>某些死锁进程，抢夺它的资源分给其它死锁进程，但应防止饥饿</li>
+<li>撤销进程：撤销部分进程直到有足够的资源分给其它进程，实现简单但可能快结束而功亏一篑</li>
+<li>进程回退：让一个或多个进程<strong>回退到足以回避死锁的地步</strong>，注意回退是进程自愿释放资源，需设置还原点</li>
+</ul>
+<h2 id="习题-v3"><a class="header-anchor" href="#习题-v3">¶</a>习题</h2>
+<p>1.进程处于临界区不能进行处理机调度（X）</p>
+<p>答：对于内核程序临界区访问的资源如果不尽快释放，极有可能影响OS内核的其它管理工作，所以处于内核程序临界区的时候不能进行调度和切换。</p>
+<p>而题目所说的是临界区，这包括普通的临界区如打印机，此时调度和切换并不会影响OS内核的管理工作。而且如果访问打印机这种慢速外设如果不能调度系统性能肯定非常低。</p>
+<p>2.适用于早期批处理调度算法的计算</p>
+<ul>
+<li>先来先服务算法(FCFS)</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/1593487747580-88c0b185-41ef-40a2-83cf-0183ec7dc383.png"  alt="image-20201215002014276"></p>
+<ul>
+<li>非抢占式的短作业优先调度算法(SPF)</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201215111716009.png"  alt="image-20201215111716009"></p>
+<blockquote>
+<p>由于非抢占，t=2时虽然P2已经到了但也只能等P1执行完</p>
+</blockquote>
+<ul>
+<li>抢占式的短作业优先调度算法(SRTN)</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201215112027037.png"  alt="image-20201215112027037"></p>
+<ul>
+<li>高响应比优先算法</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201215112211464.png"  alt="image-20201215112211464"></p>
+<p>3.适用于交互式系统的算法的计算</p>
+<ul>
+<li>时间片轮转算法中时间片为2时</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/1593487869975-cee512a6-a13e-4f77-8457-a0bf1ee1a0dc.png"  alt="image-20201215112211466"></p>
+<blockquote>
+<p>注：以下括号内表示当前处于就绪队列的进程，下同</p>
+</blockquote>
+<p>0时刻(P1(5))：0时刻只有P1到达就绪队列，让P1上处理机运行一个时间片</p>
+<p>2时刻(P2(4) &gt; P1(3))：2时刻P2到达就绪队列，P1运行完一个时间片，被剥夺处理机，重新放到队尾。此时P2排在队头，因此让P2上处理机。(注意: 2时刻， P1下处理机，同一时刻新进程P2到达，如果在题目中遇到这种情况，<strong>默认新到达的进程先进入就绪队列</strong>)</p>
+<p>4时刻(P1(3)→ P3(1) &gt; P2(2))：4时刻，P3到达，先插到就绪队尾，紧接着，P2下处理机也插到队尾</p>
+<p>5时刻(P3(1) &gt; P2(2) &gt; P4(6))：5时刻，P4到达插到就绪队尾（注意：<strong>由于P1的时间片还没用完，因此暂时不调度</strong>。另外，<strong>此时P1处于运行态，并不在就绪队列中</strong>）</p>
+<p>6时刻(P3(1)→ P2(2) &gt; P4(6)→P1(1))：6时刻，P1时间片用完，下 处理机，重新放回就绪队尾，发生调度</p>
+<p>7时刻(P2(2) →P4(6)→P1(1))：虽然<strong>P3的时间片没用完</strong>，但是由于P3只需运行1个单位的时间，运行完了会主动放弃处理机，因此也会发生调度。队头进程P2上处理机。</p>
+<p>9时刻(P4(6) &gt; P1(1))：进程P2时间片用完，并刚好运行完，发生调度，P4上处理机</p>
+<p>11时刻(P1(1)→ P4(4) )：P4时间片用完，重新回到就绪队列。P1上处理机</p>
+<p>12时刻(P4(4))：P1运行完，主动放弃处理机，此时就绪队列中只剩P4，P4上处理机</p>
+<p>14时刻()：就绪队列为空，因此让P4接着运行一个时间片。</p>
+<p>16时刻：所有进程运行结束</p>
+<ul>
+<li>时间片轮转算法中时间片为5时</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201215122143265.png"  alt="image-20201215122143265"></p>
+<p>0时刻(P1(5) )：只有P1到达，P1. 上处理机。</p>
+<p>2时刻(P2(4))：P2到达，但P1时间片尚未结束，因此暂不调度</p>
+<p>4时刻(P2(4)&gt; P3(1))：P3到达，但P1时间片尚未结束，因此暂不调度</p>
+<p>5时刻( P2(4)&gt; P3(1)&gt; P4(6) )：P4到达，同时，P1运行结束。发生调度，P2上处理机。</p>
+<p>9时刻( P3(1)&gt; P4(6) )：P2运行结束，虽然时间片没用完，但是会主动放弃处理机。发生调度。</p>
+<p>10时刻( P4(6) )：P3运行结束，虽然时间片没用完，但是会主动放弃处理机。发生调度。</p>
+<p>15时刻( )：P4时 间片用完，但就绪队列为空，因此会让P4继续执行一个时间片。</p>
+<p>16时刻( )：P4运行完，主动放弃处理机。所有进程运行完。</p>
+<p>如果时间片太大，使得每个进程都可以在一个时间片内就完成，则时间片轮转调度算法退化为先来先服务调度算法，并且会增大进程响应时间。因此<strong>时间片不能太大</strong>。</p>
+<p>另一方面，进程调度、切换是有时间代价的(保存、恢复运行环境)，因此如果<strong>时间片太小，会导致进程切换过于频繁</strong>，系统会花大量的时间来处理进程切换，从而导致实际用于进程执行的时间比例减少。可见<strong>时间片也不能太小。</strong></p>
+<ul>
+<li>非抢占式优先级调度算法</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/1593487927217-c4f02d78-a485-402e-8906-7210924af5ef.png"  alt="image-20201215122143277"></p>
+<p>0时刻(P1)：只有P1到达，P1上处理机。</p>
+<p>7时刻(P2、P3、P4)：P1运行完成主动放弃处理机，其余进程都已到达，P3优先级最高，P3上处理机。</p>
+<p>8时刻(P2、P4)：P3完成，P2、 P4优先级相同，由于P2先到达，因此P2优先上处理机</p>
+<p>12时刻(P4)：P2完成，就绪队列只剩P4，P4上处理机。</p>
+<p>16时刻()：P4完成，所有进程都结束</p>
+<ul>
+<li>抢占式优先级调度算法</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201215122522783.png"  alt="image-20201215122522783"></p>
+<p>0时刻(P1)：只有P1到达， P1上处理机。</p>
+<p>2时刻(P2)：P2到达就绪队列，优先级比P1更高，发生抢占。P1回到就绪队列，P2上处理机。</p>
+<p>4时刻(P1、P3)：P3到达， 优先级比P2更高，P2回到就绪队列，P3抢占处理机。</p>
+<p>5时刻(P1、P2、P4)：P3完成，主动释放处理机，同时，P4也到达，由于P2比P4更先进入就绪队列，因此选择P2上处理机</p>
+<p>7时刻(P1、P4)：P2完成,就绪队列只剩P1、P4，P4上处理</p>
+<p>11时刻(P1)：P4完成，P1上处理机</p>
+<p>16时刻()：P1完成，所有进程均完成</p>
+<ul>
+<li>多级反馈队列调度算法</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/1593488009525-1e4f8020-a00a-44d3-8ebe-30d4df840daf.gif"  alt="image-20201215122522799"></p>
+<p>4.并发进程执行的相对速度是（C）<br>
+A.由进程的程序结构决定的		B.由进程自己来控制的<br>
+C.与进程调度策略有关的		  D.在进程被创建时确定的</p>
+<p>答：并发速度受调度策略影响，采用不同的调度策略(FCFS、SJF)会影响执行的相对速度。要不然也不会那么费力去研究调度算法了。</p>
+<p>5.中断扫描机构是（B）扫描一次中断寄存器。<br>
+A.每隔一个时间片		 B.每条指令执行周期内最后时刻<br>
+C.每当进程释放CPU		D.每产生一次中断</p>
+<p>答：处理器执行完一条指令后，中断扫描机构立即检查有无中断，无中断就继续下一条指令，若有中断就处理中断，这一过程称为&quot;中断响应&quot;</p>
+<p>6.关于临界问题的一个算法（假设只有P0和P1可能会进入临界区）如下</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">repeat</span><br><span class="line">retry:</span><br><span class="line">	<span class="keyword">if</span>(turn!=<span class="number">-1</span>)	turn=i;</span><br><span class="line">	<span class="keyword">if</span>(turn!=i)		go to retry;</span><br><span class="line">	turn=<span class="number">-1</span>;</span><br><span class="line">	临界区;</span><br><span class="line">	turn=<span class="number">0</span>;</span><br><span class="line">	其他区域;</span><br><span class="line">until <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
+<p>该算法（B）</p>
+<p>A.不能保持进程互斥进入临界区,且会出现“饥饿”<br>
+B.不能保持进程互斥进入临界区,但不会出现“饥饿”<br>
+C.保证进程互斥进入临界区,但会出现“饥饿”<br>
+D.保证进程互斥进入临界区,不会出现“饥饿”</p>
+<p>答：最容易出错的地方就是两个进程同时申请进入临界区的时候，由于并发交替进行无法确定执行顺序可能就会带来问题。</p>
+<p>①若P0先执行两个判断然后P1执行两个判断，然后他们再执行turn=-1。</p>
+<p>P0：满足turn!=-1置turn=0;满足turn=0不回退</p>
+<p>P1：满足turn!=-1置turn=1;满足turn=1不回退</p>
+<p>P0执行turn=-1然后P1执行turn=-1,就会发生他们同时进入临界区的问题</p>
+<p>②对于饥饿问题，根本原因在于进程一直进不去临界区，而只有turn=-1时他们才会进不去，但如果turn=-1那么肯定有个进程已经进去临界区了，它出来的时候就会把turn置为0所以不会有进程饿死。</p>
+<p>7.（B）有利于CPU繁忙型的作业,而不利于I/O繁忙型的作业(进程)。<br>
+A.时间片轮转调度算法	B.先来先服务调度算法<br>
+C.短作业(进程)优先调度算法	D.优先权调度算法</p>
+<p>答：CPU繁忙型指该类作业需要大量的CPU时间进行计算而很少请求I/O，例如一般的科学计算。I/O繁忙型指CPU进行处理的时候需要频繁请求I/O，而每次操作I/O时间又很短，例如目前大多数事务处理。</p>
+<p>因此可以转换为哪个算法有利于长作业而不利于短作业？</p>
+<p>FCFS先来先服务有利于长作业不利于短作业。例如排队买杯奶茶但前面却有人要了100杯。</p>
+<p>8.下面哪一个不会引起进程创建（C）<br>
+A.用户登录	B.作业调度	C.设备分配	D.应用请求</p>
+<p>答：引起进程创建的四类典型事件除了ABD还有提供服务</p>
+<ul>
+<li>用户登录：要为用户提供服务，之前没有就要创建</li>
+<li>设备分配：由内核自动完成，不需要创建进程</li>
+<li>提供服务：系统为用户创建进程</li>
+<li>应用请求：用户程序自己创建进程</li>
+<li>作业调度：为调度的作业分配资源并为其创建进程</li>
+</ul>
+<p>9.要实现两个进程互斥,设一个互斥信号量 mutex,当 mutex为0时,表示（B）<br>
+A.没有进程进入临界区</p>
+<p>B.有一个进程进入临界区</p>
+<p>C.有一个进程进入临界区,另外一个进程在等候</p>
+<p>D.两个进程都进入临界区</p>
+<p>答：两个进程互斥，互斥信号量mutex的取值为1，0，-1且初值为1。</p>
+<p>当一个进程请求访问后mutex为0，再有一个进程申请的时候执行P操作mutex-1=-1此时一个进入一个在等待。因此为0时时一个进入了临界区</p>
+<blockquote>
+<p>注意C中的另一个在等候，第二个进程要是不申请就不会等候，而它要是申请了mutex=-1</p>
+</blockquote>
+<p>10.下面关于管程的叙述错误的是（C）<br>
+A.管程是进程的同步工具,解决信号量机制大量同步操作分散的问题<br>
+B.管程每次只允许一个进程进入管程<br>
+C.管程中ⅴ操作的作用和信号量机制中V操作的作用相同<br>
+D.管程是被进程调用的,是语法范围,无法创建和撤销</p>
+<p>答：管程的V操作不同于信号量机制中的V操作，前者V必须在P之后，而后者则没有这个要求，只要P和V成对出现即可。</p>
+<p>11.若系统中有5台绘图仪,有多个进程需要使用两台,规定每个进程一次仅允许申请一台,则最多允许（D）个进程参与竞争,而不会发生死锁。<br>
+A.5	B.2	C.3	D.4</p>
+<p>答：m个进程，都需要两个同类资源，不会发生死锁的最少资源数是m*(2-1)+1即m+1 ≤ 5，所以m ≤ 4</p>
+<blockquote>
+<p>最坏情况，所有进程都差了一个资源(先给其中一个进程等它运行完就会释放资源)</p>
+</blockquote>
+<p>12.若系统中有n个进程,则在阻塞队列中进程的个数最多为（A）<br>
+A.n	B.n-1	C.n-2	D.1</p>
+<p>答：一定不要忘了有种特殊情况就是死锁，n个进程都在互相等待对方手里的资源最终都处于阻塞状态。</p>
+<p>13.下列关于线程的叙述中,正确的是（D）<br>
+Ⅰ.在采用轮转调度算法时,一进程拥有10个用户级线程,则在系统调度执行时间上占用10个时间片<br>
+Ⅱ.属于同一个进程的各个线程共享栈空间<br>
+I.同一进程中的线程可以并发执行,但不同进程内的线程不可以并发执行<br>
+Ⅳ.线程的切换,不会引起进程的切换<br>
+A.仅Ⅰ、Ⅱ、Ⅲ		B.仅Ⅱ、Ⅳ<br>
+C.仅Ⅱ、Ⅲ		    D.全错</p>
+<p>答：I错误，由于用户级线程不依赖于系统内核，内核是看不到用户级线程的，别管你有几个线程在它看来看到的都只是一个进程，因此只分一个时间片</p>
+<p>而对于内核级线程，由于内核知道线程的存在，所以有多少线程就能分多少时间片</p>
+<p>II错误，共享进程的地址空间，共享进程的资源但线程有自己的栈空间不与其他线程共享</p>
+<p>III错误，同一进程的线程可并发，甚至不同进程的线程也可以并发</p>
+<p>IV错误，从一个进程的线程切换到另一个进程的线程，进程都变了肯定会引起进程的切换</p>
+<p>14.若一个用户进程通过read系统调用读取一个磁盘文件中的数据,则下列关于此过程的叙述中,正确的是（A）<br>
+I.若该文件的数据不在内存中,则该进程进入睡眠等待状态<br>
+II.请求read系统调用会导致CPU从用户态切换到核心态<br>
+Ⅲ.read系统调用的参数应包含文件的名称<br>
+A.仅I、Ⅱ	B.仅1、Ⅲ	C.仅Ⅱ、Ⅲ	D.1、Ⅱ和Ⅲ</p>
+<p>答：若用户读取的磁盘文件不在内存中，就会转向中断处理，导致CPU从用户态切换到核心态，此时该进程进入睡眠等待状态(其实就是阻塞态)</p>
+<p>对于III，调用read之前需要用open打开文件，而open函数会指定文件的名称然后产生一个文件编号或索引，之后的所有操作都是操作这个编号或索引号就可以，因此read系统调用的参数并不会包含文件名称</p>
+<p>15.若某单处理器多进程系统中有多个就绪进程,则下列关于处理器调度的叙述中,错误的是（C）<br>
+A.在进程结束时能进行处理器调度<br>
+B.创建新进程后能进行处理器调度<br>
+C.在进程处于临界区时不能进行处理器调度<br>
+D.在系统调用完成并返回用户态时能进行处理器调度</p>
+<p>答：A.进程结束后进程撤销处理器应当处理下一个进程了，自然会出现处理器调度</p>
+<p>B.创建新进程后若该进程较紧急，处理器可能就会暂停当前活动而转向调度执行新创建的进程，因此也可能会发生处理器调度</p>
+<p>C.进程处于临界区，其它进程肯定进不去临界区，但是系统可以暂停执行处于临界区的进程而转去执行其它进程，处理完之后再继续执行临界区的剩余代码即可，因此也可能会发生处理机调度</p>
+<p>D.系统调用结束后返回正常执行的过程，此时肯定也可以继续进行系统调用</p>
+<p>16.某系统有n台互斥使用的同类设备,3个并发进程分别需要3、4、5台设备,可确保系统不发生死锁的设备数n最小为（B）<br>
+A.9	B.10	C.11	D.12</p>
+<p>答：当系统只有(3-1)+(4-1)+(5-1)=9台设备时，三个进程分别分配2、3、4台。这种情况下3个进程都无法继续执行发生死锁，而只需要再添加一个设备把它分配给任意一个进程就保证都可以执行完成，也就是最少需要10台</p>
+<blockquote>
+<p>这类问题都是固定解法，先找最坏情况或者说都缺一个的情况</p>
+</blockquote>
+<p>17.若系统S1采用死锁避免方法,S2采用死锁检测方法,下列叙述中,正确的是(B)<br>
+I.S1会限制用户申请资源的顺序,而S2不会<br>
+Ⅱ.S1需要进程运行所需资源总量信息,而S2不需要<br>
+Ⅲ.S1不会给可能导致死锁的进程分配资源,而S2会<br>
+A.仅I、Ⅱ	B.仅Ⅱ、Ⅲ	C.仅I、Ⅲ	D.I、Ⅱ、Ⅲ</p>
+<p>答：死锁避免最典型的是银行家算法，注意它会限制分配资源的顺序而不会限制申请资源的顺序，你原先咋申请现在还咋申请，只不过我不一定给你分配</p>
+<p>而对于死锁预防典型代表为顺序资源分配，只能按编号从小到大申请资源，其限制了申请资源的顺序。</p>
+<p>而对于死锁检测就是你得先出事(发生死锁)我才会管你</p>
+<p>因此I是错的</p>
+<p>18.系统中有3个不同的临界资源R1、R2和R3,被4个进程p1、p2、p3及p4共享。各进程对资源的需求为:pl申请R1和R2,p2申请R2和R3,p3申请R1和R3,p4申请R2。若系统出现死锁,则处于死锁状态的进程数至少是（C）<br>
+A.1	B.2	C.3	D.4</p>
+<p>答：可用死锁检测画图来计算</p>
+<img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201227003422442.png"  alt="image-20201227003422442"  />
+<p>而要是想形成循环和P4没关系，当发生下图时形成一个循环</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201227003537916.png"  alt="image-20201227003537916"></p>
+<p>若先分配给P4那么死锁就是3个，要是没事先分配就是4个</p>
+<h1>内存管理</h1>
+<h2 id="知识点-v4"><a class="header-anchor" href="#知识点-v4">¶</a>知识点</h2>
+<p>1.内存管理的功能</p>
+<ul>
+<li>内存的分配与回收：使程序员摆脱存储空间分配的麻烦
+<ul>
+<li>分为连续分配管理和非连续分配管理</li>
+</ul>
+</li>
+<li>地址变换：将程序中的逻辑地址转换为内存中的物理地址(地址重定位)</li>
+<li>扩充内存：借助于虚拟存储等技术为用户提供比内存大的地址空间，从逻辑上扩充内存容量
+<ul>
+<li>分为覆盖技术、交换技术、虚拟存储技术</li>
+</ul>
+</li>
+<li>内存保护：保证内存的各道作业都在自己的存储空间内运行，互不干扰
+<ul>
+<li>上、下限寄存器：分别存放进程的上、下限地址，访问地址时先检查是否越界</li>
+<li>重定位和界地址寄存器：二者分别存放起始地址和最大逻辑地址以此检查
+<ul>
+<li>如逻辑地址80，小于界地址179，则物理地址为80+重定位100=180</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>2.从源程序到执行的过程，经历了三个阶段</p>
+<ul>
+<li>编译：由编译程序将源代码编译成若干个目标模块（其实就是将高级语言翻译成机器语言）</li>
+<li>链接：编译好的目标模块以及所需的库函数链接在一起，生成装入模块(得到逻辑地址)
+<ul>
+<li>静态链接：程序运行前将各目标模块及所需库链接成完整的可执行文件，之后<strong>不再拆开</strong>
+<ul>
+<li><strong>装入前</strong>链接成一整块一下链接完，后面俩都是链接成一个个装入模块</li>
+</ul>
+</li>
+<li>装入时动态链接：将编译后得到的目标模块装入内存时边装入边链接
+<ul>
+<li>编译后链接<strong>和装入一起进行</strong>（所有模块都被链接）</li>
+</ul>
+</li>
+<li>运行时动态链接：<strong>程序运行需要</strong>一些模块时，才把这些模块进行链接
+<ul>
+<li>运行时要啥你再链接啥（部分模块被链接）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>装入：由装入程序将装入模块装入内存运行（得到物理地址）
+<ul>
+<li>绝对装入：编译时就产生绝对地址
+<ul>
+<li>只适用于单道程序，编译器负责地址转换</li>
+</ul>
+</li>
+<li>可重定位装入：又称为静态重定位，将逻辑地址重定位转换为物理地址
+<ul>
+<li>如物理地址=逻辑地址+1000</li>
+<li>必须分配作业所需全部内存空间，否则不能装入，且运行期间<strong>不能移动</strong></li>
+<li>装入程序负责地址转换，适用早期多道批处理阶段</li>
+</ul>
+</li>
+<li>动态运行装入：运行时才将逻辑地址转换为物理地址，需设置重定位寄存器
+<ul>
+<li>物理地址=重定位(基址)寄存器内容+逻辑地址</li>
+<li>可将程序分配到不连续的存储区，动态分配内存，允许程序在内存移动</li>
+<li>运行时才进行地址转换，适用于现代操作系统</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>3.覆盖技术：将程序分为多个段，常用的段常驻内存，不常用的段在需要时调入内存，解决大作业小内存问题</p>
+<ul>
+<li>固定区：存放常用的段，调入后除非运行结束否则不能再调出</li>
+<li>覆盖区：存放不常用的段，需要时调入内存，用不到时调出内存
+<ul>
+<li>可以让那些不可能同时被访问的程序段共享一个覆盖区</li>
+</ul>
+</li>
+<li>必须由<strong>程序员声明覆盖结构</strong>，操作系统完成自动覆盖</li>
+<li>缺点：对用户不透明，增加编程负担，用于早期操作系统</li>
+<li>在同一个作业或进程中发生</li>
+</ul>
+<p>4.交换技术：内存紧张时换出(挂起)某些进程再换入某些已具备运行条件的进程</p>
+<ul>
+<li>
+<p>文件区：占磁盘小部分，存放文件，追求存储空间的利用率</p>
+</li>
+<li>
+<p>对换区：存放被换出的进程数据(PCB不会被换出)，追求换入换出速度</p>
+</li>
+<li>
+<p>由中级(内存)调度决定将哪个挂起的进程调入内存</p>
+</li>
+<li>
+<p>在不同作业或进程之间发生</p>
+</li>
+</ul>
+<p>5.内部碎片：<strong>已经分配</strong>给作业但不能被利用的内存空间</p>
+<p>外部碎片：<strong>还未分配</strong>给作业但由于碎片太小无法分配给作业</p>
+<p>6.连续分配管理：为用户进程分配的必须是一个连续的内存空间</p>
+<blockquote>
+<p>助记：只要是固定大小的分配都会产生内部碎片，其余的都会产生外部碎片</p>
+</blockquote>
+<ul>
+<li>
+<p>单一连续分配：内存分为系统区和用户区，只能有一道用户程序且独占用户区</p>
+<ul>
+<li>实现简单，只适用单道程序，存储器利用率低</li>
+<li>无外部碎片，有内部碎片</li>
+</ul>
+</li>
+<li>
+<p>固定<strong>分区</strong>分配：将内存空间分为若干个固定大小的分区，每个分区只能装一道程序</p>
+<ul>
+<li>各分区大小相等：缺乏灵活性，但适用于控制多个相同对象</li>
+<li>各分区大小不等：增加了灵活性，可根据作业大小情况进行划分</li>
+<li>无外部碎片，有内部碎片</li>
+</ul>
+</li>
+<li>
+<p>动态分区分配：进程装入内存时才根据进程大小动态创建分区</p>
+<ul>
+<li>
+<p>记录内存使用情况的数据结构</p>
+<ul>
+<li>空闲分区表：每个空闲分区对应一个表项，包括分区号、分区大小、起始地址、状态等信息</li>
+<li>空闲分区链：各分区起始和结尾设置前向指针和后向指针</li>
+</ul>
+</li>
+<li>
+<p>动态分区分配算法：解决应选择哪个空闲分区的问题</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201223185037811.png"  alt="image-20201223185037811"></p>
+<blockquote>
+<p>助记：别人找你要100块，你就只给他100是最佳即优先给少点</p>
+<p>你给他10000然后你就喝西北风了这是最坏即优先给多点</p>
+</blockquote>
+</li>
+<li>
+<p>回收分区时要将相邻空闲分区合并</p>
+</li>
+<li>
+<p>外部碎片可用紧凑技术解决</p>
+</li>
+<li>
+<p>有外部碎片，无内部碎片</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>7.非连续分配：为用户进程分配的可以是一些分散的内存空间</p>
+<ul>
+<li>基本分页存储管理</li>
+<li>基本分段存储管理</li>
+<li>段页式存储管理</li>
+</ul>
+<p>8.基本分页存储管理：把进程分页，各个页面可离散放到各个内存块中</p>
+<ul>
+<li>
+<p>将进程分成若干大小相等区域，称为<strong>页</strong>或页面</p>
+<ul>
+<li>每个页面有一个编号即页号，从0开始</li>
+</ul>
+</li>
+<li>
+<p>将内存空间分成与页面大小相等的区域，称为页框(页框=页帧=<strong>内存块</strong>=物理块=物理页面)。</p>
+<ul>
+<li>每个页框也有一个编号即页框号(页框号=页帧号=内存块号=物理块号=物理页号)，从0开始。</li>
+</ul>
+</li>
+<li>
+<p>OS将进程中的任意一页放到内存中的任意一个页框(页框装着页)中。</p>
+</li>
+</ul>
+<blockquote>
+<p>简单来说就是将内存和进程都划分成若干大小相等区域，然后把进程的区域&quot;随便&quot;放到内存的区域中一一对应（进程分页，内存分块）</p>
+</blockquote>
+<p>9.页表：记录每个页面和内存中实际存放的内存块之间的映射关系</p>
+<ul>
+<li>一个进程对应一张页表，进程的每一页对应一个页表项
+<ul>
+<li>页表项由页号(页面的位置)和块号(内存块的位置)组成</li>
+<li>每个页表项大小相同</li>
+<li>页表项连续存放，因此页号可以是隐含的(不占存储空间)</li>
+<li>i号页表项存放地址 = 页表起始地址 + i*页表项大小</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>假设有一本书，每一页有固定字数，页面大小就是每一页字数数量，每本书都有目录，一个目录项(页表项)对应一页</p>
+</blockquote>
+<p>10.基本地址变换机构（由逻辑地址确定物理地址）</p>
+<ul>
+<li>地址变换过程
+<ul>
+<li>计算页号P（逻辑地址/页面大小）和页内偏移量W（逻辑地址%页面大小）</li>
+<li>若页号大于页表长度表示已超越进程的地址空间产生越界中断</li>
+<li>根据页表起始地址和页号找到对应页表项（第一次访存）</li>
+<li>根据页表项中记录的内存块号和页内偏移量得到最终物理地址</li>
+<li>访问物理内存对应的内存单元（第二次访存）</li>
+</ul>
+</li>
+<li>页式管理中地址是一维的：只要给一个逻辑地址系统就能计算页号和页内偏移量</li>
+<li>实际应用中会让页表项占更多字节使得页框刚好放下整个页表项而没有剩余</li>
+<li>为了方便找到页表项，页表项一般会放在连续的内存中</li>
+</ul>
+<p>11.具有快表的地址变换机构：是基本地址变换机构的改进版本</p>
+<ul>
+<li>
+<p>快表(TLB)：访问速度比内存快很多的高速缓存，存放最近访问的页表项的副本</p>
+</li>
+<li>
+<p>页表寄存器：存放页表在内存中的起始地址F和页表长度M</p>
+<ul>
+<li>起始地址F用来得到页表页号在内存中的具体地址：起始地址+页号*页表项长度</li>
+</ul>
+</li>
+<li>
+<p>页表长度表示页表有多少个页表项用来判断是否越界：若p ≥ M则越界中断</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201227124319360.png"  alt="image-20201227124319360"></p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201223185157788.png"  alt="image-20201223185157788"></p>
+<blockquote>
+<p>若命中先访问的是快表，而快表是高速缓存不属于内存，所以只需一次访存</p>
+<p>查快表和查页表其实看着都一样，只不过查快表速度要快的多，可理解成一个速度快得多的页表</p>
+<p>注意给的是一个逻辑地址，而一个页或一个块中有很多地址，所以需要一个页内偏移指出要访问的是哪个块中的具体哪个地址</p>
+</blockquote>
+</li>
+</ul>
+<p>12.局部性原理</p>
+<ul>
+<li>
+<p>时间局部性：使用了某个指令或数据，不久后很可能又再次使用</p>
+</li>
+<li>
+<p>空间局部性：程序访问了某个存储单元，不久后其附近的存储单元也可能被访问</p>
+<blockquote>
+<p>基本地址变换机构中，每次访问一个逻辑地址都要查询页表，由于局部性原理，可能连续多次查到的都是同一个页表项</p>
+</blockquote>
+</li>
+</ul>
+<p>13.单级页表存在的问题及解决方法</p>
+<ul>
+<li>所有页表连续存放，页表过大时需很大的连续空间(因为页表项一般都连续存储)
+<ul>
+<li>用两级页表解决，即把页表再分页并离散存储，再建立一张页表记录原页表各部分存放位置，称为页目录表(或外层页表、顶层页表)</li>
+</ul>
+</li>
+<li>一段时间内并非所有页面都能用到，没必要让整个页表常驻内存
+<ul>
+<li>可以在需要访问页面时才把页面调入内存（虚拟存储技术）</li>
+<li>可以在页表项中增加一个标志位，用于表示该页面是否已经调入内存</li>
+</ul>
+</li>
+</ul>
+<p>14.两级页表如何实现地址变换</p>
+<p>①按照地址结构将逻辑地址拆分成三部分（之前是页号+页内偏移量）<br>
+②从PCB 中读出页目录表始址，再根据一级页号查页目录表，找到下一级页表在内存中的存放位置<br>
+③根据二级页号查二级页表，找到最终想访问的内存块号<br>
+④结合页内偏移量得到物理地址</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201227145700475.png"  alt="image-20201227145700475"></p>
+<p>15.基本分段存储管理：思想和过程类似于基本分页存储管理，但各段长度可以不同</p>
+<ul>
+<li>分段：将程序的地址空间按自身逻辑划分为若干段，每个段都有段名，每段从0开始编制</li>
+<li>内存分配规则：以段为单位，每个段在内存是连续的，各段可不相邻</li>
+<li>段表：记录逻辑段到实际存储地址的映射关系
+<ul>
+<li>每个段对应一个段表项，各段表项长度相同，段号可隐含</li>
+</ul>
+</li>
+</ul>
+<p>16.分段地址变换</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201227151557944.png"  alt="image-20201227151557944"></p>
+<blockquote>
+<p>注意分页存储中，物理地址的格式为块号+页内偏移，而分段存储中物理地址格式为段基址+段内地址</p>
+</blockquote>
+<p>17.分页和分段的对比</p>
+<ul>
+<li>页是信息的物理单位对用户不可见，段是信息的逻辑单位对用户可见，编程时需显式给出段名</li>
+<li>页的大小固定且由系统决定而段长度不固定由用户决定</li>
+<li>分页的地址是一维的(给出逻辑地址即可)，而分段地址是二维的(给出段名和段内地址)</li>
+<li>分段更容易实现信息的共享和保护</li>
+</ul>
+<p>18.段页式存储管理：将进程按逻辑分段，再将各段分页。然后将内存分为与页面大小相等的内存块。就是分段+分页</p>
+<ul>
+<li>段号：给出页表是在哪个块号中和页表的长度</li>
+<li>页号：根据段号查段表得到的页表所在块号去找对应块然后根据页号就能得到具体内存块号
+<ul>
+<li>注意块和页的大小是一样的，所以给出块号就能唯一确定页表了</li>
+</ul>
+</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201227153138338.png"  alt="image-20201227153138338"></p>
+<p>19.传统存储管理方式的缺点(连续、非连续分配)：</p>
+<ul>
+<li>一次性：作业必须一次全部调入内存</li>
+<li>驻留性：作业数据在整个运行期间常驻内存</li>
+</ul>
+<p>20.虚拟内存：程序不需全部装入即可运行，运行时根据需要动态调入，若内存不够还需换出一些数据</p>
+<ul>
+<li>多次性：作业无需一次全部调入内存，可多次调入</li>
+<li>对换性：作业运行无需常驻内存，允许将作业换入、换出</li>
+<li>虚拟性：逻辑上扩充了内存，使用户看到的内存容量远大于实际容量</li>
+<li>虚拟内存的实现
+<ul>
+<li>请求分页存储管理</li>
+<li>请求分段存储管理</li>
+<li>请求段页式管理</li>
+</ul>
+</li>
+</ul>
+<p>21.请求分页存储管理：基本分页+请求调页+页面置换</p>
+<ul>
+<li>
+<p>页表结构</p>
+<ul>
+<li>页号和物理号：和基本分页存储管理功能一样</li>
+<li>状态位：表示页面是否已在内存中</li>
+<li>访问字段：记录一段时间内被访问次数，或多久未被访问</li>
+<li>修改位：表示页面调入内存后是否修改过，只有修改过的才需在置换时写回外存</li>
+<li>外存地址：页面在外存中存放的位置</li>
+</ul>
+</li>
+<li>
+<p>缺页中断机构</p>
+<ul>
+<li>找到页表项检查页表是否在内存中，若没在<strong>产生缺页中断</strong>
+<ul>
+<li>传统存储管理作业一次性调入内存所以不存在页表不在内存的情况，也不会有缺页中断</li>
+</ul>
+</li>
+<li>缺页中断处理中，要将目标页面调入内存，必要时换出页面</li>
+<li>缺页中断属于内中断的&quot;故障&quot;，即可能被系统修复的异常</li>
+<li>一条指令执行过程中可能产生多次缺页中断</li>
+</ul>
+</li>
+<li>
+<p>地址变换机构</p>
+<ul>
+<li>找到页表项检查页表是否在内存中
+<ul>
+<li>若不在内存中，需要<strong>请求调页</strong></li>
+</ul>
+</li>
+<li>若内存空间不够，还需<strong>页面置换</strong>换出页面</li>
+<li>页面调入内存后，需要修改相应页表项</li>
+</ul>
+<blockquote>
+<p>在具有快表机构的请求分页系统中，访问一个逻辑地址时，若发生缺页，则地址变换步骤是：查快表(未命中)——查慢表(发现未调入内存)——调页(调入的页面对应的表项会直接加入快表)——查快表(命中)——访问目标内存单元</p>
+</blockquote>
+</li>
+</ul>
+<p>22.页面置换算法：决定将内存中哪个页面置换出去</p>
+<blockquote>
+<p>以下前三个算法是重点</p>
+<p>最佳置换OPT向后看淘汰最远，最近最少使用LRU向前看淘汰最远</p>
+<p>只有FIFO才可能产生Belady异常</p>
+</blockquote>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201223185453974.png"  alt="image-20201223185453974"></p>
+<p>23.页面分配策略</p>
+<ul>
+<li>驻留集：请求分页存储管理中给进程分配的物理块的集合</li>
+<li>页面分配、置换策略
+<ul>
+<li>固定分配局部置换：运行前分配一定数量物理块，缺页时只能换出自己的某一页</li>
+<li>可变分配全局置换：只要缺页就分配新物理块，可能来自空闲物理块，也可能需换出别的进程页面</li>
+<li>可变分配局部置换：频繁缺页的进程多分配一些物理块，缺页率很低的进程回收一些物理块，直到缺页率合适。</li>
+</ul>
+</li>
+<li>页面调入策略（何时调入）
+<ul>
+<li>预调页策略：将预测要访问的页面预先调入内存，用于程序运行前调入</li>
+<li>请求调页策略：运行期间发生缺页才将所缺页面调入内存</li>
+</ul>
+</li>
+<li>从何处调入页面
+<ul>
+<li>补充知识：对换区采用连续存储方式，I/O速度更快。文件区采用离散存储方式，速度更慢</li>
+<li>对换区足够大：运行前将数据从文件区复制到对换区，之后都从对换区调入调出</li>
+<li>对换区不够大：不会被修改的数据从文件区调入无需换出，会被修改的数据调出到对换区，需要时从对换区调入</li>
+<li>UNIX方式：第一次使用的页面都从文件区调入。调出的页面都写回对换区，再次使用时从对换区调入。</li>
+</ul>
+</li>
+<li>抖动(颠簸)现象：页面频繁换入换出。主要原因是页面置换算法不合理。</li>
+<li>工作集：某段时间间隔里，进程实际访问的页面的集合。一般小于驻留集。</li>
+</ul>
+<p>24.3种离散分配方式的比较</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201227175957572.png"  alt="image-20201227175957572"></p>
+<blockquote>
+<p>助记：只要是固定大小的分配都会产生内部碎片，其余的都会产生外部碎片</p>
+<p>分页和分段都2次访存，带快表就访存1或2次，段页式访存3次</p>
+</blockquote>
+<p>25.几种内存管理方式的比较</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201227180029960.png"  alt="image-20201227180029960"></p>
+<h2 id="习题-v4"><a class="header-anchor" href="#习题-v4">¶</a>习题</h2>
+<p>1.假设某系统物理内存大小为4GB,页面大小为4KB,则每个页表项至少应该为多少字节?<br>
+答：内存块大小=页面大小=4KB=2<sup>12</sup>B<br>
+4GB的内存总共会被分为2<sup>32</sup>/2<sup>12</sup>=2<sup>20</sup>个内存块<br>
+内存块号的范围应该是0~2<sup>20</sup>-1<br>
+内存块号至少要用20bit来表示即至少要用3B来表示块号(3*8=24bit)</p>
+<p>页表项=页号+块号，由于页号可以是隐含的所以页表项至少为3B</p>
+<p>2.若页面大小L为1K字节，页号2对应的内存块号b=8，将逻辑地址A=2500转换为物理地址E</p>
+<p>答：题目等价描述：某系统按字节寻址，页内偏移量占10位(2<sup>10</sup>=1KB)，页号2对应的内存块号 b = 8，将逻辑地址 A=2500 转换为物理地址E</p>
+<p>①页号P=A/L=2500/1024=2  页内偏移量W=A%L=2500%1024=452</p>
+<p>②根据题目描述页号2没有越界（因为其有对应的内存块号）</p>
+<p>③物理地址E=b*L+W=8*1024+452=8644</p>
+<p>3.某系统使用基本分页存储管理，并采用了具有快表的地址变换机构。访问一次快表耗时 1us，访问一次内存耗时 100us。若快表的命中率为 90%，那么访问一个逻辑地址的平均耗时是多少？</p>
+<p>答：①若先查快表再查慢表：(1+100)*0.9 + (1+100+100)*0.1=111us<br>
+②有的系统支持快表和慢表同时查找，平均耗时为 (1+100)*0.9 + (100+100) *0.1=110.9 us</p>
+<blockquote>
+<p>若未引入快表，需要100+100=200us，这题关键在于是几次访存</p>
+</blockquote>
+<p>4.在一个请求分页系统中,采用LRU页面置换算法时,加入一个作业的页面走向为:1,3,2,1,1,3,5,1,3,2,1,5。当分配给该作业的物理块数分别为3和4时,在访问过程中所发生的缺页率为（C）<br>
+A.25%,33%	B.25%,100%<br>
+C.50%,33%	D.50%,75%</p>
+<p>答：物理块为3时，缺页情况如下</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201230202312545.png"  alt="image-20201230202312545"></p>
+<p>解释：LRU即最近最少使用算法，向前看找访问串里离缺页那一列最远出现的数替换掉它</p>
+<p>如第四次缺页时，现在有1、3、2，我们往前看访问串依次是3112到这3个数字都出现了，而2是排最后所以把它替换掉。又如第五次缺页，此时有1、3、5，我们向前看访问串依次是315到这3个数字全部出现而最远的是5所以替换掉5</p>
+<p>缺页次数为6，缺页率为6/12=50%</p>
+<p>物理块数为4时，也可以向上图一样画表，但我们可以发现访问串访问的其实就只有1325这四个数，所以一定是只有4次缺页</p>
+<p>即缺页次数为4，缺页率为4/12=33%</p>
+<p>5.设有8页的逻辑空间,每页有1024B,它们被映射到32块的物理存储区中。那么,逻辑地址的有效位是()位,物理地址至少是()位。 （C）</p>
+<p>A.10、11	B.12、14	C.13、15	D.14、16</p>
+<p>答：8页=2<sup>3</sup>，所以页号地址有3位。每页有1024B=2<sup>10</sup>，所以页内偏移量有10位，因此逻辑地址至少要有13位</p>
+<p>物理块大小和页面大小相同，所以物理块大小为1024B，而内存至少要有32个物理块，因此内存至少为32*1024B=2<sup>15</sup>B，因此物理地址至少为15位，不然无法访问内存的所有区域</p>
+<p>6.假定某页式管理系统中,主存为128KB,分成32块,块号为0,1,2,3,…,31。某作业有5块,其页号为0,1,2,3,4,被分别装入主存的3,8,4,6,9块中。有一逻辑地址为[3,70]。试求出相应的物理地址(其中方括号中的第一个元素为页号,第二个元素为页内地址,按十进制计算)(B)</p>
+<p>A.14646	B.24646	C.24576	D.34576</p>
+<p>答：每块大小为128KB/32=4KB，所以每页也为4KB大小</p>
+<p>第3页被装入到第6块中，因此[3,70]对应的物理地址为6*4K+70=24646</p>
+<p>7.©存储管理方式能使存储碎片尽可能少,而且使内存利用率较高。</p>
+<p>A.固定分区	B.可变分区	C.分页管理	D.段页式管理</p>
+<p>答：分页管理与固定分区和可变分区相比碎片明显减少。因为分页管理的碎片都能控制在一个页面大小内，而页面大小通常都较小。</p>
+<p>段页式虽然结合了段式和页式的优点，但一个进程会有很多段，其中一个段对应一张页表每段都会有一个页内碎片，而页式管理中一个进程对应一张页表只有一个页内碎片。</p>
+<p>8.下列选项中,属于多级页表优点的是（D）<br>
+A.加快地址变换速度<br>
+B.减少缺页中断次数<br>
+C.减少页表项所占字节数<br>
+D.减少页表所占的连续内存空间</p>
+<p>答：对于A，多级页表不仅不会加快地址变换速度反而会减慢速度(多级一级一级查肯定没有单级只查一级快)</p>
+<p>对于B，如果访问过程中多级的页表都不在内存中反而增加了缺页中断次数</p>
+<p>对于C，多级和页表项长度没关系</p>
+<p>对于D，既然多级上面三个都不是它优点那为什么还要发明它呢？因为如果页表太大占了太多连续内存空间，我们可以把它分级使得每一级的页表大小在一定范围内</p>
+<p>9.系统为某进程分配了4个页框,该进程已访问的页号序列为2,0,2,9,3,4,2,8,2,4,8,4,5。若进程要访问的下一页的页号为7,依据LRU算法,应淘汰页的页号是（A）<br>
+A.2	B.3	C.4	D.8</p>
+<p>答：LRU最近最久未访问算法，现在最后一个访问的是5，向前看然后是4，再接着是8，然后又是4，现在占了3个页框，然后是2占满了4个页框，显然在5482里最久未访问的是2所以替换2</p>
+<p>10.在请求分页系统中,页面分配策略与页面置换策略不能组合使用的是©<br>
+A.可变分配,全局置换<br>
+B.可变分配,局部置换<br>
+C.固定分配,全局置换<br>
+D.固定分配,局部置换</p>
+<p>答：固定分配：操作系统为每个进程分配一组固定数组的物理块，在进程运行期间不再改变。</p>
+<p>全局置换：可以将操作系统保留的空闲物理块<strong>分配</strong>给缺页的进程，也可以将别的进程保持有的物理块置换到外存，再<strong>分配</strong>给缺页进程。</p>
+<p>局部置换：发生缺页时只能选进程自己的物理块进行置换。</p>
+<p>固定分配后页数是固定的了不能再接受全局置换的分配了，只能自己内部置换</p>
+<p>11.某计算机按字节编址,其动态分区内存管理采用最佳适应算法,每次分配和回收内存后都对空闲分区链重新排序。当前空闲分区信息如下</p>
+<table>
+<thead>
+<tr>
+<th>分区起始地址</th>
+<th>20K</th>
+<th>500K</th>
+<th>1000K</th>
+<th>200K</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分区大小</td>
+<td>40K</td>
+<td>80K</td>
+<td>100K</td>
+<td>200K</td>
+</tr>
+</tbody>
+</table>
+<p>回收起始地址为60K、大小为140KB的分区后,系统中空闲分区的数量、空闲分区链第一个分区的起始地址和大小分别是（B）<br>
+A.3、20K、380KB<br>
+B.3、500K、80KB<br>
+C.4、20K、180KB<br>
+D.4、500K、80KB</p>
+<p>答：回收了起始地址为60K大小为140K的分区(60+140=200K)后它会与表中第一个和最后一个分区合并(第一个末尾地址20+40=60K,最后一个起始200K)形成起始地址20K大小为380K的分区。</p>
+<p>但是题目中说了每次回收内存都要重新排序，而采用最佳适应算法，排序后空闲分区由小到大排列。排列后的分区为500K+80K、1000K+100K、20K+380K</p>
+<p>所以空闲分区数量为3，第一个起始为500K大小为80K</p>
+<p>12.某虚拟存储器的用户编程空间共32个页面，每页为1KB，内存为16KB。假定某时刻一用户页表中已调入内存的页面的页号和物理块号的对照表如下：</p>
+<table>
+<thead>
+<tr>
+<th>页号</th>
+<th>物理块号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>5</td>
+</tr>
+<tr>
+<td>1</td>
+<td>10</td>
+</tr>
+<tr>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p>则逻辑地址 0A5D（H）所对应的物理地址是什么？</p>
+<p>答：这道题有两种解法</p>
+<p>(1)：按照一般解法，页号=逻辑地址/页面大小，偏移量=逻辑地址%页面大小</p>
+<p>每页1KB，所以页面大小为1024，逻辑地址0A5D即0000 1010 0101 1101转为十进制后是2653</p>
+<p>页号=2653/1024=2，偏移量=2653%1024=605</p>
+<p>页号2对应的物理块号是4即0100，605转为二进制后是1001 0111 01</p>
+<p>物理地址=物理块号+偏移量 发现4位加10位不满16位前面补0即可</p>
+<p>最终结果为0001 0010 0101 1101 即 125D(H)</p>
+<blockquote>
+<p>也可用十进制计算</p>
+<p>页号2对应的物理块号是4，而每页1KB，因此物理地址为4*1024+605=4701</p>
+<p>转换为二进制为1001001011101，则最终结果为0001 0010 0101 1101 即 125D(H)</p>
+<p>这题偏移量固定占10位，如果十进制转为二进制后不足10位，要补成10位</p>
+</blockquote>
+<p>(2)：事实上我们发现题目中有的条件没用到，我们也可以用下面方法求解</p>
+<p>页面有32个即2<sup>5</sup>，所以要用逻辑地址中5位页号来表示这32个页面。每页1KB所以偏移量占10位</p>
+<p>所以0A5D即0<strong>000 10</strong>10 0101 1101中000 10是页号，10 0101 1101是偏移量</p>
+<p>00010即十进制的2对应的物理块号是4即0100</p>
+<p>所以物理地址=物理块号+偏移量即0100 10 0101 1101 前面补0成16位即125D(H)</p>
+<p>13.在基本分页存储管理系统中，假定页面大小为 1024 字节，每个页表项占用 4 个字节。（题目中所有数据都是十进制）</p>
+<p>(1)若采用一级页表，系统能支持的逻辑空间最多为多少？</p>
+<p>答：一级页表即在一本书中有一页目录，一页纸能写1024个字，每个目录项占4个字，那么一页纸就能有1024/4=256个目录项。而一个目录项对应着书本里的一页，256个目录项对应256页，按字节寻址即一个字节为一个地址，页面大小为1024字节说明一页能表示1024个地址，256页就能表示256*1024=256K个地址即最多为256K</p>
+<p>(2)若采用两级页表，系统能支持的逻辑空间最多为多少？</p>
+<p>答：二级页表能表示256*256个页面即2<sup>16</sup>个页面，一个页面能表示1024个地址即2<sup>10</sup></p>
+<p>所以总共能表示2<sup>16</sup>*2<sup>10</sup>=2<sup>26</sup>=64M</p>
+<p>(3)在两级页表中，现有逻辑地址为 542783，求该地址对应的外层页号（页表页面号）、页号和页内地址。</p>
+<p>答：如下图所示，已知逻辑地址我们先求外层页号。</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20210105094010970.png"  alt="image-20210105094010970"></p>
+<p>我们可以把二级页表中的页面看成是连续的页面。再给他们编上序号，那542783对应着542783/1024=530，也就是说542783在序号为530的页面中。</p>
+<blockquote>
+<p>其实这个时候问题可以转换为已知逻辑地址为530，求它的页号(对应着本题的外层表号)和页内地址(对应着本题的页号)</p>
+</blockquote>
+<p>这个序号530又在哪个一级页表中呢，一个一级页表项能表示256个页面即序号0-255在一级页表中的0，256-511在一级页表中的1</p>
+<p>那530就在530/256=2及序号为2的页表项里，那在对应的二级页表中的哪一项呢，即530%256=18</p>
+<p>对于页内地址，还是来看二级页表把所有页表当成连续的来看，那542783/1024是所在编号，而542783%1024正是页内地址即63</p>
+<ul>
+<li>当然我们已知外层页号2和页号18，他们所能表示的页面的起始地址是2*256*1024+18*1024=542720，那页内地址就等于542783-542720=63</li>
+</ul>
+<blockquote>
+<p>总结：外层页号=逻辑地址/页面大小/一页有多少页表项 （542783/1024/256）</p>
+<p>页号=逻辑地址/页面大小%一页有多少页表项	（542783/1024%256）</p>
+<p>页内地址=逻辑地址%页面大小	（542783%1024）</p>
+</blockquote>
+<h1>文件管理</h1>
+<h2 id="知识点-v5"><a class="header-anchor" href="#知识点-v5">¶</a>知识点</h2>
+<p>1.文件的属性</p>
+<ul>
+<li>名称</li>
+<li>标识符：各文件标识符唯一，对用户来说透明</li>
+<li>文件类型</li>
+<li>文件位置：指向文件的指针</li>
+<li>大小</li>
+<li>创建时间、上次修改时间</li>
+<li>文件所有者信息</li>
+<li>保护信息：对文件进行保护的访问控制信息</li>
+</ul>
+<p>2.文件的逻辑结构分为两种，如下</p>
+<p>无结构文件：文件内部数据是一系列<strong>二进制流或字符流</strong>，又称流式文件如txt</p>
+<p>有结构文件：由一组相似的记录组成，又称记录式文件，每条记录由若干数据项组成</p>
+<ul>
+<li>
+<p>顺序文件：文件中记录逻辑上一个接一个顺序排列，记录可定长可变长</p>
+<ul>
+<li>串结构：记录之间的顺序与关键字无关（通常按时间排序）</li>
+<li>顺序结构：记录之间的顺序按关键字顺序排序</li>
+<li>可变长记录的顺序文件无法实现随机存取，定长记录可以</li>
+<li>采用顺序结构的定长记录文件可以快速检索(如折半查找)</li>
+<li>缺点：不方便增加/删除记录</li>
+</ul>
+<blockquote>
+<p>类比数据结构的顺序表</p>
+</blockquote>
+</li>
+<li>
+<p>索引文件：建立一张索引表，每个记录对应一个表项，各记录不用保持顺序</p>
+<ul>
+<li>索引表本身就是定长记录的顺序文件，因此支持随机存取</li>
+<li>若索引表按关键字顺序排列，则可支持快速检索</li>
+<li>优点：解决了顺序文件不方便增/删的问题，让不定长记录文件实现随机存取</li>
+<li>缺点：每个记录对应一个索引表项，可能占用很多空间</li>
+</ul>
+<blockquote>
+<p>相当于建了个目录</p>
+</blockquote>
+</li>
+<li>
+<p>索引顺序文件：将记录分组每一组对应一个索引表项</p>
+<ul>
+<li>检查记录时先顺序查索引表，找到分组后再顺序查找分组</li>
+<li>记录过多时可建立多级索引表</li>
+</ul>
+<blockquote>
+<p>先分组再建立目录</p>
+</blockquote>
+</li>
+</ul>
+<p>3.文件目录：一个文件对应一个FCB(文件控制块)，一个FCB就是一个目录项，多个FCB构成文件目录</p>
+<ul>
+<li>
+<p>对目录的操作</p>
+<ul>
+<li>搜索：根据文件名搜索目录，找到对应目录项</li>
+<li>创建文件：需在其所属目录增加一个目录项</li>
+<li>删除文件：从目录中删除对应目录项</li>
+<li>显示目录：用户可请求显示目录内容，如显示目录中所有文件及属性</li>
+<li>修改目录：如文件重命名</li>
+</ul>
+<p>4.目录结构</p>
+<ul>
+<li>单级目录结构：一个系统只有一张目录表，不允许文件重名</li>
+<li>两级目录结构：不同用户的文件可以重名但用户不能对文件分类</li>
+<li>多级(树形)目录结构：各级目录之间用&quot;/&quot;隔开
+<ul>
+<li>系统根据文件路径找到目标文件</li>
+<li>根目录出发是绝对路径，当前路径出发是相对路径(可减少I/O)</li>
+<li>不同目录下文件可重名，可分类但不方便文件共享</li>
+</ul>
+</li>
+<li>无环图目录结构：在树形目录结构基础上增加一些指向同一节点的有向边，使整个目录成为一个有向无环图
+<ul>
+<li>为共享结点设置一个共享计数器，计数器为0时才真正删除该结点</li>
+<li>不同于复制文件，其中一个用户修改了数据，所有用户都能看到变化</li>
+</ul>
+</li>
+</ul>
+<p>5.索引结点：FCB的改进，除了文件名之外的所有信息都放到索引结点中，每个文件对应一个索引结点</p>
+<ul>
+<li>目录项中只包含文件名、索引结点指针，每个目录项长度大幅减少</li>
+<li>目录项长度减少每个磁盘块就能放更多目录项，大大提高文件检索速度</li>
+<li>放入外存的索引结点为磁盘索引结点，放入内存后为内存索引结点</li>
+</ul>
+<p>6.文件的物理结构（也就是文件应怎样存在外存中）（相较于逻辑结构这个更容易考）</p>
+<ul>
+<li>补充知识点：类似于内存分页，磁盘中存储单元也会分成一个个磁盘块，通常它与内存块、页面的大小相等</li>
+<li>内存与磁盘之间数据交换以块为单位</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201223185947141.png"  alt="image-20201223185947141"></p>
+<blockquote>
+<p>连续(顺序)分配可随机存取但不便于文件长度动态增长(<strong>随机存取能力最强</strong>)</p>
+<p>链接便于文件动态长度增长但不可随机存取</p>
+<p>索引既可随机存取也便于文件长度动态增长</p>
+</blockquote>
+</li>
+</ul>
+<p>7.文件逻辑结构对比物理结构</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201223190025398.png"  alt="image-20201223190025398"></p>
+<p>8.文件的基本操作</p>
+<ul>
+<li>
+<p>创建文件：create系统调用，分配外存空间，创建目录项</p>
+</li>
+<li>
+<p>删除文件：delete系统调用，回收外存空间，删除目录项</p>
+</li>
+<li>
+<p>打开文件：open系统调用，将目录项中的信息复制到内存中的打开文件中，并将<strong>打开文件表的索引号返回给用户</strong></p>
+<ul>
+<li>打开文件后，对文件的操作不用查询目录，<strong>根据内存中的打开文件表操作</strong></li>
+<li>每个进程都有自己的打开文件表，系统有一张总的打开文件表</li>
+<li>进程打开文件表中特有的属性：读写指针，访问权限</li>
+<li>系统打开文件表中特有的属性：打开计数器（有多少进程打开了该文件）</li>
+</ul>
+</li>
+<li>
+<p>关闭文件：close系统调用，将进程中打开文件表的相应表项删除并让系统打开表的打开计数器减1，若减为0则删除系统打开表表项</p>
+</li>
+<li>
+<p>读文件：read系统调用，根据读指针、读入数据量、内存位置<strong>将数据从外存读入内存</strong></p>
+<blockquote>
+<p>根据打开文件得到的文件描述符(索引号)即可指明文件，无需文件名，下同</p>
+</blockquote>
+</li>
+<li>
+<p>写文件：write系统调用，根据写指针、写出数据量、内存位置将文件数据从内存写入外存</p>
+</li>
+</ul>
+<p>9.文件存储空间管理</p>
+<ul>
+<li>补充知识
+<ul>
+<li>目录区主要存文件目录信息(FCB)，用于磁盘存储空间管理</li>
+<li>文件区用于存放文件数据</li>
+</ul>
+</li>
+<li>空闲表法：空闲盘块表中记录每个连续空闲区的起始盘块号、盘块数
+<ul>
+<li>分配时可采用首次适应、最佳适应等策略。回收时要注意表项的合并问题</li>
+</ul>
+</li>
+<li>空闲链表法
+<ul>
+<li>空闲盘块链：以盘块为单位组成一条空闲链
+<ul>
+<li>分配时从链头依次取出空闲块，回收时将空闲块插到链尾</li>
+</ul>
+</li>
+<li>空闲盘区链：以盘区(多个连续的盘块为一盘区)为单位组成一条空闲链
+<ul>
+<li>分配时可采用首次适应、最佳适应等策略。回收时要注意相邻盘区的合并问题</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>位示图法</strong>：一个二进制位对应一个盘块
+<ul>
+<li>位示图中0和1分别代表空闲或不空闲</li>
+</ul>
+</li>
+<li>成组链接法：文件卷的目录区专门一个磁盘块作为超级块，系统启动读入内存
+<ul>
+<li>UNIX常用策略，适合大型文件系统，理解即可。</li>
+</ul>
+</li>
+</ul>
+<p>10.文件共享：使得多个用户共享同一个文件</p>
+<ul>
+<li>
+<p>基于索引结点的共享方式–硬链接</p>
+<ul>
+<li>各个用户目录项指向同一索引结点，索引结点指向文件</li>
+<li>索引结点中设有链接计数表示当前有几个用户在共享此文件</li>
+<li>用户删除文件，链接计数减1当减为0时才真正删除文件数据和索引结点</li>
+</ul>
+</li>
+<li>
+<p>基于符号链的共享方式–软链接（快捷方式）</p>
+<ul>
+<li>
+<p>在一个Link型文件中记录共享文件的存放路径(如windows快捷方式)</p>
+</li>
+<li>
+<p>操作系统根据存放路径一层一层查找目录，会有多次磁盘I/O，因此比硬链接速度慢</p>
+</li>
+<li>
+<p>即使软链接指向的共享文件已删除，Link型文件依然存在，而通过Link型文件中的路径去找文件会提示失败</p>
+<blockquote>
+<p>例如快捷方式指向的文件被删除了，快捷方式依然存在但双击会提示找不到文件</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p>11.文件保护：即保护文件数据的安全</p>
+<ul>
+<li>口令保护：为文件设置一个口令，访问文件需要验证口令
+<ul>
+<li>开销小，但口令放在系统内部不够安全</li>
+</ul>
+</li>
+<li>加密保护：用一个密码对文件加密，访问文件需要提供正确的密码
+<ul>
+<li>安全性高，但加解密需要耗费一定的时间（如异或加密）</li>
+</ul>
+</li>
+<li>访问控制：用一个访问控制列表(ACL)记录各个(或各组)用户对文件的访问权限
+<ul>
+<li>对文件的访问类型可分为读/写/执行/删除等（类似linux的文件权限）</li>
+<li>若对某目录设定了访问控制，那目录下的所有文件也要设相同的访问控制</li>
+<li>实现灵活，可实现复杂的文件保护功能</li>
+</ul>
+</li>
+</ul>
+<p>12.文件系统的层次结构</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201227233449615.png"  alt="image-20201227233449615"></p>
+<p>小案例如下</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201223190209262.png"  alt="image-20201223190209262"></p>
+<p>13.磁盘：由表面涂有磁性物质的圆形盘片组成</p>
+<ul>
+<li>磁道：从里到外一个个小圆圈就是磁道</li>
+<li>扇区：一个磁道被分为一个个扇区，最内侧扇区面积最小数据密度最大</li>
+<li>读写数据：磁头移到目标磁道，盘片旋转，对应扇区从磁头下划过完成读写</li>
+<li>磁盘由多个盘片摞起来，每个盘片有两个盘面</li>
+<li>所有磁头连接在一个磁臂上，只能共进退</li>
+<li>可用柱面号(哪个圆柱)，盘面号(哪一层)，扇区号(一层的哪一个)确定任意一个磁盘块</li>
+</ul>
+<p>14.磁盘的分类</p>
+<ul>
+<li>根据磁头是否可以移动
+<ul>
+<li>固定头磁盘：每个磁道有一个磁头</li>
+<li>移动头磁盘：每个扇面有一个磁头，磁臂可来回伸缩</li>
+</ul>
+</li>
+<li>根据盘片是否可更换
+<ul>
+<li>固定盘磁盘</li>
+<li>可换盘磁盘</li>
+</ul>
+</li>
+</ul>
+<p>15.一次磁盘读/写操作所需时间=寻道时间+延迟时间+传输时间</p>
+<ul>
+<li>寻找(寻道)时间：将磁头移到目标磁道所花时间
+<ul>
+<li>Ts=启动磁臂时间s + 移动一个磁道时间m*移动磁道数目n</li>
+</ul>
+</li>
+<li>延迟(旋转)时间：旋转磁盘到目标扇区的时间
+<ul>
+<li>转半圈时间，一般求解为转速分之一的一半</li>
+</ul>
+</li>
+<li>传输时间：读/写数据时间
+<ul>
+<li>转一圈的时间*转多少圈</li>
+</ul>
+</li>
+</ul>
+<p>16.磁盘调度算法</p>
+<ul>
+<li>先来先服务FCFS：按访问请求的先后顺序进行处理</li>
+<li>最短寻找时间优先SSTF：每次优先选择离磁头最近的磁道访问</li>
+<li>扫描算法(电梯算法SCAN)：磁头移动到边缘磁道时才改变磁头方向</li>
+<li>循环扫描算法C-SCAN：只有磁头朝某个方向移动时才会响应请求，到边缘后立即返回起点而不处理任何请求</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201228001919894.png"  alt="image-20201228001919894"></p>
+<p>17.减少磁盘延迟时间的方法</p>
+<ul>
+<li>交替编号：让编号相邻的扇区在物理上不相邻
+<ul>
+<li>原理：读完一个扇区要一段时间才能读下一个扇区若物理上也相邻这段时间内可能就划过目标扇区了</li>
+</ul>
+</li>
+<li>错位命名：让相邻盘面的扇区编号错位，原理同上</li>
+<li>磁盘地址结构的设计为(柱面号,盘面号，扇区号)而不是(盘面号,柱面号,扇区号)
+<ul>
+<li>原因：在读取连续的物理地址的扇区时，前者不需要移动磁头。</li>
+<li>后者要是柱面号换了磁头就要换磁道，前者盘面号换了只要激活相邻盘面的磁头即可</li>
+</ul>
+</li>
+</ul>
+<p>18.磁盘的管理</p>
+<ul>
+<li>磁盘初始化过程
+<ul>
+<li>进行低级格式化(物理格式化)，将各个磁道划分扇区，确定扇区检验码位数</li>
+<li>磁盘分区（如C盘、D盘等）</li>
+<li>逻辑格式化：建立文件系统、根目录和用于存储空间管理的数据结构如空闲分区表</li>
+</ul>
+</li>
+<li>引导块：就是启动分区，拥有启动分区的磁盘为启动磁盘或系统磁盘(如C盘)
+<ul>
+<li>计算机开机时需运行初始化程序(自举程序)完成初始化</li>
+<li>ROM只存放很小的自举程序而完整的自举程序在引导块中</li>
+</ul>
+</li>
+<li>坏块的管理：无法正常使用的扇区就是坏块，系统无法修复因此要标记出来
+<ul>
+<li>简单的磁盘：逻辑格式化将坏块标记出来，对OS不透明</li>
+<li>复杂的磁盘：磁盘控制器维护一个坏块链，并管理备用扇区，对OS透明</li>
+</ul>
+</li>
+</ul>
+<h2 id="习题-v5"><a class="header-anchor" href="#习题-v5">¶</a>习题</h2>
+<p>1.若8个字(字长32位)组成的位示图管理内存,假定用户归还一个块号为100的内存块,它对应位示图的位置为（B）。假定字号、位号、块号均从1开始算起,而不是从0开始。<br>
+A.字号为3,位号为5		B.字号为4,位号为4<br>
+C.字号为3,位号为4		D.字号为4,位号为5</p>
+<p>答：位示图中一位可表示一个内存块</p>
+<p>字长32位，由于都是从1开始所以依次是1-32、33-64、65-96、97-98-99-100</p>
+<p>因此字号是4，位号也是4（注意都从1开始）</p>
+<blockquote>
+<p>这样的题当然可以用公式算，但是由于有时候是0开始有时候1开始，保险起见写下来更稳点</p>
+</blockquote>
+<p>2.现代操作系统是用（C）来实现重名(即允许不同用户的文件可以具有相同的文件名)问题的</p>
+<p>A.重名翻译结构		B.建立索引表<br>
+C.树形目录结构		D.建立指针</p>
+<p>答：树形目录结构由一个根目录和若干层子目录组成。这种目录结构一是能够解决文件重名问题,即不同的目录可以包含相同的文件名或目录名;二是能够解决文件多而根目录容量有限带来的问题。</p>
+<p>3.文件系统采用两级索引分配方式。若每个磁盘块的大小为1KB,每个盘块号占4B,则该系统中单个文件的最大长度是(A)。<br>
+A.64MB	B.128MB	C.32MB	D.都不对</p>
+<p>答：每个磁盘块最多有1KB/4B=256个索引项，两级索引可表示256*256个磁盘块，这些磁盘块可以占256*256*1KB=64MB大小，因此单个文件最大长度为64MB</p>
+<p>4.下列算法中,用于磁盘调度的是©。<br>
+A.时间片轮转法				B.LRU算法<br>
+C.最短寻道时间优先算法		 D.高优先级算法</p>
+<p>答：时间片轮转法是进程调度算法,LRU算法是页面淘汰算法。</p>
+<p>最短寻道时间优先算法是磁盘调度算法,髙优先级算法是进程调度和作业调度的算法。</p>
+<blockquote>
+<p>之所以记录这道题是提醒大家由于学了很多调度算法不要弄混了</p>
+<p>单看这道题，从C的寻道也能看出它和磁盘有关(磁道)</p>
+</blockquote>
+<p>5.如果当前读写磁头正在53号柱面上执行操作,依次有4个等待访问的请求,柱面号依次为98、37、124、65,当采用©算法时,下一次磁头才可能到达37号柱面。<br>
+A.先来先服务		B.最短寻道时间优先<br>
+C.电梯调度(初始磁头移动方向向着小磁道方向)<br>
+D.循环扫描(磁头移动方向向着大磁道方向)</p>
+<p>答：先来先服务FCFS先来的先访问所以下一次访问98</p>
+<p>最短寻道时间优先SSTF先访问寻道时间最短的这其中65离53最近</p>
+<p>电梯调度SCAN向小磁道移动而只有37比53小满足题意</p>
+<p>循环扫描C-SCAN向大磁道移动下一个访问65</p>
+<blockquote>
+<p>注意题目选项可能只给出英文要知道对应的中文及算法思想</p>
+</blockquote>
+<p>6.下面关于文件的叙述中,错误的是（D）<br>
+I.打开文件的主要操作是把指定文件复制到内存指定的区域</p>
+<p>Ⅱ.对一个文件的访问,常由用户访问权限和用户优先级共同限制<br>
+Ⅲ.文件系统采用树形目录结构后,对于不同用户的文件,其文件名应该不同<br>
+Ⅳ.为防止系统故障造成系统内文件受损,常采用存取控制矩阵方法保护文件</p>
+<p>A.仅Ⅱ				B.仅Ⅰ、Ⅲ<br>
+C.仅I、Ⅲ、Ⅳ		 D.I、Ⅱ、Ⅲ、Ⅳ</p>
+<p>答：Ⅰ错误,系统调用open把文件的信息目录放到打开文件表中并将文件编号返回给用户。</p>
+<p>读取文件才会把指定文件复制到内存指定的区域</p>
+<p>Ⅱ错误,对一个文件的访问,常由用户访问权限和文件属性共同限制。<br>
+Ⅲ错误,文件系统采用树形目录结构后,对于不同用户的文件,其文件名可以不同,也可以相同。<br>
+Ⅳ错误,常采用备份的方法保护文件,而存取控制矩阵的方法是用于多用户之间的存取权限保护。</p>
+<p>7.在一个文件被用户进程首次打开的过程中,操作系统需做的是（B）<br>
+A.将文件内容读到内存中		B.将文件控制块读到内存中<br>
+C.修改文件控制块中的读写权限</p>
+<p>D.将文件的数据缓冲区首指针返回给用户进程</p>
+<p>答：一个文件被用户进程首次打开即被执行了Open操作,会把文件的FCB调入内存,而不会把文件的内容读到内存中,只有进程希望获取文件内容的时候才会读入文件内容。</p>
+<blockquote>
+<p>这个类似的题经常考，考点就是Open函数是否将文件内容读到了内存</p>
+<p>助记：想一下平常编程都是先open打开文件然后再读取文件内容，并不是open打开文件就直接获得了内容</p>
+</blockquote>
+<p>8.在文件的索引结点中存放直接索引指针10个,一级和二级索引指针各1个。磁盘块大小为1KB,每个索引指针占4B。若某文件的索引结点已在内存中,则把该文件偏移量（按字节编址）为 1234和 307400 处所在的磁盘块读入内存，需访问的磁盘块个数分别是（B）</p>
+<p>A.1,2	B.1,3	C.2,3	D.2,4</p>
+<p>答：注意索引结点存的是指针，一级索引就是根据这个指针找一级索引表，根据一级索引表的内容访问磁盘。而直接索引指针存放的就是数据的地址</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201231093132662.png"  alt="image-20201231093132662"></p>
+<blockquote>
+<p>如上图所示，一级索引需根据索引指针先访问一次一级索引表(存在磁盘中)再根据表内容第二次访问磁盘</p>
+</blockquote>
+<p>10个直接索引指针指向的数据块大小为10×1KB=10KB;<br>
+每个索引指针占4B,则每个磁盘块可存放1KB/4B=256个索引指针，索引指针指向的数据块大小为256×1KB=256KB;<br>
+二级索引指针指向的数据块大小为256×256×1KB=2<sup>16</sup>=64MB。</p>
+<p>按字节编址,偏移量为1234时,因为1234B&lt;10KB,则由直接索引指针可得到其所在的磁盘块地址。然后再根据磁盘块地址访问。要注意的是文件的索引结点已在内存中即直接索引指针也在内存中，访问直接索引指针访问的是内存而不是磁盘，故仅需1次访盘即可。</p>
+<p>偏移量为307400时,因为10KB+256KB&lt;307400&lt;64MB,可知该偏移量的内容在二级索引指针所指向的某个磁盘块中,索引结点已在内存中,先根据索引结点的指针一次访盘访问一级索引表，再根据一级索引表的内容二次访盘访问二级索引表，最后根据二级索引表的内容即文件的真正地址三次访盘取得数据</p>
+<p>9.文件系统用位图法表示磁盘空间的分配情况,位图存于磁盘的32~127号块中,每个盘块占1024B,盘块和块内字节均从0开始编号。假设要释放的盘块号为40962,则位图中要修改的位所在的盘块号和块内字节序号分别是©<br>
+A.81、1	B.81、2	C.82、1	D.82、2</p>
+<p>答：409612/(1024*8)=50    409612%(1024*8)=12</p>
+<p>除后取整为50说明它相对起始块偏移了五十个块，块号为32+50=82</p>
+<blockquote>
+<p>如果取整为1块号为32+1，取整为2块号为32+2，建议试一下保险</p>
+</blockquote>
+<p>取模为12，12是求得的位号，而问的是字节序号，1字节为8位，块内字节又从0开始所以它的块内字节序号为1</p>
+<p>10.某文件系统的簇和磁盘扇区大小分别为1KB和512B。若一个文件的大小为1026B,则系统分配给该文件的磁盘空间大小是（D）<br>
+A.1026B	B.1536B	C.1538B	D.2048B</p>
+<p>答：绝大多数操作系统为改善磁盘访问时间,以簇为单位进行空间分配,该文件大小为1026B&gt;1024B=1KB,故分配给其两个簇的大小,即2048B。</p>
+<blockquote>
+<p>簇：由若干个连续的磁盘块组成</p>
+</blockquote>
+<p>11.某文件系统中,针对每个文件,用户类别分为4类:安全管理员、文件主、文件主的伙伴、其他用户;访问权限分为5类:完全控制、执行、修改、读取、写入。若文件控制块中用二进制位串表示文件权限,为表示不同类别用户对一个文件的访问权限,则描述文件权限的位数至少应为（D）</p>
+<p>A.5	B.9	C.12	D.20</p>
+<p>答：可以把用户访问权限抽象成一个矩阵,行代表用户,列代表访问权限。这个矩阵有4行5列,1代表tue,0代表 false,所以需要20位,选D</p>
+<blockquote>
+<p>可能会误认为4*5=20而2<sup>5</sup>=32所以用5位就够了</p>
+<p>其实不然，如果20位的话那是一类用户只有一个权限的时候，而比如&quot;其他用户&quot;可能同时会有修改、读取、写入的权限那你用20位怎么表示这个状态？</p>
+</blockquote>
+<p>12.若文件f1的硬链接为f2,两个进程分别打开f1和f2,获得对应的文件描述符为fd1和fd2,则下列叙述中,正确的是(B)</p>
+<p>I.f1和f2的读写指针位置保持相同	Ⅱ.f1和f2共享同一个内存索引结点<br>
+Ⅲ.fd1和fd2分别指向各自的用户打开文件表中的一项<br>
+A.仅Ⅲ	B.仅ⅡⅢ	C.仅I、Ⅱ	D.I、Ⅱ和Ⅲ</p>
+<p>答：硬链接各个用户目录项指向同一索引结点，索引结点指向文件，所以f1和f2共享一个内存索引结点</p>
+<p>硬链接在用户看来好像是自己创建的文件一样，如甲可读文件头同时乙读文件尾，所以读写指针不可能一样。</p>
+<p>13.某磁盘文件系统使用链接分配方式组织文件,簇大小为4KB。目录文件的每个目录项包括文件名和文件的第一个簇号,其他簇号存放在文件分配表FAT中。</p>
+<p>（1）假定目录树如下图所示，各文件占用的簇号及顺序如下表所示，其中dir、dir1是目录，file1、file2是用户文件。请给出所有目录文件的内容。</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/7366756_1525401510755_300F1006E274A3A81D6610B98EFFED0C"  alt="image-20201231093132664"></p>
+<p>答：两个目录文件的dir和dir1的内容如下</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/7366756_1525401555132_694A264BD5DAEC0B990DC0CFE4BFEB36"  alt="image-20201231093132666"></p>
+<blockquote>
+<p>注意目录项只包括文件的第一个簇号</p>
+</blockquote>
+<p>（2）若FAT的每个表项仅存放簇号，占2个字节，则FAT的最大长度为多少字节？该文件系统支持的文件长度最大是多少？</p>
+<p>答：FAT即文件分配表，簇号占2个字节即16bit，全1时是最大表项数即FAT表中最多允许2<sup>16</sup>个表项。</p>
+<p>一个FAT文件最多含有2<sup>16</sup>个簇(表项全不为空时)，而一个簇号占2个字节，所以FAT长度=2<sup>16</sup>*2B=128KB</p>
+<blockquote>
+<p>FAT即文件分配表，FAT的最大长度即这个表的最大长度就等于多少个表项*每个表项的长度</p>
+</blockquote>
+<p>文件的最大长度就等于一个FAT文件可表示的最大簇数*一个簇的大小即2<sup>16</sup> * 4KB=256MB</p>
+<p>（3）系统通过目录文件和FAT实现对文件的按名存取，说明file1的106、108两个簇号分别存放在FAT的哪个表项中。</p>
+<p>答：FAT的每个表项存放的是下一个簇号(题目说是链接分配)，所以file1的簇号106存放在FAT的100号表项里，而簇号108存放在FAT的106号表项里</p>
+<p>（4）假设仅FAT和dir目录文件已读入内存，若需将文件dir/dir1/file1的第5000个字节读入内存，则要访问哪几个簇？</p>
+<p>答：先在dir目录文件里找到dirl的簇号,然后读取48号簇,得到dirl目录文件,接着找到file1的第一个簇号,据此在FAT里查找fiel的第5000B所在的簇号,最后访问磁盘中的该簇。</p>
+<p>因此,需要访问目录文件dirl所在的48号簇,及文件flel的106号簇(5000B&gt;簇大小4KB所以访问第二个簇)。</p>
+<p>14.在某个文件系统中，每个盘块为 512 字节，文件控制块占 64 个字节，其中文件名占 8 个字节。如果索引结点编号占 2 个字节，对一个存放在磁盘上的 256 个目录项的目录，试比较引入索引结点前后，为找到其中一个文件的FCB，平均启动磁盘的次数。</p>
+<p>答：：引入索引节点前，每个目录项中存放的是对应文件的 FCB，故 256 个目录项的目录总共需要占用 256×64/512=32 个盘块。故在该目录中检索到一个文件平均启动磁盘次数为 (1+32)/2=16.5</p>
+<p>引入索引节点后，每个目录项中只需<strong>存放文件名和索引节点的编号</strong>，因此 256 个目录项的目录总共需要占用 256×(8+2)/512=5 个盘块。因此，找到匹配的目录项平均需要启动 3 次磁盘；而得到索引结点编号后还需启动磁盘将<strong>对应文件的索引结点读入内存</strong>，故平均需要启动磁盘 4 次。</p>
+<h1>设备管理</h1>
+<h2 id="知识点-v6"><a class="header-anchor" href="#知识点-v6">¶</a>知识点</h2>
+<p>1.I/O设备：可以将数据输入到计算机或者可以接收计算机输出数据的外部设备</p>
+<ul>
+<li>按使用特性分类
+<ul>
+<li>人机交互设备：用于人机交互传输速度慢如鼠标、键盘、打印机</li>
+<li>存储设备：用于数据存储数据传输速度快如移动硬盘</li>
+<li>网络通信设备：用于网路通信传输速度在上述二者之间，如调制解调器</li>
+</ul>
+</li>
+<li>按传输速率分类
+<ul>
+<li>低速设备：传输速率为每秒几个到几百字节，如鼠标、键盘</li>
+<li>中速设备：传输速率为每秒数千到上万字节，如激光打印机</li>
+<li>高速设备：传输速率为每秒数千到千兆字节，如磁盘</li>
+</ul>
+</li>
+<li>按信息交换的单位分类
+<ul>
+<li>块设备：处理信息以字符块(512B~4KB)为单位，可寻址，如磁盘</li>
+<li>字符设备:处理信息以字符为单位，不可寻址，如鼠标、键盘</li>
+</ul>
+</li>
+<li>按设备的共享属性分类
+<ul>
+<li>独占设备：同一时刻只允许一个进程使用，如打印机</li>
+<li>共享设备：允许多个进程同时访问，如磁盘</li>
+<li>虚拟设备：通过虚拟技术让一个独占设备逻辑上被多个进程同时使用，如虚拟技术后的打印机</li>
+</ul>
+</li>
+</ul>
+<p>2.I/O控制器：CPU可控制I/O控制器，由I/O控制器控制设备</p>
+<ul>
+<li>主要功能
+<ul>
+<li>接收和识别CPU发出的命令：要有控制寄存器</li>
+<li>向CPU报告设备的状态：要有状态寄存器</li>
+<li>数据交换：要有数据寄存器暂存输入/输出数据</li>
+<li>地址识别：由I/O逻辑实现</li>
+</ul>
+</li>
+<li>组成
+<ul>
+<li>CPU与控制器之间的接口：实现控制器与CPU之间的通信</li>
+<li>I/O逻辑：负责识别CPU发出的命令，并向设备发出命令</li>
+<li>控制器与设备之间的接口：实现控制器与设备之间的通信</li>
+</ul>
+</li>
+<li>两种寄存器编址方式
+<ul>
+<li>内存映像I/O：控制器中的寄存器与内存统一编址
+<ul>
+<li>简化了指令，可以采用对内存进行操作的指令来操作控制器</li>
+</ul>
+</li>
+<li>寄存器独立编址：控制器中的寄存器独立编址
+<ul>
+<li>需要设置专门的指令来操作控制器</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>3.IO控制方式：即用什么样的方式来控制I/O设备的数据读/写</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201223190614810.png"  alt="image-20201223190614810"></p>
+<p>4.I/O软件层次</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201223190722845.png"  alt="image-20201223190722845"></p>
+<blockquote>
+<p>用户发出I/O请求系统从上到下处理(一定要记住这个顺序可能考选择)</p>
+<p>助记：俩软件(先用户再设备)，俩程序(先设备再中断)</p>
+</blockquote>
+<p>5.I/O核心子系统：上图中设备独立性软件、设备驱动程序和中断处理程序属于OS的内核部分即I/O核心子系统。提供的服务有以下几种</p>
+<ul>
+<li>I/O调度：用某种算法确定一个好的顺序来处理各个I/O请求，如磁盘调度</li>
+<li>高速缓存与缓冲区：即缓冲区管理，详见下</li>
+<li>设备分配与回收</li>
+<li>假脱机(SPOOLing)技术</li>
+</ul>
+<p>6.高速缓存与缓冲区：缓冲区是一个存储区域，一般<strong>用内存作为缓冲区</strong></p>
+<ul>
+<li>
+<p>缓冲区的作用</p>
+<ul>
+<li>缓和<strong>CPU和I/O设备</strong>速度不匹配的原因</li>
+<li>减少对CPU的中断频率，放宽对CPU中断响应时间的限制</li>
+<li>解决数据粒度不匹配的问题</li>
+<li>提高CPU与I/O设备之间的并行性</li>
+</ul>
+</li>
+<li>
+<p>单缓冲：操作系统在主存中为其分配一个缓冲区(通常为一个块大小)</p>
+<ul>
+<li>设备–&gt;缓冲区时间为T,缓冲区–&gt;工作区时间为M,CPU处理时间为C。下同</li>
+<li>分析问题的初始状态：工作区满，缓冲区空</li>
+<li>处理一块数据平均耗时MAX(C,T)+M</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201230124752840.png"  alt="image-20201230124752840"></p>
+</li>
+<li>
+<p>双缓冲：操作系统在主存中为其分配两个缓冲区</p>
+<ul>
+<li>分析问题的初始状态：工作区空，一个缓冲区满，另一个为空</li>
+<li>处理一块数据平均耗时MAX(T,C+M)</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201230124956121.png"  alt="image-20201230124956121"></p>
+</li>
+<li>
+<p>循环缓冲区：将多个大小相等的缓冲区链接成一个循环队列</p>
+<ul>
+<li>下图中橙色表示已充满数据的缓冲区，绿色表示空缓冲区</li>
+</ul>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20201230125322834.png"  alt="image-20201230125322834"></p>
+</li>
+<li>
+<p>缓冲池：由系统中共用的缓冲区组成</p>
+<ul>
+<li>按使用状况可以分为
+<ul>
+<li>空缓冲队列</li>
+<li>装满输入数据的缓冲队列(输入队列)</li>
+<li>装满输出数据的缓冲队列(输出队列)</li>
+</ul>
+</li>
+<li>按实际运算中的功能设置了以下四中缓冲区
+<ul>
+<li>用于收容输入数据的工作缓冲区</li>
+<li>用于提取输入数据的工作缓冲区</li>
+<li>用于收容输出数据的工作缓冲区</li>
+<li>用于提取输出数据的工作缓冲区</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>7.设备的分配与回收</p>
+<ul>
+<li>应考虑的因素
+<ul>
+<li>固有属性：独占设备、共享设备、虚拟设备(SPOOLing)</li>
+<li>分配算法：先来先服务、优先级高者优先、段任务优先…</li>
+<li>安全性：安全分配方式(一个进程只能用一个设备)、不安全分配方式(可用多个设备)</li>
+</ul>
+</li>
+<li>两种分配方式
+<ul>
+<li>静态分配：进程运行前分配所有所需资源，结束后归还</li>
+<li>动态分配：进程运行过程中动态申请设备资源</li>
+</ul>
+</li>
+<li>设备分配管理中的数据结构
+<ul>
+<li>背景知识：一个通道可控制多个设备控制器，一个设备控制器可控制多个设备</li>
+<li>设备控制表(DCT)：系统为每个设备配置一张DCT，用于记录设备情况
+<ul>
+<li>关键字段：设备类型、设备标识符、设备状态、指向COCT的指针、等待队列指针</li>
+</ul>
+</li>
+<li>控制器控制表(COCT)：每个设备控制器对应一张COCT，OS根据COCT的信息对控制器操作和管理
+<ul>
+<li>关键字段：控制器状态、指向CHCT的指针、等待队列指针</li>
+</ul>
+</li>
+<li>通道控制表：每个通道对应一张CHCT，系统根据CHCT信息对通道操作和管理
+<ul>
+<li>关键字段：状态、等待队列指针</li>
+</ul>
+</li>
+<li>系统设备表(SDT)：记录了全部设备的情况，每个设备对应一个表目
+<ul>
+<li>关键字段：类型、标识符、设备控制表(DCT)、驱动程序入口</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>设备分配的步骤
+<ul>
+<li>根据进程请求的物理设备名查找SDT（注：物理设备名是进程请求分配设备时提供的参数）</li>
+<li>根据SDT找到DCT，若设备忙碌则将进程PCB挂到设备等待队列中，不忙碌则将设备分配给进程。</li>
+<li>根据DCT找到COCT，若控制器忙碌则将进程PCB挂到控制器等待队列中，不忙碌则将控制器分配<br>
+给进程</li>
+<li>根据COCT找到CHCT，若通道忙碌则将进程PCB挂到通道等待队列中，不忙碌则将通道分配给进<br>
+程</li>
+</ul>
+</li>
+</ul>
+<p>8.假脱机(SPOOLing)技术：用软件的方式模拟脱机技术，<strong>可将独占式设备改造成共享式设备</strong></p>
+<ul>
+<li>组成
+<ul>
+<li>输入井和输出井：模拟脱机输入/输出时的磁带</li>
+<li>输入缓冲区和输出缓冲区：内存中的缓冲区，输入/输出时的中转站</li>
+<li>输入进程和输出进程：模拟脱机输入/输出时的外围控制机</li>
+</ul>
+</li>
+<li>技术特点
+<ul>
+<li>提高了I/O速度</li>
+<li>设备没有分配给任何进程</li>
+<li>实现了虚拟设备功能</li>
+<li>除了是一种速度匹配技术外还是一种虚拟设备技术</li>
+</ul>
+</li>
+</ul>
+<h2 id="习题-v6"><a class="header-anchor" href="#习题-v6">¶</a>习题</h2>
+<p>1.下列关于 SPOOLing的叙述中,不正确的是（D）<br>
+A. SPOOLing系统中必须使用独占设备<br>
+B. SPOOLing系统加快了作业执行的速度<br>
+C. SPOOLing系统使独占设备变成了共享设备<br>
+D. SPOOLing系统利用了处理器与通道并行工作的能力</p>
+<p>答：SPOOLing是操作系统中采用的一种将独占设备改造为共享设备的技术,它有效减少了进程等待读入/读出信息的时间,加快了作业执行的速度。</p>
+<p>不过,无论有没有通道,SPOOLing系统都可以运行,因此D选项是不对的。</p>
+<p>2.在如下几种类型的系统中,（B）采用忙等待I/O是合适的。<br>
+a.专门用来控制单IO设备的系统<br>
+b.运行一个单任务操作系统的个人计算机<br>
+C.作为一个负载很大的网络服务器的工作站<br>
+A. a	B. a、b	C. b、c	D. c</p>
+<p>答：忙等待I/O就是CPU等待I/O的完成的时候，进程不能继续执行。</p>
+<p>对于a和b只有单个设备或单个任务，执行I/O时OS不会处理其它事情</p>
+<p>而对于c负载很大有个I/O请求就CPU就停止工作了显然是不合理的，必须让CPU具有并行处理的能力</p>
+<p>3.在采用 SPOOLing技术的系统中,用户暂时未能打印的数据首先会被送到(A)<br>
+存储起来。<br>
+A.磁盘固定区域		B.内存固定区域<br>
+C.终端			   D.打印机</p>
+<p>答：采用 SPOOLing技术的系统中,用户的打印数据首先由内存经过缓冲区传递至输出井暂存,等输出设备(打印机)空闲时再将输出井中的数据经缓冲区传递到输出设备上。而输出井通常是在磁盘上开辟的一块固定存储区。</p>
+<p>4.下列有关设备独立性的说法中,正确的是(B)。<br>
+A.设备独立性是指I/O设备具有独立执行I/O功能的一种特性<br>
+B.设备独立性是指用户程序独立于具体物理设备的一种特性<br>
+C.设备独立性是指能够实现设备共享的一种特性<br>
+D.设备独立性是指设备驱动程序独立于具体物理设备的一种特性</p>
+<p>答：设备独立性是指用户程序独立于具体物理设备的一种特性。其他选项都不是设备独立性的描述。</p>
+<p>D选项中设备驱动程序是不可能独立于具体物理设备的,因为驱动程序就是为具体物理设备而专门定制的。</p>
+<p>5.通道又称I/O处理器,用于实现(A)之间的信息传输<br>
+A.内存与外设	B.CPU与外设	C.内存与外存	D.CPU与外存</p>
+<p>答：在设置了通道后,CPU只需向通道发送一条I/O指令。通道在收到该指令后,便从内存中取岀本次要执行的通道程序,然后执行该通道程序。</p>
+<p>仅当通道完成规定的I/O任务后,才向CPU发出中断信号。因此,通道用于完成内存与外设的信息传输。</p>
+<p>6.在 SPOOLing系统中,用户进程实际分配到的是(B)<br>
+A.用户所要求的外设		  B.内存区,即虚拟设备<br>
+C.设备的一部分存储区		D.设备的一部分空间</p>
+<p>答：通过 SPOOLing技术可将一台物理设备转换为多台虚拟设备,允许多个用户共享一台物理设备。所以在 SPOOLing系统中并不是将物理设备分配给用户进程,而仅仅是虚拟设备。</p>
+<p>如采用SPOOLing技术将磁盘的一部分作为公共缓冲区以代替打印机,用户对打印机的操作实际上是对磁盘的存储操作。</p>
+<p>7.下列关于设备驱动程序的叙述中,正确的是(A)<br>
+I.与设备相关的中断处理过程是由设备驱动程序完成的<br>
+Ⅱ.由于驱动程序与I/O设备(硬件)紧密相关,故必须全部用汇编语言书写<br>
+Ⅲ.磁盘的调度程序是在设备驱动程序中运行的<br>
+Ⅳ.一个计算机系统配置了2台同类绘图机和3台同类打印机,为了正确驱动这些设备,系统应该提供5个设备驱动程序<br>
+A.仅I、Ⅲ	B.仅Ⅱ、Ⅲ	C.仅I、Ⅲ、Ⅳ	D.I、Ⅱ、III、Ⅳ</p>
+<p>答：Ⅰ正确,设备驱动程序的低层部分在发生中断时调用,以进行中断处理。<br>
+II错误,由于驱动程序与硬件紧密相关,因而其中的一部分必须用汇编语言书写,其他部分则可以用高级语言(如CC++)来书写。<br>
+Ⅲ.正确<br>
+Ⅳ.错误,因为绘图机和打印机属于两种不同类型的设备,系统只要按设备类型配置设备驱动程序即可,即应提供2个设备驱动程序。</p>
+<p>8.(A)是操作系统中采用的以空间换取时间的技术。<br>
+A.SPOOLing技术	B.虚拟存储技术	C.覆盖与交换技术	D.通道技术</p>
+<p>答：SPOOLing技术是操作系统中用的以空间换取时间的技术(用内存换I/O速度)</p>
+<p>虚拟存储技术和覆盖与交换技术是为了扩充内存容量，它们都属于以时间换空间的技术(处理需要时间但处理后空间变大了)<br>
+而通道技术是为了提高设备速度，增加了硬件,不属于这两者中的任何一种</p>
+<p>9.<img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20210101161719481.png"  alt="image-20210101161719481"></p>
+<p>答：单缓冲，当上一个磁盘块从缓冲区读入用户区完成时下一个磁盘块才能开始读入。如下图所示</p>
+<p><img src="/" class="lazyload" data-src="https://cdn.jsdelivr.net/gh/zss192/Typora-notes@master/images/image-20210101162235813.png"  alt="image-20210101162235813"></p>
+<p>所以最短时间为100+5+100+5+90=300</p>
+<p>10.下列关于 SPOOLing技术的叙述中,错误的是（D）<br>
+A.需要外存的支持<br>
+B.需要多道程序设计技术的支持<br>
+C.可以让多个作业共享一台独占设备<br>
+D.由用户作业控制设备与输入输出井之间的数据传送</p>
+<p>答：SPOOLing是利用专门的外围控制机,将低速IO设备上的数据传送到高速磁盘上;或者相反。</p>
+<p>SPOOLing的意思是外部设备同时联机操作,又称为假脱机输入输出操作,是操作系统中采用的一项将独占设备改造成共享设备的技术。高速磁盘即外存,A正确。<br>
+SPOOLing技术需要输入输出操作,单道批处理系统无法满足,B正确。</p>
+<p>SPOOLing技术实现了将独占设备改造成共享设备的技术,C正确。</p>
+<p>设备与输入出井之间数据的传送是由系统实现的,D错误。</p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">夏日</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://zss192.github.io/2022/11/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">https://zss192.github.io/2022/11/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zss192.github.io" target="_blank">夏日 の blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E4%B8%9A%E8%AF%BE/">计算机专业课</a></div><div class="post_share"><div class="social-share" data-image="/img/post/1.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="支付宝"/><div class="post-qr-code__desc">支付宝</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2022/11/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><img class="prev_cover lazyload" data-src="/img/post/2.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div><div class="next-post pull_right"><a href="/2022/11/14/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"><img class="next_cover lazyload" data-src="/img/post/9.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">网络安全</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2022/11/14/网络安全/" title="网络安全"><img class="relatedPosts_cover lazyload"data-src="/img/post/9.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2022-11-14</div><div class="relatedPosts_title">网络安全</div></div></a></div><div class="relatedPosts_item"><a href="/2022/11/14/密码学/" title="密码学"><img class="relatedPosts_cover lazyload"data-src="/img/post/4.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2022-11-14</div><div class="relatedPosts_title">密码学</div></div></a></div><div class="relatedPosts_item"><a href="/2022/11/14/操作系统思维导图/" title="操作系统思维导图"><img class="relatedPosts_cover lazyload"data-src="/img/post/7.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2022-11-14</div><div class="relatedPosts_title">操作系统思维导图</div></div></a></div><div class="relatedPosts_item"><a href="/2021/07/05/软件安全/" title="软件安全期末总结"><img class="relatedPosts_cover lazyload"data-src="/img/post/3.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2021-07-05</div><div class="relatedPosts_title">软件安全期末总结</div></div></a></div><div class="relatedPosts_item"><a href="/2021/07/04/计算机病毒与恶意代码/" title="计算机病毒与恶意代码期末总结"><img class="relatedPosts_cover lazyload"data-src="/img/post/10.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2021-07-04</div><div class="relatedPosts_title">计算机病毒与恶意代码期末总结</div></div></a></div><div class="relatedPosts_item"><a href="/2020/06/28/密码学题型速记/" title="密码学题型速记"><img class="relatedPosts_cover lazyload"data-src="/img/post/9.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-06-28</div><div class="relatedPosts_title">密码学题型速记</div></div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://unpkg.com/valine@1.4.9/dist/Valine.min.js"></script><script>var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+window.valine = new Valine({
+  el:'#vcomment',
+  notify: false,
+  verify: false,
+  appId: 'tekAEc3UtO7aXcLkamh2nCMM-gzGzoHsz',
+  appKey: 'qVGeAkqGHCD2n17QxBQW2Q4P',
+  placeholder: '建议评论时填写邮箱，可收到回复邮件提醒',
+  avatar: 'monsterid',
+  meta: guest_info,
+  pageSize: '10',
+  lang: 'zh-cn',
+  recordIP: false,
+  serverURLs: ''
+});</script></div></article></main><footer id="footer" style="background-image: url(/img/post/4.jpg)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 夏日</div><div class="framework-info"><span>驱动 </span><a target="_blank" rel="noopener" href="https://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span></a></div><div class="icp"><a target="_blank" rel="noopener" href="http://www.beian.gov.cn"><img class="icp-icon" src="/img/icp.png"/><span>豫ICP备20013184号</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/js/third-party/ClickShowText.js"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":20},"mobile":{"show":false},"log":false,"tagMode":false});</script></body></html><script type="text/javascript" src="/js/crash_cheat.js"></script>

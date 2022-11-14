@@ -1,0 +1,366 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>网络安全 | 夏日 の blog</title><meta name="description" content="网络安全"><meta name="keywords" content="计算机专业课"><meta name="author" content="夏日"><meta name="copyright" content="夏日"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="网络安全"><meta name="twitter:description" content="网络安全"><meta name="twitter:image" content="https://zss192.github.io/img/post/9.jpg"><meta property="og:type" content="article"><meta property="og:title" content="网络安全"><meta property="og:url" content="https://zss192.github.io/2022/11/14/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"><meta property="og:site_name" content="夏日 の blog"><meta property="og:description" content="网络安全"><meta property="og:image" content="https://zss192.github.io/img/post/9.jpg"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="https://zss192.github.io/2022/11/14/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"><link rel="prev" title="操作系统" href="https://zss192.github.io/2022/11/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><link rel="next" title="密码学" href="https://zss192.github.io/2022/11/14/%E5%AF%86%E7%A0%81%E5%AD%A6/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"欢迎你,来到,我的博客","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: false,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isSidebar: true  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><script src="/js/sakura.js"></script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="夏日 の blog" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">17</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">2</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-coffee"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">写在前面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">题型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">选择题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">3.1.</span> <span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%A6%E4%B8%8A%E9%80%89%E6%8B%A9%E9%A2%98-%E5%A4%A7%E6%A6%82%E7%8E%87%E8%80%83%E5%8E%9F%E9%A2%98"><span class="toc-number">3.2.</span> <span class="toc-text">书上选择题(大概率考原题)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="toc-number">3.2.1.</span> <span class="toc-text">第一章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0"><span class="toc-number">3.2.2.</span> <span class="toc-text">第二章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0"><span class="toc-number">3.2.3.</span> <span class="toc-text">第三章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0"><span class="toc-number">3.2.4.</span> <span class="toc-text">第四章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0"><span class="toc-number">3.2.5.</span> <span class="toc-text">第五章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0"><span class="toc-number">3.2.6.</span> <span class="toc-text">第六章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0"><span class="toc-number">3.2.7.</span> <span class="toc-text">第七章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0"><span class="toc-number">3.2.8.</span> <span class="toc-text">第八章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0"><span class="toc-number">3.2.9.</span> <span class="toc-text">第九章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E7%AB%A0"><span class="toc-number">3.2.10.</span> <span class="toc-text">第十章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0"><span class="toc-number">3.2.11.</span> <span class="toc-text">第十一章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0"><span class="toc-number">3.2.12.</span> <span class="toc-text">第十二章</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">判断题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">简答题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%85%E8%80%83%E9%A2%98"><span class="toc-number">5.1.</span> <span class="toc-text">必考题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E8%83%BD%E8%80%83%E7%82%B9"><span class="toc-number">5.2.</span> <span class="toc-text">可能考点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">应用题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#RSA%E7%AE%97%E6%B3%95%EF%BC%88%E8%AE%A1%E7%AE%97%EF%BC%89"><span class="toc-number">6.1.</span> <span class="toc-text">RSA算法（计算）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AD%BE%E5%90%8D%E8%BF%87%E7%A8%8B-%E5%8F%99%E8%BF%B0%E9%A2%98"><span class="toc-number">6.2.</span> <span class="toc-text">签名过程(叙述题)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A0%E5%AF%86%E5%92%8C%E7%AD%BE%E5%90%8D"><span class="toc-number">6.2.1.</span> <span class="toc-text">加密和签名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AA%E7%AD%BE%E5%90%8D-%E9%A2%84%E8%AE%A1%E8%80%83%E8%BF%99%E4%B8%AA"><span class="toc-number">6.2.2.</span> <span class="toc-text">只签名(预计考这个)</span></a></li></ol></li></ol></li></ol></div></div></div><div id="body-wrap"><div class="post-bg" id="nav" style="background-image: url(/img/post/9.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">夏日 の blog</a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-coffee"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">网络安全</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2022-11-14 17:36:00"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2022-11-14</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2022-11-14 23:59:27"><i class="fa fa-history" aria-hidden="true"></i> 更新于 2022-11-14</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E4%B8%9A%E8%AF%BE/">计算机专业课</a></span></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="post-meta__icon fa fa-file-word-o" aria-hidden="true"></i><span>字数总计:</span><span class="word-count">6.5k</span><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-clock-o" aria-hidden="true"></i><span>阅读时长: 19 分钟</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-comment-o" aria-hidden="true"></i><span>评论数:</span><a href="/2022/11/14/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/2022/11/14/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" itemprop="commentCount"></span></a></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container"><h1>写在前面</h1>
+<p>作者：夏日</p>
+<p>博客地址：<a target="_blank" rel="noopener" href="https://blog.csdn.net/zss192">https://blog.csdn.net/zss192</a></p>
+<h1>题型</h1>
+<p>选择题：20*1</p>
+<p>判断题：5*2</p>
+<p>简答题：包括问答题和分析题 8*5</p>
+<p>应用题：15*2</p>
+<h1>选择题</h1>
+<blockquote>
+<p>选择题不必每个都记忆特别深，有印象能选出来就行。17个知识点包含所有选择题考点</p>
+</blockquote>
+<h2 id="知识点"><a class="header-anchor" href="#知识点">¶</a>知识点</h2>
+<p>1.网络安全确保的5个维度（预测挖一个空让选）</p>
+<p>保密性、完整性、可用性、可控性、可审查性。</p>
+<p>2.网络安全包括哪些内容？</p>
+<p>可能让选<strong>系统</strong>上的安全和<strong>信息本身</strong>的安全</p>
+<p>也可能让选实体安全（物理安全）、系统安全、运行安全、管理安全、应用安全。</p>
+<p>3.常见攻击方式（了解名词的意思即可，预测给出一个描述让选是什么攻击方式）</p>
+<ul>
+<li>缓冲区溢出：是指通过向缓冲区写入超出其长度的大量文件或信息内容，造成缓冲区溢出（当计算机向缓冲区内存储调入填充数据时，超过了缓冲区本身限定的容量，致使溢出的数据覆盖在合法数据上），破坏程序的堆栈，使程序转而执行其他指令或使得攻击者篡改程序运行的控制权。</li>
+<li>DOS攻击：黑客利用合理的服务请求来占用过多的服务资源，使合法用户无法得到服务的响应，直至瘫痪而停止提供正常的网络服务的攻击方式。(一对一)</li>
+<li>DDOS攻击：指借助于客户/服务器技术，将网络中的多个计算机联合作为攻击平台，对一个或多个目标发动DOS攻击，从而成倍的提高拒绝服务攻击的威力。(多对一或多对多)</li>
+<li>字典攻击：字典穷举法，此法采用破解工具可自动从定义的字典中取出单词作为用户的口令尝试登录，如果口令错误，就按序列取出下一个单词再次尝试，直到找出正确的密码或字典中的单词测试完成为止，这种方法不受网段限制。</li>
+<li>非授权访问：指未经授权使用网络资源或以未授权的方式使用网络资源，主要包括非法用户进入网络或系统进行违法操作和合法用户以未授权的方式进行操作</li>
+<li>网络监听：通过某种手段监视网络状态、数据流及网络上传输信息的行为(网卡开<strong>混杂模式</strong>)</li>
+<li>端口扫描：就是逐个对一段端口或指定的端口进行扫描。通过扫描结果可以知道一台计算机上都提供了哪些服务，然后就可以通过所提供的这些服务的己知漏洞就可进行攻击。</li>
+</ul>
+<p>4.HTTPS工作原理（老师提示可用推理排除法）</p>
+<p>HTTPS是以安全为目标的HTTP通道，在HTTP的基础上通过<strong>传输加密</strong>和<strong>身份认证</strong>保证了传输过程的安全性。HTTPS 在HTTP 的基础下<strong>加入SSL层</strong>，HTTPS 的安全基础是 SSL，因此加密的详细内容就需要SSL。 HTTPS 存在不同于 HTTP 的默认端口及一个加密/身份验证层（在 HTTP与 TCP。这个系统提供了身份验证与加密通讯方法。它被广泛用于万维网上安全敏感的通讯，例如交易支付等方面。</p>
+<p>HPPTS是HTTP+SSL/TCP的简称。</p>
+<p>TLS（传输层安全）是更为安全的升级版 SSL。</p>
+<p>将一个网站Web应用启用SSL技术来加密，并使用HTTPS协议进行传输</p>
+<p><strong>SSL协议提供的服务主要有：</strong></p>
+<p>1）认证用户和服务器，确保数据发送到正确的客户机和服务器；</p>
+<p>2）加密数据以防止数据中途被窃取；</p>
+<p>3）维护数据的完整性，确保数据在传输过程中不被改变。</p>
+<p>服务器认证阶段：</p>
+<p>1）客户端向服务器发送一个开始信息“Hello”以便开始一个新的会话连接；</p>
+<p>2）服务器根据客户的信息确定是否需要生成新的主密钥，如需要则服务器在响应客户的“Hello”信息时将包含生成主密钥所需的信息；</p>
+<p>3）客服根据收到的服务器响应信息，产生一个主密钥，并用服务器的公开密钥加密后传给服务器；</p>
+<p>4）服务器恢复该主密钥，并返回给客户一个用主密钥认证的信息，以此让客户认证服务器。</p>
+<p>用户认证阶段：在此之前，服务器已经通过了客户认证，这一阶段主要完成对客户的认证。经认证的服务器发送一个提问给客户，客户则返回（数字）签名后的提问和其公开密钥，从而向服务器提供认证。</p>
+<p>5.对称加密非对称加密</p>
+<ul>
+<li><strong>对称</strong>加密：加密过程和解密过程都使用<strong>同一个密钥</strong></li>
+<li>非对称加密：加密和解密使用不同的密钥即公钥和私钥
+<ul>
+<li>加密信息传输：公钥加密，私钥解密</li>
+<li>签名：私钥加密，公钥解密</li>
+</ul>
+</li>
+</ul>
+<p>6.网络安全的保障包括哪些？</p>
+<p>网络安全<strong>策略</strong>、网络安全<strong>政策和标准</strong>、网络安全<strong>管理</strong>、网络安全<strong>运作</strong>、网络安全<strong>技术</strong>。</p>
+<p>7.网络常用的加密有哪些？</p>
+<p><strong>结点</strong>(路由器、交换机、服务器、终端…)的加密、<strong>端到端</strong>的加密、<strong>链路</strong>加密</p>
+<p>8.数据存储的加密</p>
+<p>利用<strong>系统本身</strong>的加密(和OS有关)、<strong>密码</strong>加密、<strong>密钥</strong>加密</p>
+<p>9.网络安全的管理规范</p>
+<p>大概要问网络安全管理规范是不是法律上的要求或者是有什么要求，实际上不是法律或什么，他是有一定的强制力</p>
+<p>10.防火墙位置、功能，能干嘛，不能干嘛</p>
+<p>防火墙是位于<strong>多个网络之间</strong>，通过执行<strong>访问控制策略</strong>保护网络安全的系统。</p>
+<p>防火墙的主要功能有：建立一个集中的监视点、隔绝内外网络，保护内部网络、强化网络安全策略、有效记录和审计内外网络之间的活动。</p>
+<p>防火墙可以与入侵检测系统互动，可在线升级，划分不同安全级别的区域，可实时警告等。不可以防范不经过防火墙的攻击，不能防止利用服务器系统漏洞进行的攻击，不能防止本身的安全漏洞威胁等。</p>
+<p>以前是硬件实现，现在是软件实现(利用NFV(网络功能虚拟化)技术即用软件实现硬件功能)，比较方便调整资源，流量大就多启动几台机器，需求少就关停部分机器。</p>
+<p><strong>防火墙在网络的边界，不能防御网络内部的流量</strong></p>
+<p>11.网络中常用命令（重点在于输入命令能看到什么）</p>
+<ul>
+<li>ping：使用ICMP传输协议，发出要求回应的信息，若远端主机的网络功能没有问题，就会回应该信息，因而得知该主机运作正常（<strong>大概率考这个</strong>）</li>
+<li>ipconfig命令：显示所有TCP/IP网络配置信息、刷新动态主机配置协议和域名系统DNS设置。</li>
+<li>netstart：显示活动的连接、计算机监听的端口、以太网统计信息、IP路由表和ipv4统计信息。</li>
+</ul>
+<p>12.凯撒加密属于什么样的加密方法</p>
+<p>使用<strong>代换</strong>技术：即将明文中的每个元素映射为另一个元素的技术</p>
+<p>属于<strong>古典对称</strong>密码：加密和解密都是同一个密钥</p>
+<p>大致思想就是每个字母都有一个偏移量，如偏移量为2，加密时就把a换成c，b换成d这种。</p>
+<p>解密只需逆操作即可如e解密成c</p>
+<p>13.IP地址欺诈</p>
+<p>IP地址欺骗是指行动产生的IP数据包为伪造的源IP地址，以便冒充其他系统或发件人的身份。这是一种黑客的攻击形式，黑客使用一台计算机上网,而借用另外一台机器的IP地址,从而冒充另外一台机器与服务器打交道。</p>
+<p>源IP地址欺骗：<strong>盗用他人的IP</strong>地址进行欺骗攻击。</p>
+<p>为什么会出现IP地址欺诈：<strong>没对源IP验证</strong></p>
+<p>14.数据备份的方式</p>
+<p>完全备份：对所有数据都进行备份；</p>
+<p>增量备份：备份自从上次备份操作以来新改变的数据</p>
+<p>15.如何进行系统恢复（就选下面加粗的内容）</p>
+<p>按照备份时部分或全部<strong>正常启动运行的数值特征</strong>来进行运作</p>
+<p>16.实验中的嗅探攻击用wireshark软件，网卡需要开启<strong>混杂模式</strong>来捕获信息</p>
+<p>17.计算机病毒的特征</p>
+<p>计算机病毒概念：具有影响或破坏服务器、计算机、手机或平板电脑等系统正常运行的功能、人为编制的一组指令或程序。</p>
+<p><strong>病毒的特征：病毒具有传播性、隐蔽性、潜伏性、触发及控制性、影响破坏性、多态及不可预见性。</strong></p>
+<p>木马概念：木马是一些具备破坏和删除文件、发送密码、记录键盘与攻击DOS等特殊功能的后门程序。</p>
+<p>蠕虫概念：蠕虫病毒并不依赖宿主寄生，而是通过复制自身在网络环境下进行传播。破坏性更强。是一组计算机指令或者程序代码。</p>
+<blockquote>
+<p>后台自动安装垃圾软件的软件不属于木马病毒属于流氓软件</p>
+</blockquote>
+<h2 id="书上选择题-大概率考原题"><a class="header-anchor" href="#书上选择题-大概率考原题">¶</a>书上选择题(大概率考原题)</h2>
+<blockquote>
+<p>画对勾的为预计会考原题的题目</p>
+</blockquote>
+<h3 id="第一章"><a class="header-anchor" href="#第一章">¶</a>第一章</h3>
+<p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20210107155858592.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"><br>
+<img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20210107160017237.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"></p>
+<h3 id="第二章"><a class="header-anchor" href="#第二章">¶</a>第二章</h3>
+<p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20210107160123630.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"><br>
+<img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/2021010716021554.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"></p>
+<h3 id="第三章"><a class="header-anchor" href="#第三章">¶</a>第三章</h3>
+<p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20210107160501382.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"></p>
+<h3 id="第四章"><a class="header-anchor" href="#第四章">¶</a>第四章</h3>
+<p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20210107160557648.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"><br>
+<img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20210107160644200.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"></p>
+<h3 id="第五章"><a class="header-anchor" href="#第五章">¶</a>第五章</h3>
+<p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/202101071607381.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"><br>
+<img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/2021010716082627.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"></p>
+<h3 id="第六章"><a class="header-anchor" href="#第六章">¶</a>第六章</h3>
+<p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20210107160913926.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"></p>
+<h3 id="第七章"><a class="header-anchor" href="#第七章">¶</a>第七章</h3>
+<p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20210107161004417.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"><br>
+<img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20210107161042662.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"></p>
+<h3 id="第八章"><a class="header-anchor" href="#第八章">¶</a>第八章</h3>
+<p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20210107161134273.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"></p>
+<h3 id="第九章"><a class="header-anchor" href="#第九章">¶</a>第九章</h3>
+<p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20210107161220114.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"><br>
+<img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20210107161257803.jpg"  alt="在这里插入图片描述"></p>
+<h3 id="第十章"><a class="header-anchor" href="#第十章">¶</a>第十章</h3>
+<p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20210107161414908.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"><br>
+<img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20210107161452526.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"></p>
+<h3 id="第十一章"><a class="header-anchor" href="#第十一章">¶</a>第十一章</h3>
+<p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20210107161542644.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"><br>
+<img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20210107161632691.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"></p>
+<h3 id="第十二章"><a class="header-anchor" href="#第十二章">¶</a>第十二章</h3>
+<p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20210107161725703.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"><br>
+<img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/20210107161754493.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pzczE5Mg==,size_16,color_FFFFFF,t_70"  alt="在这里插入图片描述"></p>
+<h1>判断题</h1>
+<p>没说考什么，但提示选对的多一点。(推测4对1错)</p>
+<h1>简答题</h1>
+<blockquote>
+<p>每一题必须全部背会，原理概念性问题写对大致思路即可</p>
+</blockquote>
+<h2 id="必考题"><a class="header-anchor" href="#必考题">¶</a>必考题</h2>
+<p>1.DoS和DDoS是什么，它们的区别是什么</p>
+<p>DoS攻击：即拒绝服务攻击，是指黑客利用合理的服务请求来占用过多的服务资源，使合法用户无法得到服务的响应，直至瘫痪而停止提供正常的网络服务的攻击方式。</p>
+<p>DDoS攻击：即分布式拒绝服务攻击，是指借助于客户/服务器技术，将网络中的多个计算机联合作为攻击平台，对一个或多个目标发动DOS攻击，从而成倍的提高拒绝服务攻击的威力。</p>
+<p>区别：DoS攻击是利用一台计算机攻击目标，是一对一的关系。当攻击目标性能指标不高时效果明显，否则将达不到攻击效果。</p>
+<p>而DDoS是DoS攻击基础之上产生的一种新的攻击方式，通过控制成百上千台肉鸡，组成一个DDoS攻击群，同一时刻对目标发起攻击，是多对一或多对多的关系。其攻击的强度和造成的威胁要比DOS严重很多，更具破坏性。</p>
+<p>2.黑客常用的攻击步骤和攻击手段</p>
+<p><strong>黑客的攻击步骤（大概率考这个）</strong></p>
+<ul>
+<li>隐藏IP(来无影)：就是隐藏黑客的IP地址，典型方法是利用被控制的其它主机作为跳板</li>
+<li>踩点扫描：通过各种途径和手段对所要攻击的目标对象信息进行多方探寻搜集，确保具体信息准确，确保攻击时间和地点等</li>
+<li>获得控制权：即获得管理权限，目的是通过网络登录到远程计算机上，对其实施控制，达到攻击目的</li>
+<li>种植后门：利用程序的漏洞进入系统后安装的后门程序，以便于以后可以不被察觉地再次进入系统</li>
+<li>隐身退出(去无踪)：入侵完毕后及时清除登陆日志和其它相关的系统日志，及时隐身退出</li>
+</ul>
+<p>黑客攻击手段：网络监听、拒绝服务攻击、欺骗攻击(源IP地址欺骗、源路由欺骗攻击)、缓冲区溢出、病毒及密码攻击、应用层攻击。</p>
+<p>3.VPN的实现技术及技术特点</p>
+<p>虚拟专用网VPN：是利用Internet等公共网络的基础设施，通过隧道技术，为用户提供的与<strong>专用网络</strong>具有相同通信功能的安全数据<strong>通道</strong>。</p>
+<p>VPN的实现技术：隧道技术(核心技术)、加解密技术(利用非对称加密技术进行密钥协商，利用对称加密技术进行数据传输)、密钥管理技术、身份认证技术。</p>
+<p>VPN的技术特点：安全性高、费用低廉、管理<strong>便利</strong>、灵活性<strong>强</strong>、服务质量佳。</p>
+<p>4.防火墙如何去防止利用三次握手的DoS攻击？（写一个的原理过程）</p>
+<p>应用代理型防火墙的防御方法是由于它位于客户端与服务器端中间，充当代理角色，这样客户端要与服务端建立一个TCP连接，就必须先与防火墙进行一个三次握手。当客户端和防火墙三次握手成功以后，再由防火墙和服务器进行三次握手。一个成功的TCP连接所经历的两个三次握手过程如下图所示</p>
+<p><img src="/" class="lazyload" data-src="https://img-blog.csdnimg.cn/img_convert/4ba9a208312cb7274efbaeb8219f1b15.png"  alt="image-20210102011218912"></p>
+<p>当外部对内部网络中的服务器端发起攻击时，实际上遭受攻击的不是服务器而是防火墙。而防火墙自身具有抗攻击能力，可以通过规则设置，拒绝外界客户端不断发送的报文。</p>
+<blockquote>
+<p>防火墙是位于两个或多个内外网络之间，通过执行访问控制策略保护网络安全的系统.</p>
+<p>功能：建立一个集中的监视点；隔绝内外网络，保护内部网络；强化网络安全策略、有效记录和审计内、外网路之间的活动。</p>
+<p>缺点：客户端要与服务端建立一个TCP连接就要经历六次握手，要求防火墙具有较强的处理能力和较大的内存。不适合访问流量大的服务器或者网络。</p>
+<p>（可能会考，上面的一定会考）</p>
+</blockquote>
+<p>5.物理层的实体的安全防护有哪些？</p>
+<ul>
+<li>
+<p>防火：网络中心的机房发生火灾一般是由于电气原因、人为事故或外部火灾蔓延等引起的</p>
+</li>
+<li>
+<p>防盗：被偷窃所造成的损失可能会远远超过计算机及网络设备本身的价值，因此必须采取严格防范措施</p>
+</li>
+<li>
+<p>防静电：静电产生后，能量会不断增加，从而产生静电放电火花，造成火灾，因此要采取相应措施</p>
+</li>
+<li>
+<p>防雷击：传统避雷针防雷，不仅增大雷击的可能性还会产生感应雷，因此要采取防雷击措施</p>
+</li>
+<li>
+<p>防电磁泄露：计算机、服务器等设备在工作时会产生电磁<strong>发射</strong>，其可能会被高灵敏度的接收设备接收、分析或还原，造成信息泄露</p>
+</li>
+</ul>
+<p>6.计算机病毒有哪些危害？介绍一个病毒</p>
+<p>计算机病毒的危害：破坏系统、文件和数据，窃取机密文件和数据，造成网络堵塞或瘫痪，消耗内存、磁盘空间和系统资源，计算机运行缓慢，对用户造成心理压力。</p>
+<p>熊猫烧香是一种经过多次变种的蠕虫病毒。被列为我国2006年十大病毒之首。自爆发后,短时间内出现近百个变种,上百万台计算机中毒,并深受其害。<br>
+感染中毒的计算机系统中,可执行文件会出现“熊猫烧香”图案,其他更为明显的中毒症状表现为计算机蓝屏、反复重启或硬盘数据遭破坏等。同时,作为蠕虫病毒的一类变种,熊猫烧香病毒同样可以通过网络进行传播,感染网络内所有的计算机系统,造成不同程度的局域网和互联网瘫痪。</p>
+<p>7.拖库和撞库是什么？</p>
+<p>拖库：是指黑客入侵有价值的网络站点，把注册用户的资料数据库全部盗走的行为，因为谐音，也经常被称作“脱裤”。<br>
+撞库：黑客通过收集互联网已泄露的用户和密码信息，生成对应的<strong>字典表</strong>，尝试批量登陆其他网站后，得到一系列可以登录的用户。</p>
+<blockquote>
+<p>可能要考：拖库可以通过数据库安全防护技术解决，撞库可通过大数据安全技术防护解决</p>
+</blockquote>
+<p>8.5G本身需求和特点，针对这些需求特点设计它的安全协议应该注意什么（分析题-不一定写完但尽量多写点）</p>
+<blockquote>
+<p>5G：即第五代移动通信技术，5G 可以在毫米波中运行，5G可用的频谱数量意味着数据传输的速度比目前可能的速度要快得多。</p>
+<p>用到技术：SDN，NFV，边缘计算</p>
+<p>（帮助理解，考试应该不考）</p>
+</blockquote>
+<p>5G需求特点：高速度、高可靠性、低时延、低功耗、万物互联、重构安全</p>
+<p>5G有高可靠性低时延需求如远程医疗，无人驾驶。要考虑协议产生的时延是否会对5G的低时延要求造成较大影响。</p>
+<p>超密集部署技术使单个接入节点覆盖范围很小，车辆等终端快速移动时，信号可能会不稳定从而影响时延，这也是设计协议所必须考虑的。</p>
+<p>对于万物互联，其与传统的无线网络相比，更容易受到威胁和攻击。而如果对每个设备都单独认证则会消耗大量资源，安全协议也应考虑这个问题。</p>
+<p>5G的高速度要求将出现数量众多的小站，因此也必须考虑除了传统移动互联网所存在的安全威胁外，在这种密集组网场景下可能会存在小站接入的安全威胁。</p>
+<p>5G的低功耗要求，如对于手机等移动终端的功耗，通信过程若消耗大量能量就很难让用户广泛接受，因此也必须考虑功耗问题。</p>
+<h2 id="可能考点"><a class="header-anchor" href="#可能考点">¶</a>可能考点</h2>
+<p>9.无线网络安全（做一些解释）</p>
+<p>无线网络安全包括应用于无线（或 WiFi）网络的典型网络层安全控制。无线网络安全是存在于当今移动工作场所中的一大严峻问题。管理员面临着日益增长的保护公司关键资源免受攻击的需求。当员工通过无线网络访问公司的私人数据时，如果用户没有屏蔽外部人员的连接（例如，通过密码保护的访问），数据可能会被未经授权的查看者破坏。</p>
+<p>无线局域网的协议设计还应该考虑到网络特点 。由于无线特点，消息暴露，攻击者将变得更多，协议应该有很强的抗篡改性。除了加密的信息，暴露的明文信息应该不足以被攻击者利用来破解密文。</p>
+<p>10.入侵检测系统</p>
+<p>入侵检测系统（intrusion detection system，简称“IDS”）是一种对网络传输进行即时监视，在发现可疑传输时发出警报或者采取主动反应措施的网络安全设备。它与其他网络安全设备的不同之处便在于，IDS是一种积极主动的安全防护技术。在很多中大型企业，政府机构，都会布有IDS。我们做一个比喻——假如防火墙是一幢大厦的门锁，那么IDS就是这幢大厦里的监视系统。一旦小偷进入了大厦，或内部人员有越界行为，只有实时监视系统才能发现情况并发出警告。</p>
+<p>入侵检测系统的作用</p>
+<ul>
+<li>防火墙的重要补充</li>
+<li>构建网络安全防御体系重要环节</li>
+<li>克服传统防御机制的限制</li>
+</ul>
+<p>入侵检测系统功能</p>
+<ul>
+<li>监测并分析用户和系统的活动</li>
+<li>核查系统配置和漏洞</li>
+<li>对操作系统进行日志管理，并识别违反安全策略的用户活动</li>
+<li>针对已发现的攻击行为作出适当的反应，如告警、中止进程等</li>
+</ul>
+<p>11.IP协议的缺点</p>
+<p>答：IP地址可以暴露个人位置…</p>
+<p>12.区块链去中心化的优点和缺点</p>
+<p>答：优点：不再存在由于少数节点的物理崩溃而造成所搭建的体系崩溃的问题</p>
+<ul>
+<li>解决了目前中心化的信任问题，信用的认证依赖于整个网络，而不再依赖中心节点</li>
+<li>数据被分割成小块，经过加密后才会分散存储在众多结点上，能够避免中心化存储的集中式风险，即便某一块数据被泄露，也只是部分而非全部数据。</li>
+<li>去中心化存储能够发挥共享经济的优势，硬盘的空余空间可以被充分地利用起来</li>
+</ul>
+<p>缺点：存取速度问题：由于并不是所有节点带宽都比较大，导致去中心化存储存取速度较慢</p>
+<ul>
+<li>由于数据存放在众多结点，而不是每个结点都有很多好的防护，如何保证结点的安全也是问题</li>
+</ul>
+<h1>应用题</h1>
+<h2 id="RSA算法（计算）"><a class="header-anchor" href="#RSA算法（计算）">¶</a>RSA算法（计算）</h2>
+<p>工作原理如下（帮助理解，主要是计算）</p>
+<p>假定用户Aice要发送消息m给用户Bob,则RSA算法的加/解密过程如下<br>
+1)首先,Bob产生两个大素数p和q（p、q是保密的）<br>
+2)Bob计算n=p*q 和 φ(n)=(p-1)*(q-1)<br>
+3)Bob选择一个随机数e(0&lt;e&lt;φ(n)，使得(e,φ(n))=1(即e和φ(n)互素)。<br>
+4)Bob计算得出d,使得 d*e mod φ(n)=1(即在与n互素的数中选取与φ(n)互素的数，可以通过欧几里得算法得出)。私钥是d，Bob自留且加密<br>
+5)Bob将(e,n)作为公钥公开<br>
+6)Alice通过公开信道查到n和e。对m加密,加密E(m)= m<sup>e</sup> mod n<br>
+7)Bob收到密文c后,解密D©= c<sup>d</sup> mod n</p>
+<p><strong>重点公式如下</strong></p>
+<p>n=p*q   φ(n)=(p-1)*(q-1)  d*e ≡ 1 mod φ(n)</p>
+<p>加密：c ≡ m<sup>e</sup> mod n    （e和n会给出）</p>
+<p>解密：m ≡ c<sup>d</sup> mod n      (一般d要自己求)</p>
+<p>习题</p>
+<p>1.假设明文m=5，e=7，p=11，q=13，给出RSA的加密解密过程  (<strong>预测考这种求加密和解密两个过程的题</strong>)</p>
+<p>答：n=p*q=11*13=143           φ(143) = (p-1)*(q-1) = 10*12=120</p>
+<p>因为d*e ≡ 1 mod φ(n)  即d*7 ≡ 1 mod 120   所以 d=103 (考试时d不会那么大，试几次就知道啦)</p>
+<p>加密：c ≡ m<sup>e</sup> mod n  ≡ 5<sup>7</sup> ≡ 47 mod 143</p>
+<p>解密：m ≡ c<sup>d</sup> mod n  ≡ 47<sup>103</sup> ≡ 5 mod 143</p>
+<blockquote>
+<p>预测老师所说和学号有关的是明文m，考试时我的m应该为6</p>
+<p>6<sup>2</sup>=36  6<sup>3</sup>=216	6<sup>4</sup>=1296	6<sup>5</sup>=7776（在此仅为先列出有个印象到时候别算错了）</p>
+</blockquote>
+<p>2.RSA加密体制中，接收方的公开钥是(e,n)=(5,35)，接收到的密文是C=10，求明文M (<strong>预测n、e等数值和本题一样，密文或明文和学号有关</strong>)</p>
+<p>答：（    m ≡ c<sup>d</sup> mod n         所以得先算出d  -----&gt; d*e ≡ 1 mod φ(n)  ）</p>
+<p>n=35             所以 p=5，q=7</p>
+<p>φ(35) = (p-1)*(q-1) =4*6=24</p>
+<p>因为 d*e ≡ 1 mod φ(n)   所以d=5      （这个到时候一个一个试就行）</p>
+<p>m ≡ c<sup>d</sup> mod n ≡ 10<sup>5</sup> mod 35 ≡ 5          （注意不是等号）</p>
+<h2 id="签名过程-叙述题"><a class="header-anchor" href="#签名过程-叙述题">¶</a>签名过程(叙述题)</h2>
+<h3 id="加密和签名"><a class="header-anchor" href="#加密和签名">¶</a>加密和签名</h3>
+<p>创建数字签名</p>
+<ul>
+<li>发方将原文用哈希算法求得数字摘要；</li>
+<li>发方用自己的私钥对数字摘要加密求得数字签名，并将签名附在原文的后面；</li>
+<li>发方用<strong>加密密钥</strong>对原文和签名进行加密；</li>
+<li>发方用收方的公钥<strong>对加密密钥进行加密</strong>，发送给收方；</li>
+</ul>
+<p>验证数字签名</p>
+<ul>
+<li>收方用自己的私钥解密加密密钥；</li>
+<li>收方用加密密钥解密密文，得到原文和发方签名；</li>
+<li>收方用相同的哈希算法对解密后的原文计算摘要记为摘要1；</li>
+<li>收方用发方公钥解密数字签名得到发方摘要记为摘要2；</li>
+<li>收方对比摘要1和摘要2，若结果相同签名得到验证。</li>
+</ul>
+<h3 id="只签名-预计考这个"><a class="header-anchor" href="#只签名-预计考这个">¶</a>只签名(预计考这个)</h3>
+<p>创建数字签名</p>
+<ul>
+<li>发方将原文用哈希算法求得数字摘要；</li>
+<li>发方用自己的私钥对数字摘要加密求得数字签名；</li>
+<li>发方将签名附在原文的后面发给收方；</li>
+</ul>
+<p>验证数字签名</p>
+<ul>
+<li>收方将收到的消息中的原文及其数字签名分离出来</li>
+<li>收方用相同的哈希算法对原文计算摘要记为摘要1；</li>
+<li>收方用发方公钥解密数字签名得到发方摘要记为摘要2；</li>
+<li>收方对比摘要1和摘要2，若结果相同签名得到验证。</li>
+</ul>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">夏日</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://zss192.github.io/2022/11/14/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">https://zss192.github.io/2022/11/14/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zss192.github.io" target="_blank">夏日 の blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E4%B8%9A%E8%AF%BE/">计算机专业课</a></div><div class="post_share"><div class="social-share" data-image="/img/post/1.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="支付宝"/><div class="post-qr-code__desc">支付宝</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2022/11/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><img class="prev_cover lazyload" data-src="/img/post/4.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">操作系统</div></div></a></div><div class="next-post pull_right"><a href="/2022/11/14/%E5%AF%86%E7%A0%81%E5%AD%A6/"><img class="next_cover lazyload" data-src="/img/post/4.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">密码学</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2022/11/14/操作系统/" title="操作系统"><img class="relatedPosts_cover lazyload"data-src="/img/post/4.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2022-11-14</div><div class="relatedPosts_title">操作系统</div></div></a></div><div class="relatedPosts_item"><a href="/2022/11/14/密码学/" title="密码学"><img class="relatedPosts_cover lazyload"data-src="/img/post/4.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2022-11-14</div><div class="relatedPosts_title">密码学</div></div></a></div><div class="relatedPosts_item"><a href="/2022/11/14/操作系统思维导图/" title="操作系统思维导图"><img class="relatedPosts_cover lazyload"data-src="/img/post/7.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2022-11-14</div><div class="relatedPosts_title">操作系统思维导图</div></div></a></div><div class="relatedPosts_item"><a href="/2021/07/05/软件安全/" title="软件安全期末总结"><img class="relatedPosts_cover lazyload"data-src="/img/post/3.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2021-07-05</div><div class="relatedPosts_title">软件安全期末总结</div></div></a></div><div class="relatedPosts_item"><a href="/2021/07/04/计算机病毒与恶意代码/" title="计算机病毒与恶意代码期末总结"><img class="relatedPosts_cover lazyload"data-src="/img/post/10.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2021-07-04</div><div class="relatedPosts_title">计算机病毒与恶意代码期末总结</div></div></a></div><div class="relatedPosts_item"><a href="/2020/06/28/密码学题型速记/" title="密码学题型速记"><img class="relatedPosts_cover lazyload"data-src="/img/post/9.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-06-28</div><div class="relatedPosts_title">密码学题型速记</div></div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://unpkg.com/valine@1.4.9/dist/Valine.min.js"></script><script>var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+window.valine = new Valine({
+  el:'#vcomment',
+  notify: false,
+  verify: false,
+  appId: 'tekAEc3UtO7aXcLkamh2nCMM-gzGzoHsz',
+  appKey: 'qVGeAkqGHCD2n17QxBQW2Q4P',
+  placeholder: '建议评论时填写邮箱，可收到回复邮件提醒',
+  avatar: 'monsterid',
+  meta: guest_info,
+  pageSize: '10',
+  lang: 'zh-cn',
+  recordIP: false,
+  serverURLs: ''
+});</script></div></article></main><footer id="footer" style="background-image: url(/img/post/9.jpg)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 夏日</div><div class="framework-info"><span>驱动 </span><a target="_blank" rel="noopener" href="https://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span></a></div><div class="icp"><a target="_blank" rel="noopener" href="http://www.beian.gov.cn"><img class="icp-icon" src="/img/icp.png"/><span>豫ICP备20013184号</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/js/third-party/ClickShowText.js"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":20},"mobile":{"show":false},"log":false,"tagMode":false});</script></body></html><script type="text/javascript" src="/js/crash_cheat.js"></script>
